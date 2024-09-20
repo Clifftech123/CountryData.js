@@ -1,6 +1,6 @@
 /**
  * @file index.test.ts
- * @description This file contains unit tests for the CountryHelper class using Jest.
+ * @description Unit tests for the CountryHelper class.
  */
 
 import CountryHelper from '../src/index';
@@ -8,9 +8,6 @@ import * as fs from 'fs';
 
 jest.mock('fs');
 
-/**
- * @description Mock data representing countries and their regions.
- */
 const mockData = JSON.stringify([
   {
     countryName: "Åland Islands",
@@ -92,7 +89,7 @@ const mockData = JSON.stringify([
 ]);
 
 /**
- * @description Mock implementation of fs.readFile to return mock data.
+ * Mock the fs.readFile method to return mock data.
  */
 beforeAll(() => {
   (fs.readFile as unknown as jest.Mock).mockImplementation((_, __, callback) => {
@@ -103,16 +100,22 @@ beforeAll(() => {
 let countryHelper: CountryHelper;
 
 /**
- * @description Initialize a new instance of CountryHelper before each test.
+ * Initialize a new instance of CountryHelper before each test.
  */
 beforeEach(() => {
   countryHelper = new CountryHelper();
 });
 
+/**
+ * Clear all timers after each test.
+ */
+afterEach(() => {
+  jest.clearAllTimers();
+});
+
 describe('CountryHelper', () => {
   /**
-   * @test
-   * @description Test if getCountries method returns all countries.
+   * Test the getCountries method.
    */
   test('getCountries should return all countries', async () => {
     const countries = await countryHelper.getCountries();
@@ -121,8 +124,7 @@ describe('CountryHelper', () => {
   });
 
   /**
-   * @test
-   * @description Test if getCountryByShortCode method returns the correct country.
+   * Test the getCountryByShortCode method.
    */
   test('getCountryByShortCode should return the correct country', async () => {
     const country = await countryHelper.getCountryByShortCode('AX');
@@ -131,8 +133,7 @@ describe('CountryHelper', () => {
   });
 
   /**
-   * @test
-   * @description Test if getRegionsByCountryShortCode method returns the correct regions.
+   * Test the getRegionsByCountryShortCode method.
    */
   test('getRegionsByCountryShortCode should return the correct regions', async () => {
     const regions = await countryHelper.getRegionsByCountryShortCode('AX');
@@ -142,8 +143,7 @@ describe('CountryHelper', () => {
   });
 
   /**
-   * @test
-   * @description Test if getCountryByPhoneCode method returns the correct country.
+   * Test the getCountryByPhoneCode method.
    */
   test('getCountryByPhoneCode should return the correct country', async () => {
     const country = await countryHelper.getCountryByPhoneCode('+358');
@@ -152,8 +152,7 @@ describe('CountryHelper', () => {
   });
 
   /**
-   * @test
-   * @description Test if getCountryPhoneCodeByShortCode method returns the correct phone code.
+   * Test the getCountryPhoneCodeByShortCode method.
    */
   test('getCountryPhoneCodeByShortCode should return the correct phone code', async () => {
     const phoneCode = await countryHelper.getCountryPhoneCodeByShortCode('AX');

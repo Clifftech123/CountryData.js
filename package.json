@@ -10,7 +10,8 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "release": "npm run build && changeset publish",
     "lint": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "test:detect": "jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "Isaiah Clifford Opoku",

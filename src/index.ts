@@ -1,6 +1,5 @@
 /**
  * @module CountryHelper
- * @description This module provides a class to load and manage country data from a JSON file.
  */
 
 import * as fs from 'fs';
@@ -8,25 +7,25 @@ import * as path from 'path';
 import type { Country, Region } from './types/Country';
 
 /**
- * Class representing a helper for country data.
+ * Class representing a helper for country-related operations.
  */
 class CountryHelper {
   private countries: Country[] = [];
+  private loadingPromise: Promise<void> | null = null;
   private static readonly fileName = path.resolve(__dirname, '../src/data.json');
-
+  private timeoutId: NodeJS.Timeout | null = null;
 
   /**
-   * Create a CountryHelper.
-   * @constructor
+   * Creates an instance of CountryHelper and initiates loading of countries.
    */
   constructor() {
     this.loadCountries(CountryHelper.fileName);
   }
 
   /**
-   * Load countries from a JSON file.
+   * Loads countries from a JSON file.
    * @private
-   * @param {string} fileName - The path to the JSON file.
+   * @param {string} fileName - The path to the JSON file containing country data.
    */
   private loadCountries(fileName: string): void {
     fs.readFile(fileName, 'utf8', (err, jsonString) => {
@@ -47,27 +46,33 @@ class CountryHelper {
   }
 
   /**
-   * Ensure countries are loaded before use.
-   * @private
+   * Ensures that countries are loaded before proceeding.
    * @returns {Promise<void>} A promise that resolves when countries are loaded.
    */
-  private ensureCountriesLoaded(): Promise<void> {
-    return new Promise((resolve, reject) => {
-      if (this.countries.length > 0) {
-        resolve();
-      } else {
-        const interval = setInterval(() => {
-          if (this.countries.length > 0) {
-            clearInterval(interval);
-            resolve();
+  ensureCountriesLoaded(): Promise<void> {
+    if (this.loadingPromise) {
+      return this.loadingPromise;
+    }
+
+    this.loadingPromise = new Promise<void>((resolve) => {
+      const checkCountries = () => {
+        if (this.countries.length > 0) {
+          if (this.timeoutId) {
+            clearTimeout(this.timeoutId);
           }
-        }, 100);
-      }
+          resolve();
+        } else {
+          this.timeoutId = setTimeout(checkCountries, 100);
+        }
+      };
+      checkCountries();
     });
+
+    return this.loadingPromise;
   }
 
   /**
-   * Get the emoji flag for a country by its short code.
+   * Converts a country short code to its corresponding emoji flag.
    * @private
    * @param {string} countryShortCode - The short code of the country.
    * @returns {string} The emoji flag of the country.
@@ -79,9 +84,7 @@ class CountryHelper {
   }
 
   /**
-   * Get all countries.
-   * @public
-   * @async
+   * Gets the list of countries.
    * @returns {Promise<Country[]>} A promise that resolves to an array of countries.
    */
   public async getCountries(): Promise<Country[]> {
@@ -90,9 +93,7 @@ class CountryHelper {
   }
 
   /**
-   * Get a single country by its short code.
-   * @public
-   * @async
+   * Gets a country by its short code.
    * @param {string} countryShortCode - The short code of the country.
    * @returns {Promise<Country | undefined>} A promise that resolves to the country or undefined if not found.
    */
@@ -102,9 +103,7 @@ class CountryHelper {
   }
 
   /**
-   * Get regions in a particular country by its short code.
-   * @public
-   * @async
+   * Gets the regions of a country by its short code.
    * @param {string} countryShortCode - The short code of the country.
    * @returns {Promise<Region[]>} A promise that resolves to an array of regions.
    */
@@ -114,9 +113,7 @@ class CountryHelper {
   }
 
   /**
-   * Get a single country by its phone code.
-   * @public
-   * @async
+   * Gets a country by its phone code.
    * @param {string} phoneCode - The phone code of the country.
    * @returns {Promise<Country | undefined>} A promise that resolves to the country or undefined if not found.
    */
@@ -126,9 +123,7 @@ class CountryHelper {
   }
 
   /**
-   * Get a country's phone code by its short code.
-   * @public
-   * @async
+   * Gets the phone code of a country by its short code.
    * @param {string} countryShortCode - The short code of the country.
    * @returns {Promise<string | undefined>} A promise that resolves to the phone code or undefined if not found.
    */
@@ -138,12 +133,4 @@ class CountryHelper {
   }
 }
 
-// Example usage
-(async () => {
-  const countryHelper = new CountryHelper();
-  const allCountries = await countryHelper.getCountries();
-  console.log(JSON.stringify(allCountries, null, 2)); 
-})();
-
-// Export the CountryHelper class
 export default CountryHelper;
