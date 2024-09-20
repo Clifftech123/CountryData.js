@@ -10,6 +10,7 @@ const config: Config.InitialOptions = {
   },
   collectCoverage: true,
   coverageDirectory: 'coverage',
+  
 };
 
 module.exports = config;
