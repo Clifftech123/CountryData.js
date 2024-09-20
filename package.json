@@ -1,0 +1,29 @@
+{
+  "name": "countrydata.js",
+  "license": "MIT",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "release": "npm run build && changeset publish",
+    "lint": "tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Isaiah Clifford Opoku",
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.8"
+  },
+  "type": "module"
+}
