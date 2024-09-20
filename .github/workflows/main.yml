@@ -5,21 +5,32 @@ on:
       - "**"
 
 jobs:
-  build:
+  test:
+    name: Run tests and collect coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
           node-version: 16.x
           cache: "npm"
 
-      - run: npm install
-      - run: npm run lint && npm run build
-      - run: npm test
+      - name: Install dependencies
+        run: npm install
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+      - name: Run lint and build
+        run: npm run lint && npm run build
+
+      - name: Run tests
+        run: npx jest --coverage
+
+      - name: Upload results to Codecov
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage/*.json
