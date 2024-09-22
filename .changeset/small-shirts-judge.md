@@ -1,5 +1,5 @@
 ---
-"countrydata.js": major
+"countrydata.js": patch
 ---
 
 Fix JavaScript and TypeScript compatibility issues
