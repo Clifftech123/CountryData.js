@@ -1,5 +1,11 @@
 # countrydata.js
 
+## 2.0.0
+
+### Major Changes
+
+- 18b3f46: Fix JavaScript and TypeScript compatibility issues
+
 ## 1.0.0
 
 ### Major Changes
