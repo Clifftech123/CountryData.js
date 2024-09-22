@@ -11,7 +11,7 @@ permissions:
   contents: write
   pull-requests: write
   actions: write
-  workflows: write  
+ 
 jobs:
   publish:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
