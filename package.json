@@ -6,17 +6,26 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "tsc && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
     "release": "npm run build && changeset publish --access public",
     "lint": "tsc",
     "test": "jest",
-    "test:detect": "jest --detectOpenHandles"
+    "test:detect": "jest --detectOpenHandles",
+    "prepublishOnly": "npm run build"
   },
   "publishConfig": {
     "access": "public"
   },
-
   "keywords": [],
   "author": "Isaiah Clifford Opoku",
   "devDependencies": {
@@ -31,6 +40,5 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.27.8"
-  },
-  "type": "module"
+  }
 }

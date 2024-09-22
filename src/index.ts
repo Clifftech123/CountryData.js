@@ -1,40 +1,36 @@
-/**
- * @module CountryHelper
- */
-
 import * as fs from 'fs';
 import * as path from 'path';
-import type { Country, Region } from './types/Country';
+import { Country, Region } from './types/Country';
 
 /**
- * Class representing a helper for country-related operations.
+ * Class to manage and retrieve country data.
  */
-class CountryHelper {
+export class CountryHelper {
   private countries: Country[] = [];
   private loadingPromise: Promise<void> | null = null;
-  private static readonly fileName = path.resolve(__dirname, '../src/data.json');
   private timeoutId: NodeJS.Timeout | null = null;
 
+  private static readonly fileName = path.join(__dirname, '..', 'src', 'data.json');
+
   /**
-   * Creates an instance of CountryHelper and initiates loading of countries.
+   * Initializes the CountryHelper instance and starts loading the country data.
    */
   constructor() {
     this.loadCountries(CountryHelper.fileName);
   }
 
   /**
-   * Loads countries from a JSON file.
-   * @private
-   * @param {string} fileName - The path to the JSON file containing country data.
+   * Loads country data from a JSON file.
+   * @param fileName - The path to the JSON file containing country data.
    */
   private loadCountries(fileName: string): void {
-    fs.readFile(fileName, 'utf8', (err, jsonString) => {
+    fs.readFile(fileName, 'utf8', (err: NodeJS.ErrnoException | null, jsonString: string) => {
       if (err) {
         console.error("File read failed:", err);
         return;
       }
       try {
-        const data = JSON.parse(jsonString) as Country[];
+        const data: Country[] = JSON.parse(jsonString);
         data.forEach(country => {
           country.countryFlag = this.getCountryEmojiFlag(country.countryShortCode);
         });
@@ -46,10 +42,10 @@ class CountryHelper {
   }
 
   /**
-   * Ensures that countries are loaded before proceeding.
-   * @returns {Promise<void>} A promise that resolves when countries are loaded.
+   * Ensures that the country data is loaded before proceeding.
+   * @returns A promise that resolves when the country data is loaded.
    */
-  ensureCountriesLoaded(): Promise<void> {
+  public async ensureCountriesLoaded(): Promise<void> {
     if (this.loadingPromise) {
       return this.loadingPromise;
     }
@@ -73,9 +69,8 @@ class CountryHelper {
 
   /**
    * Converts a country short code to its corresponding emoji flag.
-   * @private
-   * @param {string} countryShortCode - The short code of the country.
-   * @returns {string} The emoji flag of the country.
+   * @param countryShortCode - The short code of the country (e.g., "US").
+   * @returns The emoji flag of the country.
    */
   private getCountryEmojiFlag(countryShortCode: string): string {
     return countryShortCode
@@ -84,8 +79,8 @@ class CountryHelper {
   }
 
   /**
-   * Gets the list of countries.
-   * @returns {Promise<Country[]>} A promise that resolves to an array of countries.
+   * Retrieves the list of all countries.
+   * @returns A promise that resolves to an array of Country objects.
    */
   public async getCountries(): Promise<Country[]> {
     await this.ensureCountriesLoaded();
@@ -93,19 +88,19 @@ class CountryHelper {
   }
 
   /**
-   * Gets a country by its short code.
-   * @param {string} countryShortCode - The short code of the country.
-   * @returns {Promise<Country | undefined>} A promise that resolves to the country or undefined if not found.
+   * Retrieves a country by its short code.
+   * @param countryShortCode - The short code of the country (e.g., "US").
+   * @returns A promise that resolves to the Country object or null if not found.
    */
-  public async getCountryByShortCode(countryShortCode: string): Promise<Country | undefined> {
+  public async getCountryByShortCode(countryShortCode: string): Promise<Country | null> {
     await this.ensureCountriesLoaded();
-    return this.countries.find(country => country.countryShortCode === countryShortCode);
+    return this.countries.find(country => country.countryShortCode === countryShortCode) || null;
   }
 
   /**
-   * Gets the regions of a country by its short code.
-   * @param {string} countryShortCode - The short code of the country.
-   * @returns {Promise<Region[]>} A promise that resolves to an array of regions.
+   * Retrieves the regions of a country by its short code.
+   * @param countryShortCode - The short code of the country (e.g., "US").
+   * @returns A promise that resolves to an array of Region objects.
    */
   public async getRegionsByCountryShortCode(countryShortCode: string): Promise<Region[]> {
     const country = await this.getCountryByShortCode(countryShortCode);
@@ -113,23 +108,23 @@ class CountryHelper {
   }
 
   /**
-   * Gets a country by its phone code.
-   * @param {string} phoneCode - The phone code of the country.
-   * @returns {Promise<Country | undefined>} A promise that resolves to the country or undefined if not found.
+   * Retrieves a country by its phone code.
+   * @param phoneCode - The phone code of the country (e.g., "1" for the US).
+   * @returns A promise that resolves to the Country object or null if not found.
    */
-  public async getCountryByPhoneCode(phoneCode: string): Promise<Country | undefined> {
+  public async getCountryByPhoneCode(phoneCode: string): Promise<Country | null> {
     await this.ensureCountriesLoaded();
-    return this.countries.find(country => country.phoneCode === phoneCode);
+    return this.countries.find(country => country.phoneCode === phoneCode) || null;
   }
 
   /**
-   * Gets the phone code of a country by its short code.
-   * @param {string} countryShortCode - The short code of the country.
-   * @returns {Promise<string | undefined>} A promise that resolves to the phone code or undefined if not found.
+   * Retrieves the phone code of a country by its short code.
+   * @param countryShortCode - The short code of the country (e.g., "US").
+   * @returns A promise that resolves to the phone code as a string or null if not found.
    */
-  public async getCountryPhoneCodeByShortCode(countryShortCode: string): Promise<string | undefined> {
+  public async getCountryPhoneCodeByShortCode(countryShortCode: string): Promise<string | null> {
     const country = await this.getCountryByShortCode(countryShortCode);
-    return country ? country.phoneCode : undefined;
+    return country ? country.phoneCode : null;
   }
 }
 

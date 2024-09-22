@@ -39,6 +39,8 @@ const allCountries = countryData.getAllCountries();
 console.log(allCountries);
 ```
 
+
+
 ## API
 
 ### `getCountry(code)`
