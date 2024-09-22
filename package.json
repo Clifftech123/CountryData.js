@@ -8,7 +8,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "release": "npm run build && changeset publish",
+    "release": "npm run build && changeset publish --access public",
     "lint": "tsc",
     "test": "jest"
   },
