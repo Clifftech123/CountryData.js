@@ -13,6 +13,10 @@
     "test": "jest",
     "test:detect": "jest --detectOpenHandles"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+
   "keywords": [],
   "author": "Isaiah Clifford Opoku",
   "devDependencies": {
