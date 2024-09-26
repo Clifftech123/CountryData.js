@@ -10,7 +10,6 @@
       }
     ],
     "regions": [
-
       {
         "name": "Badakhshan",
         "shortCode": "BDS"
@@ -1981,7 +1980,7 @@
         "name": "Bhutanese ngultrum"
       }
     ],
-    
+
     "regions": [
       {
         "name": "Bumthang",
@@ -4266,7 +4265,7 @@
   {
     "countryName": "Curaçao",
     "countryShortCode": "CW",
-    "phoneCode": "+599", 
+    "phoneCode": "+599",
     "currency": [
       {
         "code": "ANG",
@@ -6292,8 +6291,8 @@
   {
     "countryName": "Heard Island and McDonald Islands",
     "countryShortCode": "HM",
-   "phoneCode": "+672",
-   "currency": [
+    "phoneCode": "+672",
+    "currency": [
       {
         "code": "",
         "name": ""
@@ -17681,7 +17680,7 @@
         "name": "New Zealand dollar"
       }
     ],
-    
+
     "regions": [
       {
         "name": "Atafu"
@@ -20126,7 +20125,7 @@
   {
     "countryName": "Uzbekistan",
     "countryShortCode": "UZ",
-    "phoneCode":"+998",
+    "phoneCode": "+998",
     "currency": [
       {
         "code": "UZS",
@@ -20580,7 +20579,7 @@
   {
     "countryName": "Virgin Islands, U.S.",
     "countryShortCode": "VI",
-    "phoneCode":"+1340",
+    "phoneCode": "+1340",
     "currency": [
       {
         "code": "",
@@ -20605,7 +20604,7 @@
   {
     "countryName": "Wallis and Futuna",
     "countryShortCode": "WF",
-    "phoneCode":"+681",
+    "phoneCode": "+681",
     "currency": [
       {
         "code": "XPF",
@@ -20630,14 +20629,14 @@
   {
     "countryName": "Western Sahara",
     "countryShortCode": "EH",
-    "phoneCode":"+212",
+    "phoneCode": "+212",
     "currency": [
       {
         "code": "MAD",
         "name": "Moroccan dirham"
       }
     ],
-      
+
     "regions": [
       {
         "name": "Es Smara",

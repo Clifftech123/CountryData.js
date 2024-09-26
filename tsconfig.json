@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
-    "module": "Node16",
-    "target": "ESNext",
-    "moduleResolution": "Node16",
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false, 
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/*.test.ts"]
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "module": "NodeNext", 
+    "lib": ["es2022"],
+    "noEmit": true
+  }
 }
