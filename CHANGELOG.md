@@ -1,5 +1,11 @@
 # countrydata.js
 
+## 1.0.2
+
+### Patch Changes
+
+- def97ba: Updated the GitHub Actions workflow to use Vitest for running tests and collecting coverage. Installed the `@vitest/coverage-v8` dependency to ensure coverage reports are generated correctly. Updated the `vitest.config.ts` to specify the `v8` coverage provider.
+
 ## 1.0.1
 
 ### Patch Changes
