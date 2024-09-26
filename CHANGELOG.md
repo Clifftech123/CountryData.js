@@ -6,6 +6,12 @@
 
 - 19a4fd5: Fix JavaScript and TypeScript compatibility issues
 
+## 1.0.1
+
+### Patch Changes
+
+- 19a4fd5: Fix JavaScript and TypeScript compatibility issues
+
 ## 1.0.0
 
 ### Major Changes
