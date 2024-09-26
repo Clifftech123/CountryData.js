@@ -1,5 +1,11 @@
 # countrydata.js
 
+## 1.0.3
+
+### Patch Changes
+
+- 83710eb: Updated build configuration to exclusively use ES Modules (ESM). Fixed the error our data.json not found. Updated the package.json to include the `type` field set to `module`.
+
 ## 1.0.2
 
 ### Patch Changes
