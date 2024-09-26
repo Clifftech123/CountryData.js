@@ -37,7 +37,6 @@
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "release": "npm run build && changeset publish --access public",
-    "prepublishOnly": "npm run ci",
     "check-exports": "attw --pack .",
     "lint": "tsc",
     "test": "vitest run",
