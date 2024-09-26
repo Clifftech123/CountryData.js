@@ -12,12 +12,12 @@
   ],
   "type": "module",
   "main": "dist/index.cjs",
-  "module": "dist/index.js", 
+  "module": "dist/index.js",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./dist/index.js", 
-      "require": "./dist/index.cjs" 
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "homepage": "https://github.com/Clifftech123/CountryData.js",
@@ -52,6 +52,7 @@
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.13",
     "@types/node": "^22.5.5",
+    "@vitest/coverage-v8": "^2.1.1",
     "jest": "^29.7.0",
     "jest-junit": "^16.0.0",
     "prettier": "^3.3.3",
