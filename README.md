@@ -10,7 +10,7 @@ CountryData.js is a comprehensive Node.js package designed to provide easy acces
 
 ## Features
 
-- **Comprehensive Country Data**: Access detailed information including country names, short codes, phone codes, currencies, regions, and emoji flags.
+- **Comprehensive Country Data**: Access detailed information including `country names`, `short codes`, `phone codes`,  `regions`, and  `flags`.
 - **JavaScript and TypeScript Support**: Use the package in both JavaScript and TypeScript projects.
 - **Easy Integration**: Seamlessly integrate with any Node.js project using ES modules.
 - **Asynchronous Operations**: All methods return promises for efficient data handling.
@@ -72,6 +72,7 @@ import { CountryHelper } from 'countrydata.js';
 You can check the sample code in the [example folder](https://github.com/Clifftech123/CountryData.js/tree/main/Sample).
 With this sample code, you can see how to use the package in your project both in JavaScript and TypeScript.
 
+Make sure to check how the Sample has been implemented .
 
 ## API
 

@@ -1,7 +1,7 @@
 {
   "name": "countrydata.js",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "An offline JavaScript library for getting Global Country , iso3166  Data",
   "keywords": [
     "javascript",
@@ -10,14 +10,14 @@
     "country-data",
     "iso3166"
   ],
-  "type": "module",
+
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./dist/index.js",
+       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
@@ -28,7 +28,7 @@
   "author": "Isaiah Clifford Opoku <opokuisaiahclifford@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Clifftech123/CountryData.js"
+    "url": "https://github.com/frankodoom/CountryData.Net"
   },
   "files": [
     "dist",
@@ -42,20 +42,12 @@
     "check-exports": "attw --pack .",
     "lint": "tsc",
     "test": "vitest run",
-    "test:detect": "jest --detectOpenHandles",
-    "clean": "shx rm -rf dist",
-    "test:watch": "vitest watch"
+    "test:detect": "jest --detectOpenHandles"
   },
   "publishConfig": {
     "access": "public"
   },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "funding": {
-    "type": "individual",
-    "url": "https://github.com/sponsors/Clifftech123"
-  },
+  "type": "module",
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.4",
     "@jest/globals": "^29.7.0",

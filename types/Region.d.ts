@@ -1,5 +1,5 @@
 // Region.d.ts
-export type Region = {
+export  type Region = {
   Name?: string;
   ShortCode?: string;
 };
