@@ -8,6 +8,9 @@
 
 CountryData.js is a comprehensive Node.js package designed to provide easy access to detailed country information. It supports both JavaScript and TypeScript, making it versatile for various project needs. Whether you're building a web application, API, or any other project that requires country data, this package offers a simple and efficient solution.
 
+Make sure to compile TypeScript files to JavaScript before running the code.
+
+
 ## Features
 
 - **Comprehensive Country Data**: Access detailed information including `country names`, `short codes`, `phone codes`,  `regions`, and  `flags`.
