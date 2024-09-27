@@ -1,5 +1,14 @@
 # countrydata.js
 
+## 1.0.5
+
+### Patch Changes
+
+- 227b2df: Fix: Fixed TypeScript types for Country and Region. Fixed the TypeScript compilation error.
+- 3683b6d: Stable release for general use. Fixed all TypeScript issues and ensured compatibility with both JavaScript and TypeScript environments. Updated README to align with npm standards.
+- 83710eb: Updated build configuration to exclusively use ES Modules (ESM). Fixed the error our data.json not found. Updated the package.json to include the `type` field set to `module`.
+- 10f9d39: Fix: Fixed TypeScript types for Country and Region. Fixed the TypeScript compilation error.
+
 ## 1.0.4
 
 ### Patch Changes
