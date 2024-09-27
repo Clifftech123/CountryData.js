@@ -1,5 +1,11 @@
 # countrydata.js
 
+## 1.0.6
+
+### Patch Changes
+
+- 47916f4: Fix: Resolved the GitHub repository connection problem with npm and added a sample index.js.
+
 ## 1.0.5
 
 ### Patch Changes
