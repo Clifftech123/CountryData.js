@@ -1,5 +1,11 @@
 # countrydata.js
 
+## 1.0.4
+
+### Patch Changes
+
+- 10f9d39: Fix: Fixed TypeScript types for Country and Region. Fixed the TypeScript compilation error.
+
 ## 1.0.3
 
 ### Patch Changes
