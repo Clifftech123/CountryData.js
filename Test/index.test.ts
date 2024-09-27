@@ -1,34 +1,43 @@
-import { describe, beforeAll, beforeEach, afterEach, afterAll, test, expect, vi } from 'vitest';
+import {
+  describe,
+  beforeAll,
+  beforeEach,
+  afterEach,
+  afterAll,
+  test,
+  expect,
+  vi,
+} from 'vitest';
 import { CountryHelper } from '../src/index.js';
 import * as fs from 'fs';
 
 // Mock data representing a JSON structure of countries and their regions
 const mockData = JSON.stringify([
   {
-    countryName: "Åland Islands",
-    countryShortCode: "AX",
-    phoneCode: "+358",
+    countryName: 'Åland Islands',
+    countryShortCode: 'AX',
+    phoneCode: '+358',
     currency: [
       {
-        code: "EUR",
-        name: "European euro"
-      }
+        code: 'EUR',
+        name: 'European euro',
+      },
     ],
     regions: [
       {
-        Name: "Brändö",
-        ShortCode: "BR"
+        Name: 'Brändö',
+        ShortCode: 'BR',
       },
       {
-        Name: "Eckerö",
-        ShortCode: "EC"
+        Name: 'Eckerö',
+        ShortCode: 'EC',
       },
       {
-        Name: "Finström",
-        ShortCode: "FN"
+        Name: 'Finström',
+        ShortCode: 'FN',
       },
-    ]
-  }
+    ],
+  },
 ]);
 
 // Mock the 'fs' module to simulate file reading
@@ -39,7 +48,17 @@ describe('CountryHelper', () => {
 
   // Mock the fs.readFile method to return the mock data before all tests
   beforeAll(() => {
-    vi.spyOn(fs, 'readFile').mockImplementation(((path: fs.PathOrFileDescriptor, options: { encoding?: BufferEncoding | null; flag?: string; } | BufferEncoding | null, callback: (err: NodeJS.ErrnoException | null, data: string | Buffer) => void) => {
+    vi.spyOn(fs, 'readFile').mockImplementation(((
+      path: fs.PathOrFileDescriptor,
+      options:
+        | { encoding?: BufferEncoding | null; flag?: string }
+        | BufferEncoding
+        | null,
+      callback: (
+        err: NodeJS.ErrnoException | null,
+        data: string | Buffer,
+      ) => void,
+    ) => {
       if (typeof options === 'function') {
         callback = options;
         options = 'utf8';

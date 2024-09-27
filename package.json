@@ -1,23 +1,23 @@
 {
   "name": "countrydata.js",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "An offline JavaScript library for getting Global Country , iso3166  Data",
   "keywords": [
     "javascript",
     "typescript",
     "country",
     "country-data",
-    " iso3166"
+    "iso3166"
   ],
-  "type": "module",
+
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./dist/index.js",
+       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
@@ -47,6 +47,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.4",
     "@jest/globals": "^29.7.0",
