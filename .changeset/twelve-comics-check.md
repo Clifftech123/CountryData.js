@@ -1,5 +1,4 @@
 ---
 'countrydata.js': patch
 ---
-
-Added detailed documentation for functions in app.js to improve code readability and maintainability.
+Fix: Fixed TypeScript types for Country and Region. Fixed the TypeScript compilation error.
