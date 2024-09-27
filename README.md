@@ -6,9 +6,6 @@
 
 
 
-
-# CountryData.js
-
 CountryData.js is a comprehensive Node.js package designed to provide easy access to detailed country information. It supports both JavaScript and TypeScript, making it versatile for various project needs. Whether you're building a web application, API, or any other project that requires country data, this package offers a simple and efficient solution.
 
 ## Features
@@ -48,31 +45,33 @@ const countryHelper = new CountryHelper();
   console.log(country);
 })();
 
-// More examples...
+
 ```
 
 ### TypeScript Version
 
 ```typescript
-import { CountryHelper } from "countrydata.js";
-import type { Country, Region } from "countrydata.js";
 
-const countryHelper = new CountryHelper();
+import { CountryHelper } from 'countrydata.js';
 
-// Get all countries
 (async () => {
-  const allCountries: Country[] = await countryHelper.getCountries();
+  const countryHelper = new CountryHelper();
+  const allCountries = await countryHelper.getCountries();
   console.log(JSON.stringify(allCountries, null, 2));
 })();
 
-// Get regions in a particular country
+// Get country by short code
 (async () => {
-  const regions: Region[] = await countryHelper.getRegionsByCountryShortCode('GH');
-  console.log(regions);
+  const countryHelper = new CountryHelper();
+  const countryData = await countryHelper.getCountryByShortCode('US');
+  console.log(countryData);
 })();
 
-// More examples...
 ```
+
+You can check the sample code in the [example folder](https://github.com/Clifftech123/CountryData.js/tree/main/Sample).
+With this sample code, you can see how to use the package in your project both in JavaScript and TypeScript.
+
 
 ## API
 
@@ -82,41 +81,14 @@ The main class that provides access to country data. It works the same way in bo
 
 #### Methods
 
-- `getCountries(): Promise<Country[]>`
-- `getCountryByShortCode(shortCode: string): Promise<Country | null>`
-- `getRegionsByCountryShortCode(shortCode: string): Promise<Region[]>`
-- `getCountryByPhoneCode(phoneCode: string): Promise<Country | null>`
-- `getCountryPhoneCodeByShortCode(shortCode: string): Promise<string | null>`
 
-### Data Types
-
-#### `Country`
-
-An object representing a country with the following properties:
-
-- `countryName: string`
-- `countryShortCode: string`
-- `phoneCode: string`
-- `currency: Array<{ code: string, name: string }>`
-- `regions: Region[]`
-- `countryFlag: string`
-
-#### `Region`
-
-An object representing a region or administrative division of a country:
-
-- `Name: string`
-- `ShortCode: string`
-
-## TypeScript Support
-
-For TypeScript users, CountryData.js comes with built-in type definitions. You can import types directly from the package:
-
-```typescript
-import { CountryHelper, Country, Region } from "countrydata.js";
-```
-
-This allows for better type checking and autocompletion in TypeScript projects.
+| Method | Description |
+|--------|-------------|
+| `getCountries(): Promise<Country[]>` | Fetches and returns a promise that resolves to an array of all countries. |
+| `getCountryByShortCode(shortCode: string): Promise<Country` | null>` | Fetches and returns a promise that resolves to a country object based on the provided country short code (e.g., "US"). Returns `null` if the country is not found. |
+| `getRegionsByCountryShortCode(shortCode: string): Promise<Region[]>` | Fetches and returns a promise that resolves to an array of regions for the specified country short code (e.g., "US"). |
+| `getCountryByPhoneCode(phoneCode: string): Promise<Country` | null> | Fetches and returns a promise that resolves to a country object based on the provided phone code (e.g., "1" for the US). Returns `null` if the country is not found. |
+| `getCountryPhoneCodeByShortCode(shortCode: string): Promise<string` | null>` | Fetches and returns a promise that resolves to the phone code of a country based on the provided country short code (e.g., "US"). Returns `null` if the country is not found. |
 
 ## Contributing
 
@@ -129,4 +101,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 If you encounter any issues or have questions about using CountryData.js, please open an issue on our GitHub repository or contact us directly through our support channels.
+
 

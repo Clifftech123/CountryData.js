@@ -8,7 +8,7 @@
     "typescript",
     "country",
     "country-data",
-    " iso3166"
+    "iso3166"
   ],
   "type": "module",
   "main": "dist/index.js",
@@ -28,7 +28,7 @@
   "author": "Isaiah Clifford Opoku <opokuisaiahclifford@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/frankodoom/CountryData.Net"
+    "url": "https://github.com/Clifftech123/CountryData.js"
   },
   "files": [
     "dist",
@@ -42,10 +42,19 @@
     "check-exports": "attw --pack .",
     "lint": "tsc",
     "test": "vitest run",
-    "test:detect": "jest --detectOpenHandles"
+    "test:detect": "jest --detectOpenHandles",
+    "clean": "shx rm -rf dist",
+    "test:watch": "vitest watch"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/Clifftech123"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.4",

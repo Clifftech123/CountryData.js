@@ -19,7 +19,12 @@ export class CountryHelper {
       return path.join(__dirname, '..', 'src', 'data.json');
     } else {
       // ESM
-      return path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data.json');
+      return path.join(
+        path.dirname(fileURLToPath(import.meta.url)),
+        '..',
+        'src',
+        'data.json',
+      );
     }
   })();
 
@@ -35,21 +40,27 @@ export class CountryHelper {
    * @param fileName - The path to the JSON file containing country data.
    */
   private loadCountries(fileName: string): void {
-    fs.readFile(fileName, 'utf8', (err: NodeJS.ErrnoException | null, jsonString: string) => {
-      if (err) {
-        console.error("File read failed:", err);
-        return;
-      }
-      try {
-        const data: Country[] = JSON.parse(jsonString);
-        data.forEach(country => {
-          country.countryFlag = this.getCountryEmojiFlag(country.countryShortCode);
-        });
-        this.countries = data;
-      } catch (err) {
-        console.error('Error parsing JSON:', err);
-      }
-    });
+    fs.readFile(
+      fileName,
+      'utf8',
+      (err: NodeJS.ErrnoException | null, jsonString: string) => {
+        if (err) {
+          console.error('File read failed:', err);
+          return;
+        }
+        try {
+          const data: Country[] = JSON.parse(jsonString);
+          data.forEach((country) => {
+            country.countryFlag = this.getCountryEmojiFlag(
+              country.countryShortCode,
+            );
+          });
+          this.countries = data;
+        } catch (err) {
+          console.error('Error parsing JSON:', err);
+        }
+      },
+    );
   }
 
   /**
@@ -86,7 +97,9 @@ export class CountryHelper {
   private getCountryEmojiFlag(countryShortCode: string): string {
     return countryShortCode
       .toUpperCase()
-      .replace(/./g, char => String.fromCodePoint(127397 + char.charCodeAt(0)));
+      .replace(/./g, (char) =>
+        String.fromCodePoint(127397 + char.charCodeAt(0)),
+      );
   }
 
   /**
@@ -103,9 +116,15 @@ export class CountryHelper {
    * @param countryShortCode - The short code of the country (e.g., "US").
    * @returns A promise that resolves to the Country object or null if not found.
    */
-  public async getCountryByShortCode(countryShortCode: string): Promise<Country | null> {
+  public async getCountryByShortCode(
+    countryShortCode: string,
+  ): Promise<Country | null> {
     await this.ensureCountriesLoaded();
-    return this.countries.find(country => country.countryShortCode === countryShortCode) || null;
+    return (
+      this.countries.find(
+        (country) => country.countryShortCode === countryShortCode,
+      ) || null
+    );
   }
 
   /**
@@ -113,7 +132,9 @@ export class CountryHelper {
    * @param countryShortCode - The short code of the country (e.g., "US").
    * @returns A promise that resolves to an array of Region objects.
    */
-  public async getRegionsByCountryShortCode(countryShortCode: string): Promise<Region[]> {
+  public async getRegionsByCountryShortCode(
+    countryShortCode: string,
+  ): Promise<Region[]> {
     const country = await this.getCountryByShortCode(countryShortCode);
     return country ? country.regions : [];
   }
@@ -123,9 +144,13 @@ export class CountryHelper {
    * @param phoneCode - The phone code of the country (e.g., "1" for the US).
    * @returns A promise that resolves to the Country object or null if not found.
    */
-  public async getCountryByPhoneCode(phoneCode: string): Promise<Country | null> {
+  public async getCountryByPhoneCode(
+    phoneCode: string,
+  ): Promise<Country | null> {
     await this.ensureCountriesLoaded();
-    return this.countries.find(country => country.phoneCode === phoneCode) || null;
+    return (
+      this.countries.find((country) => country.phoneCode === phoneCode) || null
+    );
   }
 
   /**
@@ -133,7 +158,9 @@ export class CountryHelper {
    * @param countryShortCode - The short code of the country (e.g., "US").
    * @returns A promise that resolves to the phone code as a string or null if not found.
    */
-  public async getCountryPhoneCodeByShortCode(countryShortCode: string): Promise<string | null> {
+  public async getCountryPhoneCodeByShortCode(
+    countryShortCode: string,
+  ): Promise<string | null> {
     const country = await this.getCountryByShortCode(countryShortCode);
     return country ? country.phoneCode : null;
   }

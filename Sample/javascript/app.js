@@ -1,4 +1,4 @@
-import { CountryHelper } from '.'; // Import the CountryHelper class
+import { CountryHelper } from 'countrydata.js';
 
 // Create an instance of CountryHelper
 const countryHelper = new CountryHelper();
@@ -52,7 +52,8 @@ const getCountryByPhoneCode = async (phoneCode) => {
  * @param {string} shortCode - The short code of the country (e.g., "US").
  */
 const getCountryPhoneCodeByShortCode = async (shortCode) => {
-  const phoneCode = await countryHelper.getCountryPhoneCodeByShortCode(shortCode);
+  const phoneCode =
+    await countryHelper.getCountryPhoneCodeByShortCode(shortCode);
   console.log(phoneCode);
 };
 
