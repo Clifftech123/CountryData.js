@@ -35,7 +35,7 @@
     "src/data.json"
   ],
   "scripts": {
-    "build": "tsup && shx cp src/data.json dist/",
+    "build": "tsup",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "release": "npm run build && changeset publish --access public",

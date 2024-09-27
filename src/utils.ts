@@ -12,8 +12,16 @@ export class CountryHelper {
   private loadingPromise: Promise<void> | null = null;
   private timeoutId: NodeJS.Timeout | null = null;
 
-  // Use import.meta.url to get the current file URL and convert it to a path
-  private static readonly fileName = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data.json');
+  // Determine the file path based on the module system
+  private static readonly fileName = (() => {
+    if (typeof __dirname !== 'undefined') {
+      // CommonJS
+      return path.join(__dirname, '..', 'src', 'data.json');
+    } else {
+      // ESM
+      return path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data.json');
+    }
+  })();
 
   /**
    * Initializes the CountryHelper instance and starts loading the country data.

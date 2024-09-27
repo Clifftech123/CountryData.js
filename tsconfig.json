@@ -1,3 +1,4 @@
+
 {
   "compilerOptions": {
     "esModuleInterop": true,
@@ -7,7 +8,7 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-    "verbatimModuleSyntax": false, 
+    "verbatimModuleSyntax": false,
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
