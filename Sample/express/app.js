@@ -7,6 +7,7 @@ import cors from 'cors';
 import { CountryHelper } from '../../dist/index.js';
 
 const app = express();
+app.disable('x-powered-by');
 const port = process.env.PORT || 3000;
 const countryHelper = new CountryHelper();
 
