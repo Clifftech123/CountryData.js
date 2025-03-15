@@ -2,6 +2,7 @@
 // npm run build  : This will generate the dist folder with the index.js file.
 // Then you can import the CountryHelper class from the dist/index.js file.
 // But when you install it from npm, you can directly import the CountryHelper class from the src/index.js file.
+// Take note of the import from teh local and production use . If you want to test the local version, you need to build the project firs but for production you can directly import the CountryHelper class from the index.js file.
 
 import { CountryHelper } from '../../dist/index.js';
 
