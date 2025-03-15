@@ -10,8 +10,14 @@ const app = express();
 const port = process.env.PORT || 3000;
 const countryHelper = new CountryHelper();
 
-// Middleware
-app.use(cors());
+
+
+// SECURITY NOTE: CORS is configured for local development only
+app.use(cors({
+  origin: 'http://localhost:3000',
+  methods: ['GET'], 
+}));
+
 app.use(express.json());
 
 // Root endpoint
