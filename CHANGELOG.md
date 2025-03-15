@@ -1,5 +1,11 @@
 # countrydata.js
 
+## 1.1.0
+
+### Minor Changes
+
+- 1f397b6: Enhanced the flag emoji functionality by renaming the method from getCountryEmoji to getCountryFlag, implementing proper string manipulation techniques, and optimizing performance.
+
 ## 1.0.5
 
 ### Patch Changes
