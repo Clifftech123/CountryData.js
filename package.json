@@ -1,7 +1,7 @@
 {
   "name": "countrydata.js",
   "license": "MIT",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "An offline JavaScript library for getting Global Country , iso3166  Data",
   "keywords": [
     "javascript",
@@ -40,8 +40,7 @@
     "release": "npm run build && changeset publish --access public",
     "check-exports": "attw --pack .",
     "lint": "tsc",
-    "test": "vitest run",
-    "test:detect": "jest --detectOpenHandles"
+    "test": "vitest run"
   },
   "publishConfig": {
     "access": "public"

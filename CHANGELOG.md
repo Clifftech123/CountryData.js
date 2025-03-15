@@ -1,10 +1,10 @@
 # countrydata.js
 
-## 1.0.6
+## 1.1.0
 
-### Patch Changes
+### Minor Changes
 
-- 47916f4: Fix: Resolved the GitHub repository connection problem with npm and added a sample index.js.
+- 1f397b6: Enhanced the flag emoji functionality by renaming the method from getCountryEmoji to getCountryFlag, implementing proper string manipulation techniques, and optimizing performance.
 
 ## 1.0.5
 
@@ -12,6 +12,7 @@
 
 - 227b2df: Fix: Fixed TypeScript types for Country and Region. Fixed the TypeScript compilation error.
 - 3683b6d: Stable release for general use. Fixed all TypeScript issues and ensured compatibility with both JavaScript and TypeScript environments. Updated README to align with npm standards.
+- 47916f4: Fix: Resolved the GitHub repository connection problem with npm and added a sample index.js.
 - 83710eb: Updated build configuration to exclusively use ES Modules (ESM). Fixed the error our data.json not found. Updated the package.json to include the `type` field set to `module`.
 - 10f9d39: Fix: Fixed TypeScript types for Country and Region. Fixed the TypeScript compilation error.
 
