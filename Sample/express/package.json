@@ -1,0 +1,23 @@
+{
+  "name": "countrydata-express-sample",
+  "version": "1.0.0",
+  "description": "Express.js sample application for CountryData.js",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [
+    "express",
+    "countrydata",
+    "api",
+    "sample"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

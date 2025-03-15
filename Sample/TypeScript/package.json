@@ -1,10 +1,11 @@
 {
   "name": "typescript",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node index.ts  ",
+    "start": "node --loader ts-node/esm index.ts",
     "build": "tsc"
   },
   "keywords": [],
@@ -12,9 +13,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
-  },
-  "dependencies": {
-    "countrydata.js": "^1.0.1"
   }
 }

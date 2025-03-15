@@ -1,31 +1,26 @@
-# CountryData.js ![NPM Downloads](https://img.shields.io/npm/d18m/countrydata.js)
+# CountryData.js
 
+## Overview
 
-| CI Status                                                                                                                                                               | Code Coverage                                                                                                                                               | Quality Gate Status                                                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![CI](https://github.com/Clifftech123/CountryData.js/actions/workflows/main.yml/badge.svg)](https://github.com/Clifftech123/CountryData.js/actions/workflows/main.yml) | [![codecov](https://codecov.io/github/Clifftech123/CountryData.js/graph/badge.svg?token=42Y3GT9MKN)](https://codecov.io/github/Clifftech123/CountryData.js) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Clifftech123_CountryData.js&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Clifftech123_CountryData.js) |
-
-
-
-
-
-
-CountryData.js is a comprehensive Node.js package designed to provide easy access to detailed country information. It supports both JavaScript and TypeScript, making it versatile for various project needs. Whether you're building a web application, API, or any other project that requires country data, this package offers a simple and efficient solution.
-
-Make sure to compile TypeScript files to JavaScript before running the code.
-
+`CountryData.js` is a comprehensive Node.js package designed to provide easy access to detailed country information. It supports both JavaScript and TypeScript, making it versatile for various project needs. Whether you're building a web application, API, or any other project that requires country data, this package offers a simple and efficient solution.
 
 ## Features
 
-- **Comprehensive Country Data**: Access detailed information including `country names`, `short codes`, `phone codes`,  `regions`, and  `flags`.
-- **JavaScript and TypeScript Support**: Use the package in both JavaScript and TypeScript projects.
-- **Easy Integration**: Seamlessly integrate with any Node.js project using ES modules.
-- **Asynchronous Operations**: All methods return promises for efficient data handling.
-- **Lightweight**: Minimal dependencies to keep your project lean.
+- 🌍 **Comprehensive Country Data**: Access detailed information, including `country names`, `short codes`, `phone codes`, `regions`, and `flags`.
+- ⚡ **JavaScript and TypeScript Support**: Use the package seamlessly in both JavaScript and TypeScript projects.
+- 🔄 **Asynchronous Operations**: All methods return promises for efficient data handling.
+- 📦 **Lightweight & Efficient**: Minimal dependencies to keep your project lean.
+- 🏗️ **Easy Integration**: Seamlessly integrates with any Node.js project using ES modules and commonJS
+
+## Status & Quality
+
+| 🔄 CI Status                                                                                                                                                            | 📊 Code Coverage                                                                                                                                            | 🏆 Quality Gate Status                                                                                                                                                                                    |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![CI](https://github.com/Clifftech123/CountryData.js/actions/workflows/main.yml/badge.svg)](https://github.com/Clifftech123/CountryData.js/actions/workflows/main.yml) | [![codecov](https://codecov.io/github/Clifftech123/CountryData.js/graph/badge.svg?token=42Y3GT9MKN)](https://codecov.io/github/Clifftech123/CountryData.js) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Clifftech123_CountryData.js&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Clifftech123_CountryData.js) |
+
+![NPM Downloads](https://img.shields.io/npm/d18m/countrydata.js)
 
 ## Installation
-
-Install CountryData.js using npm:
 
 ```sh
 npm install countrydata.js
@@ -33,74 +28,59 @@ npm install countrydata.js
 
 ## Usage
 
-### JavaScript Version
+### JavaScript Example
 
 ```javascript
-import { CountryHelper } from "countrydata.js";
+import { CountryHelper } from 'countrydata.js';
 
 const countryHelper = new CountryHelper();
 
 // Get all countries
-(async () => {
-  const allCountries = await countryHelper.getCountries();
-  console.log(JSON.stringify(allCountries, null, 2));
-})();
+countryHelper.getCountries().then(console.log);
 
 // Get country by short code
-(async () => {
-  const country = await countryHelper.getCountryByShortCode('US');
-  console.log(country);
-})();
-
-
+countryHelper.getCountryByShortCode('US').then(console.log);
 ```
 
-### TypeScript Version
+### TypeScript Example
 
 ```typescript
-
 import { CountryHelper } from 'countrydata.js';
 
-(async () => {
-  const countryHelper = new CountryHelper();
-  const allCountries = await countryHelper.getCountries();
-  console.log(JSON.stringify(allCountries, null, 2));
-})();
+const countryHelper = new CountryHelper();
+
+// Get all countries
+const allCountries = await countryHelper.getCountries();
+console.log(allCountries);
 
 // Get country by short code
-(async () => {
-  const countryHelper = new CountryHelper();
-  const countryData = await countryHelper.getCountryByShortCode('US');
-  console.log(countryData);
-})();
-
+const countryByCode = await countryHelper.getCountryByShortCode('US');
+console.log(countryByCode);
 ```
 
-You can check the sample code in the [example folder](https://github.com/Clifftech123/CountryData.js/tree/main/Sample).
-With this sample code, you can see how to use the package in your project both in JavaScript and TypeScript.
+## Sample Implementation
 
-Make sure to check how the Sample has been implemented .
+If you want to see a sample implementation of this package further in both javascript and typescript , you can check out the [Sample](https://github.com/Clifftech123/CountryData.js/tree/main/Sample) folder.
 
-## API
+### Usage with Express.js
 
-### `CountryHelper`
+This package can be used in an Express.js application to create a REST API for country data. Check the [example folder](https://github.com/Clifftech123/CountryData.js/tree/main/Sample) for sample implementations in both JavaScript and TypeScript.
 
-The main class that provides access to country data. It works the same way in both JavaScript and TypeScript.
+## API Reference
 
-#### Methods
+### `CountryHelper` Methods
 
-
-| Method | Description |
-|--------|-------------|
-| `getCountries(): Promise<Country[]>` | Fetches and returns a promise that resolves to an array of all countries. |
-| `getCountryByShortCode(shortCode: string): Promise<Country` | null>` | Fetches and returns a promise that resolves to a country object based on the provided country short code (e.g., "US"). Returns `null` if the country is not found. |
-| `getRegionsByCountryShortCode(shortCode: string): Promise<Region[]>` | Fetches and returns a promise that resolves to an array of regions for the specified country short code (e.g., "US"). |
-| `getCountryByPhoneCode(phoneCode: string): Promise<Country` | null> | Fetches and returns a promise that resolves to a country object based on the provided phone code (e.g., "1" for the US). Returns `null` if the country is not found. |
-| `getCountryPhoneCodeByShortCode(shortCode: string): Promise<string` | null>` | Fetches and returns a promise that resolves to the phone code of a country based on the provided country short code (e.g., "US"). Returns `null` if the country is not found. |
+| Method                                                                           | Description                                                                                       |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **`getCountries(): Promise<Country[]>`**                                         | Returns an array of all countries.                                                                |
+| **`getCountryByShortCode(shortCode: string): Promise<Country \| null>`**         | Returns a country object based on the short code (e.g., "US"), or `null` if not found.            |
+| **`getRegionsByCountryShortCode(shortCode: string): Promise<Region[]>`**         | Returns an array of regions for the specified country short code (e.g., "US").                    |
+| **`getCountryByPhoneCode(phoneCode: string): Promise<Country \| null>`**         | Returns a country object based on the phone code (e.g., "1" for the US), or `null` if not found.  |
+| **`getCountryPhoneCodeByShortCode(shortCode: string): Promise<string \| null>`** | Returns the phone code of a country based on the short code (e.g., "US"), or `null` if not found. |
 
 ## Contributing
 
-We welcome contributions to CountryData.js! Please read our [contributing guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, or request features.
+We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, or request features.
 
 ## License
 
@@ -108,6 +88,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-If you encounter any issues or have questions about using CountryData.js, please open an issue on our GitHub repository or contact us directly through our support channels.
+If you encounter any issues or have questions, please open an issue on our GitHub repository or contact us directly through our support channels.
 
-
+🚀 Get started today with `CountryData.js` and simplify your country data management!

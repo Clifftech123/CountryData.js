@@ -5,12 +5,12 @@ import type { Country } from '../types/Country.js';
 import type { Region } from '../types/Region.js';
 
 /**
- * Class to manage and retrieve country data.
+ * Class to manage and retrieve country data efficiently.
  */
 export class CountryHelper {
-  private countries: Country[] = [];
-  private loadingPromise: Promise<void> | null = null;
-  private timeoutId: NodeJS.Timeout | null = null;
+  private readonly countries: Country[];
+  private readonly countryByShortCode: Map<string, Country>;
+  private readonly countryByPhoneCode: Map<string, Country>;
 
   // Determine the file path based on the module system
   private static readonly fileName = (() => {
@@ -29,64 +29,30 @@ export class CountryHelper {
   })();
 
   /**
-   * Initializes the CountryHelper instance and starts loading the country data.
+   * Initializes the CountryHelper instance with indexed data structures for fast lookups.
    */
   constructor() {
-    this.loadCountries(CountryHelper.fileName);
-  }
+    try {
+      const jsonString = fs.readFileSync(CountryHelper.fileName, 'utf8');
+      const data: Country[] = JSON.parse(jsonString);
+      this.countries = data.map((country) => ({
+        ...country,
+        countryFlag: this.getCountryFlag(country.countryShortCode),
+      }));
 
-  /**
-   * Loads country data from a JSON file.
-   * @param fileName - The path to the JSON file containing country data.
-   */
-  private loadCountries(fileName: string): void {
-    fs.readFile(
-      fileName,
-      'utf8',
-      (err: NodeJS.ErrnoException | null, jsonString: string) => {
-        if (err) {
-          console.error('File read failed:', err);
-          return;
-        }
-        try {
-          const data: Country[] = JSON.parse(jsonString);
-          data.forEach((country) => {
-            country.countryFlag = this.getCountryEmojiFlag(
-              country.countryShortCode,
-            );
-          });
-          this.countries = data;
-        } catch (err) {
-          console.error('Error parsing JSON:', err);
-        }
-      },
-    );
-  }
-
-  /**
-   * Ensures that the country data is loaded before proceeding.
-   * @returns A promise that resolves when the country data is loaded.
-   */
-  public async ensureCountriesLoaded(): Promise<void> {
-    if (this.loadingPromise) {
-      return this.loadingPromise;
+      // Initialize lookup maps
+      this.countryByShortCode = new Map(
+        this.countries.map((country) => [country.countryShortCode, country]),
+      );
+      this.countryByPhoneCode = new Map(
+        this.countries.map((country) => [country.phoneCode, country]),
+      );
+    } catch (err) {
+      console.error('Failed to load country data:', err);
+      this.countries = [];
+      this.countryByShortCode = new Map();
+      this.countryByPhoneCode = new Map();
     }
-
-    this.loadingPromise = new Promise<void>((resolve) => {
-      const checkCountries = () => {
-        if (this.countries.length > 0) {
-          if (this.timeoutId) {
-            clearTimeout(this.timeoutId);
-          }
-          resolve();
-        } else {
-          this.timeoutId = setTimeout(checkCountries, 100);
-        }
-      };
-      checkCountries();
-    });
-
-    return this.loadingPromise;
   }
 
   /**
@@ -94,7 +60,7 @@ export class CountryHelper {
    * @param countryShortCode - The short code of the country (e.g., "US").
    * @returns The emoji flag of the country.
    */
-  private getCountryEmojiFlag(countryShortCode: string): string {
+  public getCountryFlag(countryShortCode: string): string {
     return countryShortCode
       .toUpperCase()
       .replace(/./g, (char) =>
@@ -104,65 +70,49 @@ export class CountryHelper {
 
   /**
    * Retrieves the list of all countries.
-   * @returns A promise that resolves to an array of Country objects.
+   * @returns Array of Country objects.
    */
-  public async getCountries(): Promise<Country[]> {
-    await this.ensureCountriesLoaded();
+  public getCountries(): Country[] {
     return this.countries;
   }
 
   /**
    * Retrieves a country by its short code.
    * @param countryShortCode - The short code of the country (e.g., "US").
-   * @returns A promise that resolves to the Country object or null if not found.
+   * @returns The Country object or null if not found.
    */
-  public async getCountryByShortCode(
-    countryShortCode: string,
-  ): Promise<Country | null> {
-    await this.ensureCountriesLoaded();
-    return (
-      this.countries.find(
-        (country) => country.countryShortCode === countryShortCode,
-      ) || null
-    );
+  public getCountryByShortCode(countryShortCode: string): Country | null {
+    return this.countryByShortCode.get(countryShortCode) || null;
   }
 
   /**
    * Retrieves the regions of a country by its short code.
    * @param countryShortCode - The short code of the country (e.g., "US").
-   * @returns A promise that resolves to an array of Region objects.
+   * @returns Array of Region objects.
    */
-  public async getRegionsByCountryShortCode(
-    countryShortCode: string,
-  ): Promise<Region[]> {
-    const country = await this.getCountryByShortCode(countryShortCode);
-    return country ? country.regions : [];
+  public getRegionsByCountryShortCode(countryShortCode: string): Region[] {
+    const country = this.getCountryByShortCode(countryShortCode);
+    return country?.regions ?? [];
   }
 
   /**
    * Retrieves a country by its phone code.
    * @param phoneCode - The phone code of the country (e.g., "1" for the US).
-   * @returns A promise that resolves to the Country object or null if not found.
+   * @returns The Country object or null if not found.
    */
-  public async getCountryByPhoneCode(
-    phoneCode: string,
-  ): Promise<Country | null> {
-    await this.ensureCountriesLoaded();
-    return (
-      this.countries.find((country) => country.phoneCode === phoneCode) || null
-    );
+  public getCountryByPhoneCode(phoneCode: string): Country | null {
+    return this.countryByPhoneCode.get(phoneCode) || null;
   }
 
   /**
    * Retrieves the phone code of a country by its short code.
    * @param countryShortCode - The short code of the country (e.g., "US").
-   * @returns A promise that resolves to the phone code as a string or null if not found.
+   * @returns The phone code as a string or null if not found.
    */
-  public async getCountryPhoneCodeByShortCode(
+  public getCountryPhoneCodeByShortCode(
     countryShortCode: string,
-  ): Promise<string | null> {
-    const country = await this.getCountryByShortCode(countryShortCode);
-    return country ? country.phoneCode : null;
+  ): string | null {
+    return this.getCountryByShortCode(countryShortCode)?.phoneCode ?? null;
   }
 }
 

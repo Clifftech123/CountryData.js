@@ -1,42 +1,35 @@
-import { CountryHelper } from 'countrydata.js';
+// Import from local source instead of npm package
+import { CountryHelper } from '../.././src/index.js';
 
-(async () => {
-  const countryHelper = new CountryHelper();
-  const allCountries = await countryHelper.getCountries();
-  console.log(JSON.stringify(allCountries, null, 2));
-})();
+// Create a single instance to use for all operations
+const countryHelper = new CountryHelper();
+
+// Log all countries
+console.log('All Countries:');
+const allCountries = countryHelper.getCountries();
+console.log(JSON.stringify(allCountries.slice(0, 2), null, 2));
 
 // Get country by short code
-(async () => {
-  const countryHelper = new CountryHelper();
-  const countryData = await countryHelper.getCountryByShortCode('US');
-  console.log(countryData);
-})();
+console.log('\nCountry by Short Code (US):');
+const countryByCode = countryHelper.getCountryByShortCode('US');
+console.log(countryByCode);
 
 // Get regions in a particular country
-(async () => {
-  const countryHelper = new CountryHelper();
-  const regionsData = await countryHelper.getRegionsByCountryShortCode('GH');
-  console.log(regionsData);
-})();
+console.log('\nRegions in Ghana (GH):');
+const regionsData = countryHelper.getRegionsByCountryShortCode('GH');
+console.log(regionsData);
 
-// Get country Country Flag
-(async () => {
-  const countryHelper = new CountryHelper();
-  const countryData = await countryHelper.getCountryByShortCode('US');
-  console.log(countryData?.countryFlag);
-})();
+// Get country flag
+console.log('\nUS Country Flag:');
+const countryWithFlag = countryHelper.getCountryByShortCode('US');
+console.log(countryWithFlag?.countryFlag);
 
 // Get country by phone code
-(async () => {
-  const countryHelper = new CountryHelper();
-  const countryData = await countryHelper.getCountryByPhoneCode('+233');
-  console.log(countryData);
-})();
+console.log('\nCountry by Phone Code (+233):');
+const countryByPhone = countryHelper.getCountryByPhoneCode('+233');
+console.log(countryByPhone);
 
 // Get country phone code by short code
-(async () => {
-  const countryHelper = new CountryHelper();
-  const phoneCode = await countryHelper.getCountryPhoneCodeByShortCode('US');
-  console.log(phoneCode);
-})();
+console.log('\nPhone Code for US:');
+const phoneCode = countryHelper.getCountryPhoneCodeByShortCode('US');
+console.log(phoneCode);

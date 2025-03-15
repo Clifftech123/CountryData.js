@@ -1,68 +1,83 @@
-import { CountryHelper } from 'countrydata.js';
+// To get this input you need to build the project using the following command:
+// npm run build  : This will generate the dist folder with the index.js file.
+// Then you can import the CountryHelper class from the dist/index.js file.
+// But when you install it from npm, you can directly import the CountryHelper class from the src/index.js file.
+
+import { CountryHelper } from '../../dist/index.js';
 
 // Create an instance of CountryHelper
 const countryHelper = new CountryHelper();
 
 /**
- * Fetches and logs all countries.
+ * Gets and logs all countries.
  */
-const getCountries = async () => {
-  const allCountries = await countryHelper.getCountries();
-  console.log(JSON.stringify(allCountries, null, 2));
+const getCountries = () => {
+  const allCountries = countryHelper.getCountries();
+  // Only log a few countries to avoid console flooding
+  console.log(JSON.stringify(allCountries.slice(0, 3), null, 2));
+  console.log(`Total countries: ${allCountries.length}`);
 };
 
 /**
- * Fetches and logs a country by its short code.
+ * Gets and logs a country by its short code.
  * @param {string} shortCode - The short code of the country (e.g., "US").
  */
-const getCountryByShortCode = async (shortCode) => {
-  const country = await countryHelper.getCountryByShortCode(shortCode);
+const getCountryByShortCode = (shortCode) => {
+  const country = countryHelper.getCountryByShortCode(shortCode);
   console.log(country);
 };
 
 /**
- * Fetches and logs the regions of a country by its short code.
+ * Gets and logs the regions of a country by its short code.
  * @param {string} shortCode - The short code of the country (e.g., "US").
  */
-const getRegionsByCountryShortCode = async (shortCode) => {
-  const regions = await countryHelper.getRegionsByCountryShortCode(shortCode);
+const getRegionsByCountryShortCode = (shortCode) => {
+  const regions = countryHelper.getRegionsByCountryShortCode(shortCode);
   console.log(regions);
 };
 
 /**
- * Fetches and logs the flag emoji of a country by its short code.
+ * Gets and logs the flag emoji of a country by its short code.
  * @param {string} shortCode - The short code of the country (e.g., "US").
  */
-const getCountryFlag = async (shortCode) => {
-  const country = await countryHelper.getCountryByShortCode(shortCode);
+const getCountryFlag = (shortCode) => {
+  const country = countryHelper.getCountryByShortCode(shortCode);
   console.log(country?.countryFlag);
 };
 
 /**
- * Fetches and logs a country by its phone code.
+ * Gets and logs a country by its phone code.
  * @param {string} phoneCode - The phone code of the country (e.g., "1" for the US).
  */
-const getCountryByPhoneCode = async (phoneCode) => {
-  const country = await countryHelper.getCountryByPhoneCode(phoneCode);
+const getCountryByPhoneCode = (phoneCode) => {
+  const country = countryHelper.getCountryByPhoneCode(phoneCode);
   console.log(country);
 };
 
 /**
- * Fetches and logs the phone code of a country by its short code.
+ * Gets and logs the phone code of a country by its short code.
  * @param {string} shortCode - The short code of the country (e.g., "US").
  */
-const getCountryPhoneCodeByShortCode = async (shortCode) => {
-  const phoneCode =
-    await countryHelper.getCountryPhoneCodeByShortCode(shortCode);
+const getCountryPhoneCodeByShortCode = (shortCode) => {
+  const phoneCode = countryHelper.getCountryPhoneCodeByShortCode(shortCode);
   console.log(phoneCode);
 };
 
-// Example usage
-(async () => {
-  await getCountries();
-  await getCountryByShortCode('US');
-  await getRegionsByCountryShortCode('GH');
-  await getCountryFlag('US');
-  await getCountryByPhoneCode('+233');
-  await getCountryPhoneCodeByShortCode('US');
-})();
+// Run examples with clear section headers
+console.log('\n===== ALL COUNTRIES (SAMPLE) =====');
+getCountries();
+
+console.log('\n===== COUNTRY BY SHORT CODE (US) =====');
+getCountryByShortCode('US');
+
+console.log('\n===== REGIONS IN GHANA (GH) =====');
+getRegionsByCountryShortCode('GH');
+
+console.log('\n===== US FLAG EMOJI =====');
+getCountryFlag('US');
+
+console.log('\n===== COUNTRY BY PHONE CODE (+233) =====');
+getCountryByPhoneCode('+233');
+
+console.log('\n===== PHONE CODE FOR US =====');
+getCountryPhoneCodeByShortCode('US');
