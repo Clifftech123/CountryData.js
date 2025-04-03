@@ -6,7 +6,8 @@
     "currency": [
       {
         "code": "AFN",
-        "name": "Afghan afghani"
+        "name": "Afghan afghani",
+        "symbol": "؋"
       }
     ],
     "regions": [
@@ -155,7 +156,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -232,7 +234,8 @@
     "currency": [
       {
         "code": "ALL",
-        "name": "Albanian lek"
+        "name": "Albanian lek",
+        "symbol": "L"
       }
     ],
     "regions": [
@@ -293,7 +296,8 @@
     "currency": [
       {
         "code": "DZD",
-        "name": "Algerian dinar"
+        "name": "Algerian dinar",
+        "symbol": "دج"
       }
     ],
     "regions": [
@@ -498,7 +502,8 @@
     "currency": [
       {
         "code": "United States dollar",
-        "name": "USD"
+        "name": "USD",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -535,7 +540,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -576,7 +582,8 @@
     "currency": [
       {
         "code": "AOA",
-        "name": "Angolan kwanza"
+        "name": "Angolan kwanza",
+        "symbol": "Kz"
       }
     ],
     "regions": [
@@ -661,7 +668,8 @@
     "currency": [
       {
         "code": "XCD",
-        "name": "East Caribbean dollar"
+        "name": "East Caribbean dollar",
+        "symbol": "EC$"
       }
     ],
     "regions": [
@@ -762,7 +770,8 @@
     "regions": [
       {
         "name": "Antarctica",
-        "shortCode": "AQ"
+        "shortCode": "AQ",
+        "symbol": ""
       }
     ]
   },
@@ -773,7 +782,8 @@
     "currency": [
       {
         "code": "XCD",
-        "name": "East Caribbean dollar"
+        "name": "East Caribbean dollar",
+        "symbol": "EC$"
       }
     ],
     "regions": [
@@ -914,7 +924,8 @@
     "currency": [
       {
         "code": "ARS",
-        "name": "Argentine peso"
+        "name": "Argentine peso",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -1023,7 +1034,8 @@
     "currency": [
       {
         "code": "AMD",
-        "name": "Armenian dram"
+        "name": "Armenian dram",
+        "symbol": "֏"
       }
     ],
     "regions": [
@@ -1080,7 +1092,8 @@
     "currency": [
       {
         "code": "AWG",
-        "name": "Aruban florin"
+        "name": "Aruban florin",
+        "symbol": "ƒ"
       }
     ],
     "regions": [
@@ -1097,7 +1110,8 @@
     "currency": [
       {
         "code": "AUD",
-        "name": "Australian dollar"
+        "name": "Australian dollar",
+        "symbol": "A$"
       }
     ],
     "regions": [
@@ -1142,7 +1156,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -1191,7 +1206,8 @@
     "currency": [
       {
         "code": "AZN",
-        "name": "Azerbaijan manat"
+        "name": "Azerbaijan manat",
+        "symbol": "₼"
       }
     ],
     "regions": [
@@ -1472,7 +1488,8 @@
     "currency": [
       {
         "code": "BSD",
-        "name": "Bahamian dollar"
+        "name": "Bahamian dollar",
+        "symbol": "B$"
       }
     ],
     "regions": [
@@ -1621,7 +1638,8 @@
     "currency": [
       {
         "code": "BHD",
-        "name": "Bahraini dinar"
+        "name": "Bahraini dinar",
+        "symbol": ".د.ب"
       }
     ],
     "regions": [
@@ -1654,7 +1672,8 @@
     "currency": [
       {
         "code": "BDT",
-        "name": "Bangladeshi taka"
+        "name": "Bangladeshi taka",
+        "symbol": "৳"
       }
     ],
     "regions": [
@@ -1699,7 +1718,8 @@
     "currency": [
       {
         "code": "BBD",
-        "name": "Barbadian dollar"
+        "name": "Barbadian dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -1756,7 +1776,8 @@
     "currency": [
       {
         "code": "BYN",
-        "name": "Belarusian ruble"
+        "name": "Belarusian ruble",
+        "symbol": "Br"
       }
     ],
     "regions": [
@@ -1797,7 +1818,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -1822,7 +1844,8 @@
     "currency": [
       {
         "code": "BZD",
-        "name": "Belize dollar"
+        "name": "Belize dollar",
+        "symbol": "BZ$"
       }
     ],
     "regions": [
@@ -1859,7 +1882,8 @@
     "currency": [
       {
         "code": "XOF",
-        "name": "West African CFA franc"
+        "name": "West African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -1920,7 +1944,8 @@
     "currency": [
       {
         "code": "BMD",
-        "name": "Bermudian dollar"
+        "name": "Bermudian dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -1977,7 +2002,8 @@
     "currency": [
       {
         "code": "BTN",
-        "name": "Bhutanese ngultrum"
+        "name": "Bhutanese ngultrum",
+        "symbol": "Nu"
       }
     ],
 
@@ -2071,7 +2097,8 @@
     "currency": [
       {
         "code": "BOB",
-        "name": "Bolivian boliviano"
+        "name": "Bolivian boliviano",
+        "symbol": "Bs"
       }
     ],
     "regions": [
@@ -2121,7 +2148,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States dollar"
+        "name": "United States dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -2146,7 +2174,8 @@
     "currency": [
       {
         "code": "BAM",
-        "name": "Bosnia and Herzegovina convertible mark"
+        "name": "Bosnia and Herzegovina convertible mark",
+        "symbol": "KM"
       }
     ],
 
@@ -2172,7 +2201,8 @@
     "currency": [
       {
         "code": "BWP",
-        "name": "Botswana pula"
+        "name": "Botswana pula",
+        "symbol": "P"
       }
     ],
     "regions": [
@@ -2221,7 +2251,8 @@
     "currency": [
       {
         "code": "",
-        "name": ""
+        "name": "",
+        "symbol": "kr"
       }
     ],
     "regions": [
@@ -2238,7 +2269,8 @@
     "currency": [
       {
         "code": "BRL",
-        "name": "Brazilian real"
+        "name": "Brazilian real",
+        "symbol": "R$"
       }
     ],
     "regions": [
@@ -2359,7 +2391,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States dollar"
+        "name": "United States dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -2376,7 +2409,8 @@
     "currency": [
       {
         "code": "BND",
-        "name": "Brunei dollar"
+        "name": "Brunei dollar",
+        "symbol": "B$"
       }
     ],
     "regions": [
@@ -2405,7 +2439,8 @@
     "currency": [
       {
         "code": "BGN",
-        "name": "Bulgarian lev"
+        "name": "Bulgarian lev",
+        "symbol": "лв"
       }
     ],
     "regions": [
@@ -2530,7 +2565,8 @@
     "currency": [
       {
         "code": "XOF",
-        "name": "West African CFA franc"
+        "name": "West African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -2723,7 +2759,8 @@
     "currency": [
       {
         "code": "BIF",
-        "name": "Burundi franc"
+        "name": "Burundi franc",
+        "symbol": "FBu"
       }
     ],
     "regions": [
@@ -2804,7 +2841,8 @@
     "currency": [
       {
         "code": "KHR",
-        "name": "Cambodian riel"
+        "name": "Cambodian riel",
+        "symbol": "៛"
       }
     ],
     "regions": [
@@ -2917,7 +2955,8 @@
     "currency": [
       {
         "code": "XAF",
-        "name": "Central African CFA franc"
+        "name": "Central African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -2970,7 +3009,8 @@
     "currency": [
       {
         "code": "CAD",
-        "name": "Canadian dollar"
+        "name": "Canadian dollar",
+        "symbol": "CA$"
       }
     ],
     "regions": [
@@ -3035,7 +3075,8 @@
     "currency": [
       {
         "code": "CVE",
-        "name": "Cape Verdean escudo"
+        "name": "Cape Verdean escudo",
+        "symbol": "CVE"
       }
     ],
     "regions": [
@@ -3124,7 +3165,8 @@
     "currency": [
       {
         "code": "KYD",
-        "name": "Cayman Islands dollar"
+        "name": "Cayman Islands dollar",
+        "symbol": "CI$"
       }
     ],
     "regions": [
@@ -3161,7 +3203,8 @@
     "currency": [
       {
         "code": "XAF",
-        "name": "Central African CFA franc"
+        "name": "Central African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -3242,7 +3285,8 @@
     "currency": [
       {
         "code": "XAF",
-        "name": "Central African CFA franc"
+        "name": "Central African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -3343,7 +3387,8 @@
     "currency": [
       {
         "code": "CLP",
-        "name": "Chilean peso"
+        "name": "Chilean peso",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -3424,7 +3469,8 @@
     "currency": [
       {
         "code": "CNY",
-        "name": "Chinese yuan  Renminbi"
+        "name": "Chinese yuan  Renminbi",
+        "symbol": "¥"
       }
     ],
     "regions": [
@@ -3569,7 +3615,8 @@
     "currency": [
       {
         "code": "AUD",
-        "name": "Australian dollar"
+        "name": "Australian dollar",
+        "symbol": "A$"
       }
     ],
 
@@ -3587,7 +3634,8 @@
     "currency": [
       {
         "code": "AUD",
-        "name": "Australian dollar"
+        "name": "Australian dollar",
+        "symbol": "A$"
       }
     ],
     "regions": [
@@ -3621,11 +3669,11 @@
     "countryName": "Colombia",
     "countryShortCode": "CO",
     "phoneCode": "+57",
-
     "currency": [
       {
         "code": "COP",
-        "name": "Colombian peso"
+        "name": "Colombian peso",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -3770,7 +3818,8 @@
     "currency": [
       {
         "code": "KMF",
-        "name": "Comorian franc"
+        "name": "Comorian franc",
+        "symbol": "CF"
       }
     ],
     "regions": [
@@ -3795,7 +3844,8 @@
     "currency": [
       {
         "code": "XAF",
-        "name": "Central African CFA franc"
+        "name": "Central African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -3857,7 +3907,8 @@
     "currency": [
       {
         "code": "CDF",
-        "name": "Congolese franc"
+        "name": "Congolese franc",
+        "symbol": "FC"
       }
     ],
     "regions": [
@@ -3914,7 +3965,8 @@
     "currency": [
       {
         "code": "NZD",
-        "name": "New Zealand dollar"
+        "name": "New Zealand dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -3963,7 +4015,8 @@
     "currency": [
       {
         "code": "CRC",
-        "name": "Costa Rican colón"
+        "name": "Costa Rican colón",
+        "symbol": "₡"
       }
     ],
     "regions": [
@@ -4004,7 +4057,8 @@
     "currency": [
       {
         "code": "XOF",
-        "name": "West African CFA franc"
+        "name": "West African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -4094,7 +4148,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -4192,7 +4247,8 @@
     "currency": [
       {
         "code": "CUP",
-        "name": "Cuban peso"
+        "name": "Cuban peso",
+        "symbol": "CUC$"
       }
     ],
     "regions": [
@@ -4269,7 +4325,8 @@
     "currency": [
       {
         "code": "ANG",
-        "name": "Netherlands Antillean guilder"
+        "name": "Netherlands Antillean guilder",
+        "symbol": "ƒ"
       }
     ],
 
@@ -4287,7 +4344,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -4324,7 +4382,8 @@
     "currency": [
       {
         "code": "CZK",
-        "name": "Czech koruna"
+        "name": "Czech koruna",
+        "symbol": "Kč"
       }
     ],
     "regions": [
@@ -4393,7 +4452,8 @@
     "currency": [
       {
         "code": "DKK",
-        "name": "Danish krone"
+        "name": "Danish krone",
+        "symbol": "kr"
       }
     ],
     "regions": [
@@ -4466,7 +4526,8 @@
     "currency": [
       {
         "code": "DJF",
-        "name": "Djiboutian franc"
+        "name": "Djiboutian franc",
+        "symbol": "Fdj"
       }
     ],
     "regions": [
@@ -4499,7 +4560,8 @@
     "currency": [
       {
         "code": "XCD",
-        "name": "East Caribbean dollar"
+        "name": "East Caribbean dollar",
+        "symbol": "EC$"
       }
     ],
     "regions": [
@@ -4552,7 +4614,8 @@
     "currency": [
       {
         "code": "DOP",
-        "name": "Dominican peso"
+        "name": "Dominican peso",
+        "symbol": "RD$"
       }
     ],
     "regions": [
@@ -4601,7 +4664,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States dollar"
+        "name": "United States dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -4710,7 +4774,8 @@
     "currency": [
       {
         "code": "EGP",
-        "name": "Egyptian pound"
+        "name": "Egyptian pound",
+        "symbol": "E£"
       }
     ],
     "regions": [
@@ -4839,7 +4904,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States dollar"
+        "name": "United States dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -4908,7 +4974,8 @@
     "currency": [
       {
         "code": "XAF",
-        "name": "Central African CFA franc"
+        "name": "Central African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -4949,7 +5016,8 @@
     "currency": [
       {
         "code": "ERN",
-        "name": "Eritrean nakfa"
+        "name": "Eritrean nakfa",
+        "symbol": "Nkf"
       }
     ],
     "regions": [
@@ -4986,7 +5054,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -5059,7 +5128,8 @@
     "currency": [
       {
         "code": "ETB",
-        "name": "Ethiopian birr"
+        "name": "Ethiopian birr",
+        "symbol": "Br"
       }
     ],
     "regions": [
@@ -5116,7 +5186,8 @@
     "currency": [
       {
         "code": "FKP",
-        "name": "Falkland Islands pound"
+        "name": "Falkland Islands pound",
+        "symbol": "FK£"
       }
     ],
     "regions": [
@@ -5132,7 +5203,8 @@
     "currency": [
       {
         "code": "DKK",
-        "name": "Danish krone"
+        "name": "Danish krone",
+        "symbol": "kr"
       }
     ],
     "regions": [
@@ -5172,7 +5244,8 @@
     "currency": [
       {
         "code": "FJD",
-        "name": "Fijian dollar"
+        "name": "Fijian dollar",
+        "symbol": "FJ$"
       }
     ],
     "regions": [
@@ -5245,7 +5318,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -5282,7 +5356,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -5399,7 +5474,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -5415,7 +5491,8 @@
     "currency": [
       {
         "code": "XPF",
-        "name": "CFP franc"
+        "name": "CFP franc",
+        "symbol": "₣"
       }
     ],
     "regions": [
@@ -5443,7 +5520,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -5468,7 +5546,8 @@
     "currency": [
       {
         "code": "XAF",
-        "name": "Central African CFA franc"
+        "name": "Central African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -5517,7 +5596,8 @@
     "currency": [
       {
         "code": "GMD",
-        "name": "Gambian dalasi"
+        "name": "Gambian dalasi",
+        "symbol": "D"
       }
     ],
     "regions": [
@@ -5554,7 +5634,8 @@
     "currency": [
       {
         "code": "GEL",
-        "name": "Georgian lari"
+        "name": "Georgian lari",
+        "symbol": "₾"
       }
     ],
     "regions": [
@@ -5615,7 +5696,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -5692,7 +5774,8 @@
     "currency": [
       {
         "code": "GHS",
-        "name": "Ghanaian cedi"
+        "name": "Ghanaian cedi",
+        "symbol": "GH₵"
       }
     ],
     "regions": [
@@ -5762,7 +5845,8 @@
     "currency": [
       {
         "code": "GIP",
-        "name": "Gibraltar pound"
+        "name": "Gibraltar pound",
+        "symbol": "£"
       }
     ],
     "regions": [
@@ -5778,7 +5862,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -5847,7 +5932,8 @@
     "currency": [
       {
         "code": "DKK",
-        "name": "Danish krone"
+        "name": "Danish krone",
+        "symbol": "kr"
       }
     ],
     "regions": [
@@ -5876,7 +5962,8 @@
     "currency": [
       {
         "code": "XCD",
-        "name": "East Caribbean dollar"
+        "name": "East Caribbean dollar",
+        "symbol": "EC$"
       }
     ],
     "regions": [
@@ -5917,7 +6004,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -5933,7 +6021,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States dollar"
+        "name": "United States dollar",
+        "symbol": "$"
       }
     ],
 
@@ -5951,7 +6040,8 @@
     "currency": [
       {
         "code": "GTQ",
-        "name": "Guatemalan quetzal"
+        "name": "Guatemalan quetzal",
+        "symbol": "Q"
       }
     ],
     "regions": [
@@ -6052,7 +6142,8 @@
     "currency": [
       {
         "code": "GGP",
-        "name": "Guernsey Pound"
+        "name": "Guernsey Pound",
+        "symbol": "£"
       }
     ],
     "regions": [
@@ -6095,7 +6186,8 @@
     "currency": [
       {
         "code": "GNF",
-        "name": "Guinean franc"
+        "name": "Guinean franc",
+        "symbol": "FG"
       }
     ],
     "regions": [
@@ -6140,7 +6232,8 @@
     "currency": [
       {
         "code": "XOF",
-        "name": "West African CFA franc"
+        "name": "West African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -6189,7 +6282,8 @@
     "currency": [
       {
         "code": "GYD",
-        "name": "Guyanese dollar"
+        "name": "Guyanese dollar",
+        "symbol": "G$"
       }
     ],
     "regions": [
@@ -6242,7 +6336,8 @@
     "currency": [
       {
         "code": "HTG",
-        "name": "Haitian gourde"
+        "name": "Haitian gourde",
+        "symbol": "G"
       }
     ],
     "regions": [
@@ -6295,7 +6390,8 @@
     "currency": [
       {
         "code": "",
-        "name": ""
+        "name": "",
+        "symbol": ""
       }
     ],
     "regions": [
@@ -6311,7 +6407,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
 
@@ -6329,7 +6426,8 @@
     "currency": [
       {
         "code": "HNL",
-        "name": "Honduran lempira"
+        "name": "Honduran lempira",
+        "symbol": "L"
       }
     ],
     "regions": [
@@ -6414,7 +6512,8 @@
     "currency": [
       {
         "code": "HKD",
-        "name": "Hong Kong dollar"
+        "name": "Hong Kong dollar",
+        "symbol": "HK$"
       }
     ],
     "regions": [
@@ -6431,7 +6530,8 @@
     "currency": [
       {
         "code": "HUF",
-        "name": "Hungarian forint"
+        "name": "Hungarian forint",
+        "symbol": "ft"
       }
     ],
     "regions": [
@@ -6616,7 +6716,8 @@
     "currency": [
       {
         "code": "ISK",
-        "name": "Icelandic króna"
+        "name": "Icelandic króna",
+        "symbol": "kr"
       }
     ],
     "regions": [
@@ -6661,7 +6762,8 @@
     "currency": [
       {
         "code": "INR",
-        "name": "Indian rupee"
+        "name": "Indian rupee",
+        "symbol": "₹"
       }
     ],
     "regions": [
@@ -6818,7 +6920,8 @@
     "currency": [
       {
         "code": "IDR",
-        "name": "Indonesian rupiah"
+        "name": "Indonesian rupiah",
+        "symbol": "Rp"
       }
     ],
     "regions": [
@@ -6963,7 +7066,8 @@
     "currency": [
       {
         "code": "IRR",
-        "name": "Iranian rial"
+        "name": "Iranian rial",
+        "symbol": "﷼"
       }
     ],
     "regions": [
@@ -7100,7 +7204,8 @@
     "currency": [
       {
         "code": "IQD",
-        "name": "Iraqi dinar"
+        "name": "Iraqi dinar",
+        "symbol": "ع.د"
       }
     ],
     "regions": [
@@ -7185,7 +7290,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -7302,7 +7408,8 @@
     "currency": [
       {
         "code": "IMP",
-        "name": "Manx pound"
+        "name": "Manx pound",
+        "symbol": "£"
       }
     ],
     "regions": [
@@ -7318,7 +7425,8 @@
     "currency": [
       {
         "code": "ILS",
-        "name": "Israeli new shekel"
+        "name": "Israeli new shekel",
+        "symbol": "₪"
       }
     ],
     "regions": [
@@ -7355,7 +7463,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -7448,7 +7557,8 @@
     "currency": [
       {
         "code": "JMD",
-        "name": "Jamaican dollar"
+        "name": "Jamaican dollar",
+        "symbol": "J$"
       }
     ],
     "regions": [
@@ -7517,7 +7627,8 @@
     "currency": [
       {
         "code": "JPY",
-        "name": "Japanese yen"
+        "name": "Japanese yen",
+        "symbol": "¥"
       }
     ],
     "regions": [
@@ -7718,7 +7829,8 @@
     "currency": [
       {
         "code": "JEP",
-        "name": "Jersey pound"
+        "name": "Jersey pound",
+        "symbol": "£"
       }
     ],
 
@@ -7735,7 +7847,8 @@
     "currency": [
       {
         "code": "JOD",
-        "name": "Jordanian dinar"
+        "name": "Jordanian dinar",
+        "symbol": "ينار"
       }
     ],
     "regions": [
@@ -7796,7 +7909,8 @@
     "currency": [
       {
         "code": "KZT",
-        "name": "Kazakhstani tenge"
+        "name": "Kazakhstani tenge",
+        "symbol": "₸"
       }
     ],
     "regions": [
@@ -7872,7 +7986,8 @@
     "currency": [
       {
         "code": "KES",
-        "name": "Kenyan shilling"
+        "name": "Kenyan shilling",
+        "symbol": "KSh"
       }
     ],
     "regions": [
@@ -8073,7 +8188,8 @@
     "currency": [
       {
         "code": "AUD",
-        "name": "Australian dollar"
+        "name": "Australian dollar",
+        "symbol": "A$"
       }
     ],
     "regions": [
@@ -8170,7 +8286,8 @@
     "currency": [
       {
         "code": "",
-        "name": ""
+        "name": "",
+        "symbol": ""
       }
     ],
     "regions": [
@@ -8228,7 +8345,8 @@
     "currency": [
       {
         "code": "KRW",
-        "name": "South Korean won"
+        "name": "South Korean won",
+        "symbol": "₩"
       }
     ],
     "regions": [
@@ -8310,7 +8428,8 @@
     "currency": [
       {
         "code": "KWD",
-        "name": "Kuwaiti dinar"
+        "name": "Kuwaiti dinar",
+        "symbol": "ك"
       }
     ],
     "regions": [
@@ -8347,7 +8466,8 @@
     "currency": [
       {
         "code": "KGS",
-        "name": "Kyrgyzstani som"
+        "name": "Kyrgyzstani som",
+        "symbol": "som"
       }
     ],
     "regions": [
@@ -8392,7 +8512,8 @@
     "currency": [
       {
         "code": "LAK",
-        "name": "Lao kip"
+        "name": "Lao kip",
+        "symbol": "₭"
       }
     ],
     "regions": [
@@ -8473,7 +8594,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -8962,7 +9084,8 @@
     "currency": [
       {
         "code": "LBP",
-        "name": "Lebanese pound"
+        "name": "Lebanese pound",
+        "symbol": "ل.ل"
       }
     ],
     "regions": [
@@ -9007,7 +9130,8 @@
     "currency": [
       {
         "code": "LSL",
-        "name": "Lesotho loti"
+        "name": "Lesotho loti",
+        "symbol": "L"
       }
     ],
     "regions": [
@@ -9060,7 +9184,8 @@
     "currency": [
       {
         "code": "LRD",
-        "name": "Liberian dollar"
+        "name": "Liberian dollar",
+        "symbol": "LD$"
       }
     ],
     "regions": [
@@ -9133,7 +9258,8 @@
     "currency": [
       {
         "code": "LYD",
-        "name": "Libyan dinar"
+        "name": "Libyan dinar",
+        "symbol": "LD"
       }
     ],
     "regions": [
@@ -9234,7 +9360,8 @@
     "currency": [
       {
         "code": "CHF",
-        "name": "Swiss franc"
+        "name": "Swiss franc",
+        "symbol": "CHF"
       }
     ],
     "regions": [
@@ -9291,7 +9418,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -9344,7 +9472,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -9405,7 +9534,8 @@
     "currency": [
       {
         "code": "MOP",
-        "name": "Macanese pataca"
+        "name": "Macanese pataca",
+        "symbol": "MOP"
       }
     ],
     "regions": [
@@ -9421,7 +9551,8 @@
     "currency": [
       {
         "code": "MKD",
-        "name": "Macedonian denar"
+        "name": "Macedonian denar",
+        "symbol": "ден"
       }
     ],
     "regions": [
@@ -9718,7 +9849,8 @@
     "currency": [
       {
         "code": "MGA",
-        "name": "Malagasy ariary"
+        "name": "Malagasy ariary",
+        "symbol": "Ar"
       }
     ],
     "regions": [
@@ -9755,7 +9887,8 @@
     "currency": [
       {
         "code": "MWK",
-        "name": "Malawian kwacha"
+        "name": "Malawian kwacha",
+        "symbol": "K"
       }
     ],
     "regions": [
@@ -9876,7 +10009,8 @@
     "currency": [
       {
         "code": "MYR",
-        "name": "Malaysian ringgit"
+        "name": "Malaysian ringgit",
+        "symbol": "RM"
       }
     ],
     "regions": [
@@ -9953,7 +10087,8 @@
     "currency": [
       {
         "code": "MVR",
-        "name": "Maldivian rufiyaa"
+        "name": "Maldivian rufiyaa",
+        "symbol": "MRf"
       }
     ],
     "regions": [
@@ -10050,7 +10185,8 @@
     "currency": [
       {
         "code": "XOF",
-        "name": "West African CFA franc"
+        "name": "West African CFA franc",
+        "symbol": "CFA"
       }
     ],
 
@@ -10100,7 +10236,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -10385,7 +10522,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States Dollar"
+        "name": "United States Dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -10486,7 +10624,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -10502,7 +10641,8 @@
     "currency": [
       {
         "code": "MRU",
-        "name": "Mauritanian ouguiya"
+        "name": "Mauritanian ouguiya",
+        "symbol": "UM"
       }
     ],
     "regions": [
@@ -10575,7 +10715,8 @@
     "currency": [
       {
         "code": "MUR",
-        "name": "Mauritian rupee"
+        "name": "Mauritian rupee",
+        "symbol": "₨"
       }
     ],
     "regions": [
@@ -10652,7 +10793,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -10733,7 +10875,8 @@
     "currency": [
       {
         "code": "MXN",
-        "name": "Mexican peso"
+        "name": "Mexican peso",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -10874,7 +11017,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States Dollar"
+        "name": "United States Dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -10903,7 +11047,8 @@
     "currency": [
       {
         "code": "MDL",
-        "name": "Moldovan leu"
+        "name": "Moldovan leu",
+        "symbol": "L"
       }
     ],
     "regions": [
@@ -11064,7 +11209,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -11145,7 +11291,8 @@
     "currency": [
       {
         "code": "MNT",
-        "name": "Mongolian tugrik"
+        "name": "Mongolian tugrik",
+        "symbol": "₮"
       }
     ],
     "regions": [
@@ -11238,7 +11385,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -11343,7 +11491,8 @@
     "currency": [
       {
         "code": "XCD",
-        "name": "East Caribbean dollar"
+        "name": "East Caribbean dollar",
+        "symbol": "EC$"
       }
     ],
     "regions": [
@@ -11365,7 +11514,8 @@
     "currency": [
       {
         "code": "MAD",
-        "name": "Moroccan dirham"
+        "name": "Moroccan dirham",
+        "symbol": "DH"
       }
     ],
     "regions": [
@@ -11438,7 +11588,8 @@
     "currency": [
       {
         "code": "MZN",
-        "name": "Mozambican metical"
+        "name": "Mozambican metical",
+        "symbol": "MT"
       }
     ],
     "regions": [
@@ -11495,7 +11646,8 @@
     "currency": [
       {
         "code": "MMK",
-        "name": "Burmese kyat"
+        "name": "Burmese kyat",
+        "symbol": "K"
       }
     ],
     "regions": [
@@ -11568,7 +11720,8 @@
     "currency": [
       {
         "code": "NAD",
-        "name": "Namibian dollar"
+        "name": "Namibian dollar",
+        "symbol": "N$"
       }
     ],
     "regions": [
@@ -11637,7 +11790,8 @@
     "currency": [
       {
         "code": "AUD",
-        "name": "Australian dollar"
+        "name": "Australian dollar",
+        "symbol": "A$"
       }
     ],
     "regions": [
@@ -11706,7 +11860,8 @@
     "currency": [
       {
         "code": "NPR",
-        "name": "Nepalese rupee"
+        "name": "Nepalese rupee",
+        "symbol": "Rs"
       }
     ],
     "regions": [
@@ -11775,7 +11930,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -11836,7 +11992,8 @@
     "currency": [
       {
         "code": "XPF",
-        "name": "CFP franc"
+        "name": "CFP franc",
+        "symbol": "₣"
       }
     ],
     "regions": [
@@ -11858,7 +12015,8 @@
     "currency": [
       {
         "code": "NZD",
-        "name": "New Zealand dollar"
+        "name": "New Zealand dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -11939,7 +12097,8 @@
     "currency": [
       {
         "code": "NIO",
-        "name": "Nicaraguan córdoba"
+        "name": "Nicaraguan córdoba",
+        "symbol": "C$"
       }
     ],
     "regions": [
@@ -12020,7 +12179,8 @@
     "currency": [
       {
         "code": "XOF",
-        "name": "West African CFA franc"
+        "name": "West African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -12065,7 +12225,8 @@
     "currency": [
       {
         "code": "NGN",
-        "name": "Nigerian naira"
+        "name": "Nigerian naira",
+        "symbol": "₦"
       }
     ],
     "regions": [
@@ -12226,7 +12387,8 @@
     "currency": [
       {
         "code": "NZD",
-        "name": "New Zealand dollar"
+        "name": "New Zealand dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -12242,7 +12404,8 @@
     "currency": [
       {
         "code": "AUD",
-        "name": "Australian dollar"
+        "name": "Australian dollar",
+        "symbol": "A$"
       }
     ],
     "regions": [
@@ -12258,7 +12421,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States Dollar"
+        "name": "United States Dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -12283,7 +12447,8 @@
     "currency": [
       {
         "code": "NOK",
-        "name": "Norwegian krone"
+        "name": "Norwegian krone",
+        "symbol": "kr"
       }
     ],
     "regions": [
@@ -12380,7 +12545,8 @@
     "currency": [
       {
         "code": "OMR",
-        "name": "Omani rial"
+        "name": "Omani rial",
+        "symbol": "ر.ع"
       }
     ],
     "regions": [
@@ -12437,7 +12603,8 @@
     "currency": [
       {
         "code": "PKR",
-        "name": "Pakistani rupee"
+        "name": "Pakistani rupee",
+        "symbol": "Rs"
       }
     ],
     "regions": [
@@ -12482,7 +12649,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States Dollar"
+        "name": "United States Dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -12559,7 +12727,8 @@
     "currency": [
       {
         "code": "ILS",
-        "name": "Israeli new sheqel"
+        "name": "Israeli new sheqel",
+        "symbol": "₪"
       }
     ],
     "regions": [
@@ -12636,7 +12805,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States Dollar"
+        "name": "United States Dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -12701,7 +12871,8 @@
     "currency": [
       {
         "code": "PGK",
-        "name": "Papua New Guinean kina"
+        "name": "Papua New Guinean kina",
+        "symbol": "K"
       }
     ],
     "regions": [
@@ -12802,7 +12973,8 @@
     "currency": [
       {
         "code": "PYG",
-        "name": "Paraguayan guaraní"
+        "name": "Paraguayan guaraní",
+        "symbol": "₲"
       }
     ],
     "regions": [
@@ -12883,7 +13055,8 @@
     "currency": [
       {
         "code": "PEN",
-        "name": "Peruvian nuevo sol"
+        "name": "Peruvian nuevo sol",
+        "symbol": "S/."
       }
     ],
     "regions": [
@@ -13000,7 +13173,8 @@
     "currency": [
       {
         "code": "PHP",
-        "name": "Philippine peso"
+        "name": "Philippine peso",
+        "symbol": "₱"
       }
     ],
     "regions": [
@@ -13333,7 +13507,8 @@
     "currency": [
       {
         "code": "NZD",
-        "name": "New Zealand dollar"
+        "name": "New Zealand dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -13349,7 +13524,8 @@
     "currency": [
       {
         "code": "PLN",
-        "name": "Polish złoty"
+        "name": "Polish złoty",
+        "symbol": "zł"
       }
     ],
     "regions": [
@@ -13426,7 +13602,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -13519,7 +13696,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States Dollar"
+        "name": "United States Dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -13751,7 +13929,8 @@
     "currency": [
       {
         "code": "QAR",
-        "name": "Qatari riyal"
+        "name": "Qatari riyal",
+        "symbol": "ر.ق"
       }
     ],
     "regions": [
@@ -13792,7 +13971,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -13808,7 +13988,8 @@
     "currency": [
       {
         "code": "RON",
-        "name": "Romanian leu"
+        "name": "Romanian leu",
+        "symbol": "lei"
       }
     ],
     "regions": [
@@ -13985,7 +14166,8 @@
     "currency": [
       {
         "code": "RUB",
-        "name": "Russian ruble"
+        "name": "Russian ruble",
+        "symbol": "₽"
       }
     ],
     "regions": [
@@ -14330,7 +14512,8 @@
     "currency": [
       {
         "code": "RWF",
-        "name": "Rwandan franc"
+        "name": "Rwandan franc",
+        "symbol": "R₣"
       }
     ],
     "regions": [
@@ -14363,7 +14546,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -14384,7 +14568,8 @@
     "currency": [
       {
         "code": "SHP",
-        "name": "Saint Helena pound"
+        "name": "Saint Helena pound",
+        "symbol": "£"
       }
     ],
     "regions": [
@@ -14409,7 +14594,8 @@
     "currency": [
       {
         "code": "XCD",
-        "name": "East Caribbean dollar"
+        "name": "East Caribbean dollar",
+        "symbol": "EC$"
       }
     ],
     "regions": [
@@ -14430,7 +14616,8 @@
     "currency": [
       {
         "code": "XCD",
-        "name": "East Caribbean dollar"
+        "name": "East Caribbean dollar",
+        "symbol": "EC$"
       }
     ],
     "regions": [
@@ -14483,7 +14670,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -14499,7 +14687,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -14518,7 +14707,8 @@
     "currency": [
       {
         "code": "XCD",
-        "name": "East Caribbean dollar"
+        "name": "East Caribbean dollar",
+        "symbol": "EC$"
       }
     ],
     "regions": [
@@ -14555,7 +14745,8 @@
     "currency": [
       {
         "code": "WST",
-        "name": "Samoan tālā"
+        "name": "Samoan tālā",
+        "symbol": "WS$"
       }
     ],
     "regions": [
@@ -14612,7 +14803,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -14661,7 +14853,8 @@
     "currency": [
       {
         "code": "STN",
-        "name": "São Tomé and Príncipe dobra"
+        "name": "São Tomé and Príncipe dobra",
+        "symbol": "Db"
       }
     ],
     "regions": [
@@ -14682,7 +14875,8 @@
     "currency": [
       {
         "code": "SAR",
-        "name": "Saudi riyal"
+        "name": "Saudi riyal",
+        "symbol": "SR"
       }
     ],
     "regions": [
@@ -14747,7 +14941,8 @@
     "currency": [
       {
         "code": "XOF",
-        "name": "West African CFA franc"
+        "name": "West African CFA franc",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -14816,7 +15011,8 @@
     "currency": [
       {
         "code": "RSD",
-        "name": "Serbian dinar"
+        "name": "Serbian dinar",
+        "symbol": "RSD"
       }
     ],
     "regions": [
@@ -14949,7 +15145,8 @@
     "currency": [
       {
         "code": "SCR",
-        "name": "Seychellois rupee"
+        "name": "Seychellois rupee",
+        "symbol": "SR"
       }
     ],
     "regions": [
@@ -15062,7 +15259,8 @@
     "currency": [
       {
         "code": "SLE",
-        "name": "Sierra Leonean leone"
+        "name": "Sierra Leonean leone",
+        "symbol": "Le"
       }
     ],
     "regions": [
@@ -15091,7 +15289,8 @@
     "currency": [
       {
         "code": "SGD",
-        "name": "Singapore dollar"
+        "name": "Singapore dollar",
+        "symbol": "S$"
       }
     ],
     "regions": [
@@ -15124,7 +15323,8 @@
     "currency": [
       {
         "code": "ANG",
-        "name": "Netherlands Antillean guilder"
+        "name": "Netherlands Antillean guilder",
+        "symbol": "ƒ"
       }
     ],
     "regions": [
@@ -15140,7 +15340,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -15185,7 +15386,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -16022,7 +16224,8 @@
     "currency": [
       {
         "code": "SBD",
-        "name": "Solomon Islands dollar"
+        "name": "Solomon Islands dollar",
+        "symbol": "SI$"
       }
     ],
     "regions": [
@@ -16075,7 +16278,8 @@
     "currency": [
       {
         "code": "SOS",
-        "name": "Somali shilling"
+        "name": "Somali shilling",
+        "symbol": "Sh.So."
       }
     ],
     "regions": [
@@ -16160,7 +16364,8 @@
     "currency": [
       {
         "code": "ZAR",
-        "name": "South African rand"
+        "name": "South African rand",
+        "symbol": "R"
       }
     ],
     "regions": [
@@ -16209,7 +16414,8 @@
     "currency": [
       {
         "code": "GBP",
-        "name": "Pound sterling"
+        "name": "Pound sterling",
+        "symbol": "£"
       }
     ],
     "regions": [
@@ -16246,7 +16452,8 @@
     "currency": [
       {
         "code": "SSP",
-        "name": "South Sudanese pound"
+        "name": "South Sudanese pound",
+        "symbol": "SS£"
       }
     ],
     "regions": [
@@ -16299,7 +16506,8 @@
     "currency": [
       {
         "code": "EUR",
-        "name": "European euro"
+        "name": "European euro",
+        "symbol": "€"
       }
     ],
     "regions": [
@@ -16520,7 +16728,8 @@
     "currency": [
       {
         "code": "LKR",
-        "name": "Sri Lankan rupee"
+        "name": "Sri Lankan rupee",
+        "symbol": "Rs"
       }
     ],
     "regions": [
@@ -16569,7 +16778,8 @@
     "currency": [
       {
         "code": "SDG",
-        "name": "Sudanese pound"
+        "name": "Sudanese pound",
+        "symbol": "SDG"
       }
     ],
     "regions": [
@@ -16654,7 +16864,8 @@
     "currency": [
       {
         "code": "SRD",
-        "name": "Surinamese dollar"
+        "name": "Surinamese dollar",
+        "symbol": "Sr$"
       }
     ],
     "regions": [
@@ -16707,7 +16918,8 @@
     "currency": [
       {
         "code": "SZL",
-        "name": "Swazi lilangeni"
+        "name": "Swazi lilangeni",
+        "symbol": "E"
       }
     ],
     "regions": [
@@ -16736,7 +16948,8 @@
     "currency": [
       {
         "code": "SEK",
-        "name": "Swedish krona"
+        "name": "Swedish krona",
+        "symbol": "kr"
       }
     ],
     "regions": [
@@ -16833,7 +17046,8 @@
     "currency": [
       {
         "code": "CHF",
-        "name": "Swiss franc"
+        "name": "Swiss franc",
+        "symbol": "CHF"
       }
     ],
     "regions": [
@@ -16950,7 +17164,8 @@
     "currency": [
       {
         "code": "SYP",
-        "name": "Syrian pound"
+        "name": "Syrian pound",
+        "symbol": "£S"
       }
     ],
     "regions": [
@@ -17019,7 +17234,8 @@
     "currency": [
       {
         "code": "TWD",
-        "name": "New Taiwan dollar"
+        "name": "New Taiwan dollar",
+        "symbol": "NT$"
       }
     ],
     "regions": [
@@ -17112,7 +17328,8 @@
     "currency": [
       {
         "code": "TJS",
-        "name": "Tajikistani somoni"
+        "name": "Tajikistani somoni",
+        "symbol": "TJS"
       }
     ],
     "regions": [
@@ -17141,7 +17358,8 @@
     "currency": [
       {
         "code": "TZS",
-        "name": "Tanzanian shilling"
+        "name": "Tanzanian shilling",
+        "symbol": "TSh"
       }
     ],
     "regions": [
@@ -17258,7 +17476,8 @@
     "currency": [
       {
         "code": "THB",
-        "name": "Thai baht"
+        "name": "Thai baht",
+        "symbol": "฿"
       }
     ],
     "regions": [
@@ -17579,7 +17798,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States dollar"
+        "name": "United States dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -17644,7 +17864,8 @@
     "currency": [
       {
         "code": "XOF",
-        "name": "CFA franc BCEAO"
+        "name": "CFA franc BCEAO",
+        "symbol": "CFA"
       }
     ],
     "regions": [
@@ -17677,7 +17898,8 @@
     "currency": [
       {
         "code": "",
-        "name": "New Zealand dollar"
+        "name": "New Zealand dollar",
+        "symbol": "$"
       }
     ],
 
@@ -17700,7 +17922,8 @@
     "currency": [
       {
         "code": "TOP",
-        "name": "Tongan paʻanga"
+        "name": "Tongan paʻanga",
+        "symbol": "T$"
       }
     ],
     "regions": [
@@ -17733,7 +17956,8 @@
     "currency": [
       {
         "code": "TTD",
-        "name": "Trinidad and Tobago dollar"
+        "name": "Trinidad and Tobago dollar",
+        "symbol": "TT$"
       }
     ],
     "regions": [
@@ -17806,7 +18030,8 @@
     "currency": [
       {
         "code": "TND",
-        "name": "Tunisian dinar"
+        "name": "Tunisian dinar",
+        "symbol": "د.ت"
       }
     ],
     "regions": [
@@ -17911,7 +18136,8 @@
     "currency": [
       {
         "code": "TRY",
-        "name": "Turkish lira"
+        "name": "Turkish lira",
+        "symbol": "₺"
       }
     ],
     "regions": [
@@ -18248,7 +18474,8 @@
     "currency": [
       {
         "code": "TMT",
-        "name": "Turkmenistan manat"
+        "name": "Turkmenistan manat",
+        "symbol": "m"
       }
     ],
     "regions": [
@@ -18285,7 +18512,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States dollar"
+        "name": "United States dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -18301,7 +18529,8 @@
     "currency": [
       {
         "code": "AUD",
-        "name": "Australian dollar"
+        "name": "Australian dollar",
+        "symbol": "A$"
       }
     ],
     "regions": [
@@ -18346,7 +18575,8 @@
     "currency": [
       {
         "code": "UGX",
-        "name": "Ugandan shilling"
+        "name": "Ugandan shilling",
+        "symbol": "USh"
       }
     ],
     "regions": [
@@ -18679,7 +18909,8 @@
     "currency": [
       {
         "code": "UAH",
-        "name": "Ukrainian hryvnia"
+        "name": "Ukrainian hryvnia",
+        "symbol": "₴"
       }
     ],
     "regions": [
@@ -18800,7 +19031,8 @@
     "currency": [
       {
         "code": "AED",
-        "name": "United Arab Emirates dirham"
+        "name": "United Arab Emirates dirham",
+        "symbol": "AED"
       }
     ],
     "regions": [
@@ -18841,7 +19073,8 @@
     "currency": [
       {
         "code": "GBP",
-        "name": "Pound sterling"
+        "name": "Pound sterling",
+        "symbol": "£"
       }
     ],
     "regions": [
@@ -19722,7 +19955,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States Dollar"
+        "name": "United States Dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -19983,7 +20217,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States Dollar"
+        "name": "United States Dollar",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -20040,7 +20275,8 @@
     "currency": [
       {
         "code": "UYU",
-        "name": "Uruguayan Peso"
+        "name": "Uruguayan Peso",
+        "symbol": "$U"
       }
     ],
     "regions": [
@@ -20129,7 +20365,8 @@
     "currency": [
       {
         "code": "UZS",
-        "name": "Uzbekistani som"
+        "name": "Uzbekistani som",
+        "symbol": "som"
       }
     ],
     "regions": [
@@ -20198,7 +20435,8 @@
     "currency": [
       {
         "code": "VUV",
-        "name": "Vanuatu vatu"
+        "name": "Vanuatu vatu",
+        "symbol": "VT"
       }
     ],
     "regions": [
@@ -20235,7 +20473,8 @@
     "currency": [
       {
         "code": "VEF",
-        "name": "Venezuelan bolívar"
+        "name": "Venezuelan bolívar",
+        "symbol": "Bs."
       }
     ],
     "regions": [
@@ -20348,7 +20587,8 @@
     "currency": [
       {
         "code": "VND",
-        "name": "Vietnamese đồng"
+        "name": "Vietnamese đồng",
+        "symbol": "₫"
       }
     ],
     "regions": [
@@ -20553,7 +20793,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States Dollar"
+        "name": "United States Dollar",
+        "symbol": "$"
       }
     ],
 
@@ -20583,7 +20824,8 @@
     "currency": [
       {
         "code": "",
-        "name": ""
+        "name": "",
+        "symbol": "$"
       }
     ],
     "regions": [
@@ -20608,7 +20850,8 @@
     "currency": [
       {
         "code": "XPF",
-        "name": "CFP franc"
+        "name": "CFP franc",
+        "symbol": "₣"
       }
     ],
     "regions": [
@@ -20633,7 +20876,8 @@
     "currency": [
       {
         "code": "MAD",
-        "name": "Moroccan dirham"
+        "name": "Moroccan dirham",
+        "symbol": "DH"
       }
     ],
 
@@ -20667,7 +20911,8 @@
     "currency": [
       {
         "code": "YER",
-        "name": "Yemeni rial"
+        "name": "Yemeni rial",
+        "symbol": "﷼"
       }
     ],
     "regions": [
@@ -20760,7 +21005,8 @@
     "currency": [
       {
         "code": "ZMW",
-        "name": "Zambian kwacha"
+        "name": "Zambian kwacha",
+        "symbol": "K"
       }
     ],
     "regions": [
@@ -20809,7 +21055,8 @@
     "currency": [
       {
         "code": "USD",
-        "name": "United States dollar"
+        "name": "United States dollar",
+        "symbol": "$"
       }
     ],
     "regions": [

@@ -13,6 +13,7 @@ vi.mock('fs', () => ({
           {
             code: 'EUR',
             name: 'European euro',
+            symbol: '€',
           },
         ],
         regions: [
