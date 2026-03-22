@@ -1,24 +1,23 @@
 # CountryData.js
 
-## Overview
-
-`CountryData.js` is a comprehensive Node.js package designed to provide easy access to detailed country information. It supports both JavaScript and TypeScript, making it versatile for various project needs. Whether you're building a web application, API, or any other project that requires country data, this package offers a simple and efficient solution.
-
-## Features
-
-- 🌍 **Comprehensive Country Data**: Access detailed information, including `country names`, `short codes`, `phone codes`, `regions`, and `flags`.
-- ⚡ **JavaScript and TypeScript Support**: Use the package seamlessly in both JavaScript and TypeScript projects.
-- 🔄 **Asynchronous Operations**: All methods return promises for efficient data handling.
-- 📦 **Lightweight & Efficient**: Minimal dependencies to keep your project lean.
-- 🏗️ **Easy Integration**: Seamlessly integrates with any Node.js project using ES modules and commonJS
+`CountryData.js` is an offline Node.js library that gives you instant access to world country, state/province, and city data — with no API calls, no network required, and full TypeScript support.
 
 ## Status & Quality
 
-| 🔄 CI Status                                                                                                                                                            | 📊 Code Coverage                                                                                                                                            | 🏆 Quality Gate Status                                                                                                                                                                                    |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🔄 CI Status | 📊 Code Coverage | 🏆 Quality Gate |
+| --- | --- | --- |
 | [![CI](https://github.com/Clifftech123/CountryData.js/actions/workflows/main.yml/badge.svg)](https://github.com/Clifftech123/CountryData.js/actions/workflows/main.yml) | [![codecov](https://codecov.io/github/Clifftech123/CountryData.js/graph/badge.svg?token=42Y3GT9MKN)](https://codecov.io/github/Clifftech123/CountryData.js) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Clifftech123_CountryData.js&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Clifftech123_CountryData.js) |
 
 ![NPM Downloads](https://img.shields.io/npm/d18m/countrydata.js)
+
+## Features
+
+- **250 countries** — name, ISO code, phone code, flag emoji, currency code, latitude/longitude, timezones, and regions
+- **4 963 states & provinces** — with ISO codes and coordinates
+- **148 000+ cities** — linked to their country and state, lazily loaded
+- Synchronous API with O(1) lookups via Map indexes
+- Works in both **ESM** and **CommonJS** environments
+- Full **TypeScript** types included
 
 ## Installation
 
@@ -26,68 +25,233 @@
 npm install countrydata.js
 ```
 
-## Usage
+## Quick Start
 
-### JavaScript Example
+### Module API (recommended)
 
-```javascript
-import { CountryHelper } from 'countrydata.js';
+```typescript
+import { Country, State, City, Region, Timezone } from 'countrydata.js';
 
-const countryHelper = new CountryHelper();
+// Countries
+const all    = Country.getAllCountries();
+const us     = Country.getCountryByCode('US');
+const byPhone = Country.getCountryByPhoneCode('+233');
+const flag   = Country.getCountryFlag('GH');           // '🇬🇭'
+const sorted = Country.sortCountries();
 
-// Get all countries
-countryHelper.getCountries().then(console.log);
+// States / Provinces
+const states = State.getStatesOfCountry('US');
+const ca     = State.getStateByCodeAndCountry('CA', 'US');
+const sorted = State.sortStates(states);
 
-// Get country by short code
-countryHelper.getCountryByShortCode('US').then(console.log);
+// Cities (lazily loaded on first call)
+const cities = City.getCitiesOfState('US', 'CA');
+const ghCities = City.getCitiesOfCountry('GH');
+
+// Regions
+const regions = Region.getRegionsByCountryCode('US');
+const region  = Region.getRegionByShortCode('US', 'CA');
+
+// Timezones
+const tzList  = Timezone.getTimezonesByCountryCode('US');
+const allTz   = Timezone.getAllTimezones();
+const countries = Timezone.getCountriesByTimezone('America/New_York');
 ```
 
-### TypeScript Example
+### Class API
 
 ```typescript
 import { CountryHelper } from 'countrydata.js';
 
-const countryHelper = new CountryHelper();
+const helper = new CountryHelper();
 
-// Get all countries
-const allCountries = await countryHelper.getCountries();
-console.log(allCountries);
-
-// Get country by short code
-const countryByCode = await countryHelper.getCountryByShortCode('US');
-console.log(countryByCode);
+const us      = helper.getCountryByShortCode('US');
+const flag    = helper.getCountryFlag('GH');                 // '🇬🇭'
+const code    = helper.getCountryPhoneCodeByShortCode('GH'); // '+233'
+const states  = helper.getStatesOfCountry('US');
+const cities  = helper.getCitiesOfState('US', 'CA');
+const regions = helper.getRegionsByCountryShortCode('US');
 ```
 
-## Sample Implementation
+### Method chaining via model objects
 
-If you want to see a sample implementation of this package further in both javascript and typescript , you can check out the [Sample](https://github.com/Clifftech123/CountryData.js/tree/main/Sample) folder.
+```typescript
+const us = Country.getCountryByCode('US');
 
-### Usage with Express.js
+const states = us?.getStates?.();          // IState[] for the US
+const cities = us?.getCities?.();          // ICity[]  for the US
 
-This package can be used in an Express.js application to create a REST API for country data. Check the [example folder](https://github.com/Clifftech123/CountryData.js/tree/main/Sample) for sample implementations in both JavaScript and TypeScript.
+const ca = State.getStateByCodeAndCountry('CA', 'US');
+const caCities = ca?.getCities?.();        // ICity[] for California
+```
 
 ## API Reference
 
-### `CountryHelper` Methods
+All methods are **synchronous** and return data directly — no `await`, no `.then()`.
 
-| Method                                                                           | Description                                                                                       |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **`getCountries(): Promise<Country[]>`**                                         | Returns an array of all countries.                                                                |
-| **`getCountryByShortCode(shortCode: string): Promise<Country \| null>`**         | Returns a country object based on the short code (e.g., "US"), or `null` if not found.            |
-| **`getRegionsByCountryShortCode(shortCode: string): Promise<Region[]>`**         | Returns an array of regions for the specified country short code (e.g., "US").                    |
-| **`getCountryByPhoneCode(phoneCode: string): Promise<Country \| null>`**         | Returns a country object based on the phone code (e.g., "1" for the US), or `null` if not found.  |
-| **`getCountryPhoneCodeByShortCode(shortCode: string): Promise<string \| null>`** | Returns the phone code of a country based on the short code (e.g., "US"), or `null` if not found. |
+### `Country`
+
+| Method | Returns | Description |
+| --- | --- | --- |
+| `getAllCountries()` | `ICountry[]` | All 250 countries |
+| `getCountryByCode(code)` | `ICountry \| undefined` | Find by ISO code (e.g. `"US"`) |
+| `getCountryByPhoneCode(code)` | `ICountry \| undefined` | Find by phone code (e.g. `"+1"`) |
+| `getCountryFlag(code)` | `string` | Emoji flag (e.g. `"🇺🇸"`) |
+| `sortCountries(countries?)` | `ICountry[]` | Alphabetical copy (defaults to all) |
+
+### `State`
+
+| Method | Returns | Description |
+| --- | --- | --- |
+| `getAllStates()` | `IState[]` | All 4 963 states worldwide |
+| `getStatesOfCountry(countryCode)` | `IState[]` | States for one country |
+| `getStateByCodeAndCountry(stateCode, countryCode)` | `IState \| undefined` | Single state lookup |
+| `sortStates(states?)` | `IState[]` | Alphabetical copy (defaults to all) |
+
+### `City`
+
+> Cities are lazily loaded on first call (~148 000 entries).
+
+| Method | Returns | Description |
+| --- | --- | --- |
+| `getAllCities()` | `ICity[]` | Every city in the dataset |
+| `getCitiesOfCountry(countryCode)` | `ICity[]` | Cities for one country |
+| `getCitiesOfState(countryCode, stateCode)` | `ICity[]` | Cities for one state |
+| `sortCities(cities?)` | `ICity[]` | Sorted by country → state → name |
+
+### `Region`
+
+| Method | Returns | Description |
+| --- | --- | --- |
+| `getRegionsByCountryCode(countryCode)` | `IRegion[]` | All regions for a country |
+| `getRegionByShortCode(countryCode, shortCode)` | `IRegion \| undefined` | Single region lookup |
+| `sortRegions(regions)` | `IRegion[]` | Alphabetical copy |
+
+### `Timezone`
+
+| Method | Returns | Description |
+| --- | --- | --- |
+| `getAllTimezones()` | `ITimezone[]` | Every unique timezone in the dataset |
+| `getTimezonesByCountryCode(countryCode)` | `ITimezone[]` | Timezones for one country |
+| `getCountriesByTimezone(zoneName)` | `ICountry[]` | Countries that observe a given timezone |
+
+### `CountryHelper` class
+
+Wraps the module functions above into a class. All module methods are available as instance methods with equivalent names.
+
+## TypeScript Types
+
+```typescript
+import type { ICountry, IState, ICity, IRegion, ITimezone } from 'countrydata.js';
+
+interface ICountry {
+  countryName: string;
+  countryShortCode: string;
+  phoneCode: string;
+  countryFlag: string;
+  currencyCode?: string;
+  latitude?: string;
+  longitude?: string;
+  timezones?: ITimezone[];
+  regions: IRegion[];
+  getStates?(): IState[];
+  getCities?(): ICity[];
+}
+
+interface IState {
+  name: string;
+  isoCode: string;
+  countryCode: string;
+  latitude?: string | null;
+  longitude?: string | null;
+  getCities?(): ICity[];
+}
+
+interface ICity {
+  name: string;
+  countryCode: string;
+  stateCode: string;
+  latitude?: string | null;
+  longitude?: string | null;
+}
+
+interface IRegion {
+  name: string;
+  shortCode: string;
+}
+
+interface ITimezone {
+  zoneName: string;
+  gmtOffset: number;
+  gmtOffsetName: string;
+  abbreviation: string;
+  tzName: string;
+}
+```
+
+## Examples
+
+### Country details
+
+```typescript
+const gh = Country.getCountryByCode('GH');
+// {
+//   countryName: 'Ghana',
+//   countryShortCode: 'GH',
+//   phoneCode: '+233',
+//   countryFlag: '🇬🇭',
+//   currencyCode: 'GHS',
+//   latitude: '8.00000000',
+//   longitude: '-2.00000000',
+//   timezones: [{ zoneName: 'Africa/Accra', gmtOffset: 0, ... }],
+//   regions: [...]
+// }
+```
+
+### Country → States → Cities
+
+```typescript
+const states = State.getStatesOfCountry('GH');
+// [{ name: 'Ashanti Region', isoCode: 'AH', countryCode: 'GH', ... }, ...]
+
+const cities = City.getCitiesOfState('GH', 'AH');
+// [{ name: 'Kumasi', countryCode: 'GH', stateCode: 'AH', ... }, ...]
+```
+
+### Use with Express.js
+
+```typescript
+import express from 'express';
+import { Country, State, City } from 'countrydata.js';
+
+const app = express();
+
+app.get('/countries',         (_, res) => res.json(Country.getAllCountries()));
+app.get('/states/:code',      (req, res) => res.json(State.getStatesOfCountry(req.params.code)));
+app.get('/cities/:cc/:state', (req, res) => res.json(City.getCitiesOfState(req.params.cc, req.params.state)));
+
+app.listen(3000);
+```
+
+See the [Sample](https://github.com/Clifftech123/CountryData.js/tree/main/Sample) folder for more complete examples.
 
 ## Contributing
 
-We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, or request features.
+Contributions are welcome! The data lives in three flat JSON files in the `data/` folder:
+
+- `data/countries.json` — country records
+- `data/states.json` — state/province records
+- `data/cities.json` — city records (array-of-arrays format)
+
+**To update data or fix an entry:**
+
+1. Edit the relevant file in `data/`
+2. Run `npm run build:data` to re-sort and minify
+3. Run `npm test` to verify nothing broke
+4. Submit a PR
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-If you encounter any issues or have questions, please open an issue on our GitHub repository or contact us directly through our support channels.
-
-🚀 Get started today with `CountryData.js` and simplify your country data management!
+MIT — see [LICENSE](LICENSE) for details.

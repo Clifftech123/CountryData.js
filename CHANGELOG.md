@@ -1,5 +1,17 @@
 # countrydata.js
 
+## 2.0.0
+
+### Major Changes
+
+- **State & Province support**: Added `getAllStates()`, `getStatesOfCountry(countryCode)`, `getStateByCodeAndCountry(stateCode, countryCode)`, and `sortStates()` — covering 4 963 states and provinces worldwide.
+- **City support**: Added `getAllCities()`, `getCitiesOfCountry(countryCode)`, `getCitiesOfState(countryCode, stateCode)`, and `sortCities()` — covering 148 000+ cities, lazily loaded on first use.
+- **Enriched country data**: Countries now include `latitude`, `longitude`, `currencyCode`, and `timezones` (full timezone objects with GMT offset, abbreviation, and zone name).
+- **New types exported**: `State`, `City`, and `Timezone` are now exported from the package.
+- **Sort helpers**: `sortCountries()`, `sortStates()`, and `sortCities()` added for alphabetical ordering.
+- **Data folder**: Source data reorganised into a per-country `data/` folder (one directory per country, one per state) to make community contributions easy. Two scripts added — `npm run generate:data` and `npm run build:data` — to convert between the source folder and compiled `src/*.json` files.
+- **Data files renamed**: `src/data.json` → `src/countries.json`, new `src/states.json` and `src/cities.json`.
+
 ## 1.1.0
 
 ### Minor Changes
