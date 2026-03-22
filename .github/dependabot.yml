@@ -1,0 +1,47 @@
+version: 2
+updates:
+  # Keep npm packages updated
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
+    groups:
+      # TypeScript and type definitions
+      typescript:
+        patterns:
+          - 'typescript'
+          - '@types/*'
+      # Testing packages
+      testing:
+        patterns:
+          - 'vitest'
+          - '@vitest/*'
+          - 'jest'
+          - 'jest-junit'
+          - '@jest/*'
+          - 'ts-jest'
+      # Build tools
+      build-tools:
+        patterns:
+          - 'tsup'
+          - 'ts-node'
+          - 'shx'
+      # Code quality
+      code-quality:
+        patterns:
+          - 'prettier'
+          - '@arethetypeswrong/cli'
+      # Changesets
+      changesets:
+        patterns:
+          - '@changesets/*'
+    open-pull-requests-limit: 5
+
+  # Keep GitHub Actions updated
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+    open-pull-requests-limit: 3

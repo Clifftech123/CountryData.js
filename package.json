@@ -1,14 +1,21 @@
 {
   "name": "countrydata.js",
   "license": "MIT",
-  "version": "1.1.0",
-  "description": "An offline JavaScript library for getting Global Country , iso3166  Data",
+  "version": "2.0.0",
+  "description": "Offline JavaScript/TypeScript library for country, state/province, and city data — 250 countries, 4963 states, 148k+ cities",
   "keywords": [
     "javascript",
     "typescript",
     "country",
+    "state",
+    "city",
     "country-data",
-    "iso3166"
+    "states",
+    "cities",
+    "iso3166",
+    "timezone",
+    "geo",
+    "offline"
   ],
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -31,13 +38,16 @@
   },
   "files": [
     "dist",
-    "src/data.json"
+    "data/countries.json",
+    "data/states.json",
+    "data/cities.json"
   ],
   "scripts": {
     "build": "tsup",
+    "build:data": "node scripts/build-data.cjs",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
-    "release": "npm run build && changeset publish --access public",
+    "release": "npm run build:data && npm run build && changeset publish --access public",
     "check-exports": "attw --pack .",
     "lint": "tsc",
     "test": "vitest run"
