@@ -1,0 +1,81 @@
+# Roadmap: missing features
+
+Audit of this library against comparable libraries (`country-state-city`, `world-countries`,
+`countries-states-cities-database`) and a phased plan to close the gaps, tracked here so
+progress persists across sessions/branches. Work happens on `feature/data-roadmap`, one
+commit (and one changeset) per phase, checked off below as each phase merges.
+
+## Current state (for reference)
+
+- 250 countries: name, ISO code, phone code, flag emoji, currency **code**, lat/long,
+  timezones, regions
+- 4,963 states/provinces: name, ISO code, country code, lat/long
+- ~148,000 cities (lazy-loaded): name, country code, state code, lat/long
+- Sync, Map-indexed O(1) lookups by code; ESM + CJS; full TypeScript types
+
+## Missing data fields
+
+| Field | Notes | Possible source |
+|---|---|---|
+| Capital city | Not present on country object | REST Countries API (`capital`), or `mledoze/countries` |
+| Population | — | REST Countries API (`population`), World Bank Open Data API |
+| Area (km²) | — | REST Countries API (`area`), `mledoze/countries` |
+| Currency name / symbol | Only currency **code** exists (e.g. `USD`, not `$` / "US Dollar") | REST Countries API (`currencies`), or `currency-codes` npm package |
+| Native/official name | — | REST Countries API (`name.nativeName`, `name.official`) |
+| Demonym (nationality) | — | REST Countries API (`demonyms`) |
+| Continent (clean enum) | Only region/subregion strings exist | REST Countries API (`continents`), `mledoze/countries` |
+| Languages spoken | — | REST Countries API (`languages`) |
+| Bordering countries | — | REST Countries API (`borders`) |
+| TLD (`.us`, `.de`) | — | REST Countries API (`tld`) |
+| UN membership / independence flag | — | REST Countries API (`unMember`, `independent`) |
+
+> REST Countries (`restcountries.com`) covers nearly all of the above — country-level only
+> (won't add capital/population/currency to individual *states* or *cities*). The v3.1
+> free/no-key endpoint is discontinued; v5 requires an API key. This is still fine here since
+> it's only called **once**, at build/dev time, inside a data-generation script to produce the
+> static JSON shipped in the package — end users of this library never call the API, so it
+> stays fully offline at runtime.
+
+## Data source options & licensing (checked)
+
+| Source | Good for | License | Caveat |
+|---|---|---|---|
+| REST Countries API (v5) | Capital, population, area, currency name/symbol, languages, borders, TLD, demonyms, continents | No copyleft/attribution burden found | Country-level only; requires an API key (v3.1 free/no-key tier discontinued) |
+| `dr5hn/countries-states-cities-database` | Broadest per-city/state coverage (postcodes, native names, 19 languages), also boundary polygons | **ODbL v1.0** | Share-alike: redistributing as part of an MIT package may obligate keeping that data under ODbL + attribution |
+| `harpreetkhalsagtbit/country-state-city` (source of the `country-state-city` npm package) | — | **GPL-3.0** | Its data schema is functionally identical to this library's current dataset — worth double-checking provenance/licensing of our existing data, but do **not** pull *additional* fields from here: GPL-3.0 is copyleft and would conflict with MIT distribution |
+
+**Decision:** use REST Countries (v5) for the new country-level fields via a one-time build
+script; avoid pulling additional data from the ODbL/GPL sources without a closer license
+review first.
+
+## Missing functionality
+
+- **Search** — no fuzzy/partial name matching anywhere; all lookups are exact-code-only.
+- **Cross-entity filters** — by currency, region, language, continent.
+- **Validation helpers** — `isValidCountryCode`, `isValidPhoneCode`, `isValidStateCode`.
+- **Geo utilities** — Haversine distance, nearest city/country to a coordinate.
+- **Pagination/streaming** for the 148k-city dataset — currently all-or-nothing lazy load.
+
+## Missing DX / tooling
+
+- **i18n** — country/state names are English-only.
+- **Browser/CDN build** — slimmer bundle with cities on-demand.
+- **CLI / data export** — CSV/SQL dump for non-JS consumers.
+
+## Phase plan
+
+- [ ] **Phase 1** — Capital, population, area, currency name/symbol, native/official name,
+      demonym, continent, languages, borders, TLD, unMember/independent. New optional
+      `ICountry` fields + `scripts/fetch-restcountries.cjs` build-time fetch (reads
+      `RESTCOUNTRIES_API_KEY` from env, never committed).
+- [ ] **Phase 2** — `searchCountries()` / `searchStates()` / `searchCities()` fuzzy search.
+- [ ] **Phase 3** — Cross-entity filters: `getCountriesByCurrency`, `getCountriesByRegion`,
+      `getCountriesByLanguage`, `getCountriesByContinent`. Depends on Phase 1.
+- [ ] **Phase 4** — Validation helpers: `isValidCountryCode`, `isValidPhoneCode`,
+      `isValidStateCode`.
+- [ ] **Phase 5** — Geo utilities: Haversine distance, `getNearestCountry`, `getNearestCity`.
+- [ ] **Phase 6** — Pagination for the cities dataset (`getCitiesPaginated`).
+- [ ] **Phase 7** (backlog, lower priority) — i18n locale names, slimmer browser/CDN bundle,
+      CLI data export.
+
+Phases 2, 4, 5, 6 don't depend on Phase 1 or each other and can ship in any order.
