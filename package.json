@@ -2,7 +2,7 @@
   "name": "countrydata.js",
   "license": "MIT",
   "version": "2.0.0",
-  "description": "Offline JavaScript/TypeScript library for country, state/province, and city data — 250 countries, 4963 states, 148k+ cities",
+  "description": "Offline JavaScript/TypeScript library for country, state, and city data — 250 countries, 4,963 states, 148k+ cities, with fuzzy search, geo distance, validation, i18n names, and a CSV/SQL export CLI.",
   "keywords": [
     "javascript",
     "typescript",
@@ -15,11 +15,29 @@
     "iso3166",
     "timezone",
     "geo",
-    "offline"
+    "offline",
+    "currency",
+    "population",
+    "capital",
+    "search",
+    "validation",
+    "geolocation",
+    "distance",
+    "i18n",
+    "localization",
+    "cli",
+    "csv",
+    "sql",
+    "address",
+    "location",
+    "country-picker"
   ],
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "countrydata-export": "./dist/bin.js"
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -45,6 +63,7 @@
   "scripts": {
     "build": "tsup",
     "build:data": "node scripts/build-data.cjs",
+    "build:data:fetch": "node scripts/fetch-wikidata.cjs",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "release": "npm run build:data && npm run build && changeset publish --access public",

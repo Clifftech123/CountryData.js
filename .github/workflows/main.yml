@@ -37,3 +37,46 @@ jobs:
           files: ./coverage/*.json
           flags: unittests
           name: codecov-umbrella
+
+  samples:
+    name: Verify samples run against the built package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20.x
+          cache: 'npm'
+
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Build the package
+        run: npm run build
+
+      - name: Run JavaScript sample
+        working-directory: Sample/javascript
+        run: |
+          npm install
+          node app.js
+
+      - name: Run TypeScript sample
+        working-directory: Sample/TypeScript
+        run: |
+          npm install
+          node --loader ts-node/esm index.ts
+
+      - name: Run Express sample
+        working-directory: Sample/express
+        run: |
+          npm install
+          node app.js &
+          SERVER_PID=$!
+          sleep 2
+          curl -sf http://localhost:8000/api/countries > /dev/null
+          curl -sf http://localhost:8000/api/countries/GH/name/fr | grep -q Ghana
+          curl -sf "http://localhost:8000/api/search/countries?q=ghan" | grep -q Ghana
+          kill $SERVER_PID

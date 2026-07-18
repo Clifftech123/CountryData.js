@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import type { ICountry } from '../shared/interface.js';
 import { resolveDataPath } from '../shared/helpers.js';
+import { CURRENCIES } from '../shared/currencies.js';
 import { getStatesOfCountry } from './state.js';
 import { getCitiesOfCountry } from './city.js';
 
@@ -9,6 +10,9 @@ import { getCitiesOfCountry } from './city.js';
 let countryCache: ICountry[] | null = null;
 let byShortCode: Map<string, ICountry> | null = null;
 let byPhoneCode: Map<string, ICountry> | null = null;
+let byCurrencyCode: Map<string, ICountry[]> | null = null;
+let byContinent: Map<string, ICountry[]> | null = null;
+let byRegionName: Map<string, ICountry[]> | null = null;
 
 function ensureLoaded(): void {
   if (countryCache !== null) return;
@@ -20,12 +24,40 @@ function ensureLoaded(): void {
   countryCache = raw.map((c) => ({
     ...c,
     countryFlag: getCountryFlag(c.countryShortCode),
+    currencyName: c.currencyCode ? CURRENCIES[c.currencyCode]?.name : undefined,
+    currencySymbol: c.currencyCode ? CURRENCIES[c.currencyCode]?.symbol : undefined,
     getStates: () => getStatesOfCountry(c.countryShortCode),
     getCities: () => getCitiesOfCountry(c.countryShortCode),
   }));
 
   byShortCode = new Map(countryCache.map((c) => [c.countryShortCode, c]));
   byPhoneCode = new Map(countryCache.map((c) => [c.phoneCode, c]));
+
+  byCurrencyCode = new Map();
+  byContinent = new Map();
+  byRegionName = new Map();
+
+  for (const country of countryCache) {
+    if (country.currencyCode) {
+      const list = byCurrencyCode.get(country.currencyCode) ?? [];
+      list.push(country);
+      byCurrencyCode.set(country.currencyCode, list);
+    }
+
+    if (country.continent) {
+      const key = country.continent.toLowerCase();
+      const list = byContinent.get(key) ?? [];
+      list.push(country);
+      byContinent.set(key, list);
+    }
+
+    for (const region of country.regions) {
+      const key = region.name.toLowerCase();
+      const list = byRegionName.get(key) ?? [];
+      list.push(country);
+      byRegionName.set(key, list);
+    }
+  }
 }
 
 // ─── helpers ─────────────────────────────────────────────────────────────────
@@ -63,6 +95,58 @@ export function sortCountries(countries: ICountry[] = getAllCountries()): ICount
   });
 }
 
+// ─── cross-entity filters ──────────────────────────────────────────────────────
+
+export function getCountriesByCurrency(currencyCode: string): ICountry[] {
+  if (!currencyCode) return [];
+  ensureLoaded();
+  return byCurrencyCode!.get(currencyCode.toUpperCase()) ?? [];
+}
+
+export function getCountriesByContinent(continent: string): ICountry[] {
+  if (!continent) return [];
+  ensureLoaded();
+  return byContinent!.get(continent.toLowerCase()) ?? [];
+}
+
+export function getCountriesByLanguage(language: string): ICountry[] {
+  if (!language) return [];
+  ensureLoaded();
+  const target = language.toLowerCase();
+  return getAllCountries().filter((c) =>
+    c.languages?.some((l) => l.toLowerCase() === target),
+  );
+}
+
+// Matches a country's administrative region (e.g. "Ashanti" → Ghana), not a
+// continent — see getCountriesByContinent() for that.
+export function getCountriesByRegion(regionName: string): ICountry[] {
+  if (!regionName) return [];
+  ensureLoaded();
+  return byRegionName!.get(regionName.toLowerCase()) ?? [];
+}
+
+// ─── validation ──────────────────────────────────────────────────────────────
+
+export function isValidCountryCode(isoCode: string): boolean {
+  return getCountryByCode(isoCode) !== undefined;
+}
+
+export function isValidPhoneCode(phoneCode: string): boolean {
+  return getCountryByPhoneCode(phoneCode) !== undefined;
+}
+
+// ─── i18n ────────────────────────────────────────────────────────────────────
+
+// Falls back to the base (English) countryName when the locale is "en", missing,
+// or has no translation for that country — never returns undefined for a valid code.
+export function getCountryName(isoCode: string, locale?: string): string | undefined {
+  const country = getCountryByCode(isoCode);
+  if (!country) return undefined;
+  if (!locale || locale === 'en') return country.countryName;
+  return country.translations?.[locale] ?? country.countryName;
+}
+
 // ─── module export (Country.getAllCountries() style) ──────────────────────────
 
 export default {
@@ -71,4 +155,11 @@ export default {
   getCountryByPhoneCode,
   getCountryFlag,
   sortCountries,
+  getCountriesByCurrency,
+  getCountriesByContinent,
+  getCountriesByLanguage,
+  getCountriesByRegion,
+  isValidCountryCode,
+  isValidPhoneCode,
+  getCountryName,
 };

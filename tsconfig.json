@@ -14,5 +14,7 @@
     "module": "NodeNext",
     "lib": ["es2022"],
     "noEmit": true
-  }
+  },
+  "include": ["src/**/*.ts", "Test/**/*.ts"],
+  "exclude": ["Sample/**", "dist/**", "node_modules/**"]
 }

@@ -1,38 +1,13 @@
 import { describe, test, expect, vi } from 'vitest';
 import { Region } from '../src/index.js';
 
-const MOCK_COUNTRIES = [
-  {
-    countryName: 'Åland Islands', countryShortCode: 'AX', phoneCode: '+358',
-    timezones: [],
-    regions: [
-      { name: 'Brändö',   shortCode: 'BR' },
-      { name: 'Finström', shortCode: 'FN' },
-      { name: 'Eckerö',   shortCode: 'EC' },
-    ],
-  },
-  {
-    countryName: 'Ghana', countryShortCode: 'GH', phoneCode: '+233',
-    timezones: [],
-    regions: [
-      { name: 'Ashanti',      shortCode: 'AH' },
-      { name: 'Greater Accra',shortCode: 'AA' },
-    ],
-  },
-];
-
-const MOCK_STATES: unknown[] = [];
-const MOCK_CITIES: string[][] = [];
-
-vi.mock('fs', () => ({
-  readFileSync: (filePath: string) => {
-    const p = String(filePath);
-    if (p.includes('states.json'))    return JSON.stringify(MOCK_STATES);
-    if (p.includes('cities.json'))    return JSON.stringify(MOCK_CITIES);
-    if (p.includes('countries.json')) return JSON.stringify(MOCK_COUNTRIES);
-    return '[]';
-  },
-}));
+// vi.mock() is hoisted above imports, so fixture data must be pulled in via a
+// dynamic import inside the factory rather than referenced from a top-level import.
+vi.mock('fs', async () => {
+  const f = await import('./fixtures.js');
+  const countries = [f.COUNTRY_ALAND, f.COUNTRY_GHANA];
+  return { readFileSync: f.mockFsReader(countries, [], []) };
+});
 
 // ─── getRegionsByCountryCode ──────────────────────────────────────────────────
 

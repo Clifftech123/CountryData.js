@@ -1,22 +1,41 @@
-import type { ICountry, IState, ICity, IRegion, ITimezone } from './shared/interface.js';
+import type {
+  ICountry,
+  IState,
+  ICity,
+  IRegion,
+  ITimezone,
+  ISearchOptions,
+  INearestCityOptions,
+  ICityPaginationOptions,
+  IPaginatedCities,
+} from './shared/interface.js';
 import {
   getAllCountries,
   getCountryByCode,
   getCountryByPhoneCode,
   getCountryFlag,
   sortCountries,
+  getCountriesByCurrency,
+  getCountriesByContinent,
+  getCountriesByLanguage,
+  getCountriesByRegion,
+  isValidCountryCode,
+  isValidPhoneCode,
+  getCountryName,
 } from './modules/country.js';
 import {
   getAllStates,
   getStatesOfCountry,
   getStateByCodeAndCountry,
   sortStates,
+  isValidStateCode,
 } from './modules/state.js';
 import {
   getAllCities,
   getCitiesOfCountry,
   getCitiesOfState,
   sortCities,
+  getCitiesPaginated,
 } from './modules/city.js';
 import {
   getRegionsByCountryCode,
@@ -28,6 +47,16 @@ import {
   getCountriesByTimezone,
   getAllTimezones,
 } from './modules/timezone.js';
+import {
+  searchCountries,
+  searchStates,
+  searchCities,
+} from './modules/search.js';
+import {
+  haversineDistanceKm,
+  getNearestCountry,
+  getNearestCity,
+} from './modules/geo.js';
 
 export class CountryHelper {
   // ─── Country flag ─────────────────────────────────────────────────────────
@@ -58,6 +87,44 @@ export class CountryHelper {
 
   public sortCountries(countries?: ICountry[]): ICountry[] {
     return sortCountries(countries);
+  }
+
+  // ─── Cross-entity filter methods ─────────────────────────────────────────
+
+  public getCountriesByCurrency(currencyCode: string): ICountry[] {
+    return getCountriesByCurrency(currencyCode);
+  }
+
+  public getCountriesByContinent(continent: string): ICountry[] {
+    return getCountriesByContinent(continent);
+  }
+
+  public getCountriesByLanguage(language: string): ICountry[] {
+    return getCountriesByLanguage(language);
+  }
+
+  public getCountriesByRegion(regionName: string): ICountry[] {
+    return getCountriesByRegion(regionName);
+  }
+
+  // ─── Validation methods ───────────────────────────────────────────────────
+
+  public isValidCountryCode(isoCode: string): boolean {
+    return isValidCountryCode(isoCode);
+  }
+
+  public isValidPhoneCode(phoneCode: string): boolean {
+    return isValidPhoneCode(phoneCode);
+  }
+
+  public isValidStateCode(stateCode: string, countryCode: string): boolean {
+    return isValidStateCode(stateCode, countryCode);
+  }
+
+  // ─── i18n methods ─────────────────────────────────────────────────────────
+
+  public getCountryName(isoCode: string, locale?: string): string | undefined {
+    return getCountryName(isoCode, locale);
   }
 
   // ─── Region methods ───────────────────────────────────────────────────────
@@ -128,6 +195,42 @@ export class CountryHelper {
 
   public sortCities(cities?: ICity[]): ICity[] {
     return sortCities(cities);
+  }
+
+  public getCitiesPaginated(options?: ICityPaginationOptions): IPaginatedCities {
+    return getCitiesPaginated(options);
+  }
+
+  // ─── Search methods ───────────────────────────────────────────────────────
+
+  public searchCountries(query: string, options?: ISearchOptions): ICountry[] {
+    return searchCountries(query, options);
+  }
+
+  public searchStates(query: string, options?: ISearchOptions): IState[] {
+    return searchStates(query, options);
+  }
+
+  public searchCities(query: string, options?: ISearchOptions): ICity[] {
+    return searchCities(query, options);
+  }
+
+  // ─── Geo methods ──────────────────────────────────────────────────────────
+
+  public haversineDistanceKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
+    return haversineDistanceKm(lat1, lon1, lat2, lon2);
+  }
+
+  public getNearestCountry(latitude: number, longitude: number): ICountry | undefined {
+    return getNearestCountry(latitude, longitude);
+  }
+
+  public getNearestCity(
+    latitude: number,
+    longitude: number,
+    options?: INearestCityOptions,
+  ): ICity | undefined {
+    return getNearestCity(latitude, longitude, options);
   }
 }
 
