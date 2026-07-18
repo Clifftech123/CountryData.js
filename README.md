@@ -38,6 +38,10 @@ const us = Country.getCountryByCode('US');
 const byPhone = Country.getCountryByPhoneCode('+233');
 const flag = Country.getCountryFlag('GH'); // '🇬🇭'
 const sorted = Country.sortCountries();
+const eurCountries = Country.getCountriesByCurrency('EUR');
+const african = Country.getCountriesByContinent('Africa');
+const englishSpeaking = Country.getCountriesByLanguage('English');
+const owner = Country.getCountriesByRegion('Bavaria'); // → [Germany]
 
 // States / Provinces
 const states = State.getStatesOfCountry('US');
@@ -103,6 +107,10 @@ All methods are **synchronous** and return data directly no `await`, no `.then()
 | `getCountryByPhoneCode(code)` | `ICountry \| undefined` | Find by phone code (e.g. `"+1"`)    |
 | `getCountryFlag(code)`        | `string`                | Emoji flag (e.g. `"🇺🇸"`)            |
 | `sortCountries(countries?)`   | `ICountry[]`            | Alphabetical copy (defaults to all) |
+| `getCountriesByCurrency(code)`   | `ICountry[]` | Countries sharing a currency code (e.g. `"EUR"`)         |
+| `getCountriesByContinent(name)`  | `ICountry[]` | Countries on a continent (e.g. `"Africa"`)               |
+| `getCountriesByLanguage(name)`   | `ICountry[]` | Countries with a given official language                |
+| `getCountriesByRegion(name)`     | `ICountry[]` | Country containing a named admin region (e.g. `"Bavaria"`) |
 
 ### `State`
 

@@ -1,47 +1,15 @@
 import { describe, test, expect, vi } from 'vitest';
 import { Search } from '../src/index.js';
 
-const MOCK_COUNTRIES = [
-  {
-    countryName: 'Ghana', countryShortCode: 'GH', phoneCode: '+233',
-    currencyCode: 'GHS', latitude: '8.00000000', longitude: '-2.00000000',
-    timezones: [], regions: [],
-  },
-  {
-    countryName: 'Afghanistan', countryShortCode: 'AF', phoneCode: '+93',
-    currencyCode: 'AFN', latitude: '33.00000000', longitude: '65.00000000',
-    timezones: [], regions: [],
-  },
-  {
-    countryName: 'Germany', countryShortCode: 'DE', phoneCode: '+49',
-    currencyCode: 'EUR', latitude: '51.00000000', longitude: '9.00000000',
-    timezones: [], regions: [],
-  },
-];
-
-const MOCK_STATES = [
-  { name: 'Ashanti Region', isoCode: 'AH', countryCode: 'GH', latitude: '6.74700', longitude: '-1.52000' },
-  { name: 'Greater Accra',  isoCode: 'AA', countryCode: 'GH', latitude: '5.60000', longitude: '-0.20000' },
-  { name: 'Bavaria',        isoCode: 'BY', countryCode: 'DE', latitude: '48.79000', longitude: '11.50000' },
-];
-
-const MOCK_CITIES: string[][] = [
-  ['Accra',   'GH', 'AA', '5.55600',  '-0.20000'],
-  ['Kumasi',  'GH', 'AH', '6.68848',  '-1.62443'],
-  ['Munich',  'DE', 'BY', '48.13500', '11.58200'],
-  ['Brändö',  'DE', 'BY', '60.41667', '21.05000'],
-  ['São Paulo', 'DE', 'BY', '-23.5505', '-46.6333'],
-];
-
-vi.mock('fs', () => ({
-  readFileSync: (filePath: string) => {
-    const p = String(filePath);
-    if (p.includes('states.json'))    return JSON.stringify(MOCK_STATES);
-    if (p.includes('cities.json'))    return JSON.stringify(MOCK_CITIES);
-    if (p.includes('countries.json')) return JSON.stringify(MOCK_COUNTRIES);
-    return '[]';
-  },
-}));
+// vi.mock() is hoisted above imports, so fixture data must be pulled in via a
+// dynamic import inside the factory rather than referenced from a top-level import.
+vi.mock('fs', async () => {
+  const f = await import('./fixtures.js');
+  const countries = [f.COUNTRY_GHANA, f.COUNTRY_AFGHANISTAN, f.COUNTRY_GERMANY];
+  const states = [f.STATE_ASHANTI_REGION, f.STATE_GREATER_ACCRA, f.STATE_BAVARIA];
+  const cities = [f.CITY_ACCRA, f.CITY_KUMASI, f.CITY_MUNICH, f.CITY_BRANDO, f.CITY_SAO_PAULO];
+  return { readFileSync: f.mockFsReader(countries, states, cities) };
+});
 
 // ─── searchCountries ────────────────────────────────────────────────────────
 

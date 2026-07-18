@@ -1,40 +1,15 @@
 import { describe, test, expect, vi } from 'vitest';
 import { State } from '../src/index.js';
 
-const MOCK_COUNTRIES = [
-  {
-    countryName: 'Åland Islands', countryShortCode: 'AX', phoneCode: '+358',
-    currencyCode: 'EUR', latitude: '60.11666700', longitude: '19.90000000',
-    timezones: [], regions: [],
-  },
-  {
-    countryName: 'Ghana', countryShortCode: 'GH', phoneCode: '+233',
-    currencyCode: 'GHS', latitude: '8.00000000', longitude: '-2.00000000',
-    timezones: [], regions: [],
-  },
-];
-
-const MOCK_STATES = [
-  { name: 'Brändö',        isoCode: 'BR', countryCode: 'AX', latitude: '60.41667', longitude: '21.05000' },
-  { name: 'Eckerö',        isoCode: 'EC', countryCode: 'AX', latitude: '60.22500', longitude: '19.55000' },
-  { name: 'Ashanti Region',isoCode: 'AH', countryCode: 'GH', latitude: '6.74700',  longitude: '-1.52000' },
-];
-
-const MOCK_CITIES: string[][] = [
-  ['Brändö Village', 'AX', 'BR', '60.41667', '21.05000'],
-  ['Eckerö Village', 'AX', 'EC', '60.22500', '19.55000'],
-  ['Kumasi',         'GH', 'AH', '6.68848',  '-1.62443'],
-];
-
-vi.mock('fs', () => ({
-  readFileSync: (filePath: string) => {
-    const p = String(filePath);
-    if (p.includes('states.json'))    return JSON.stringify(MOCK_STATES);
-    if (p.includes('cities.json'))    return JSON.stringify(MOCK_CITIES);
-    if (p.includes('countries.json')) return JSON.stringify(MOCK_COUNTRIES);
-    return '[]';
-  },
-}));
+// vi.mock() is hoisted above imports, so fixture data must be pulled in via a
+// dynamic import inside the factory rather than referenced from a top-level import.
+vi.mock('fs', async () => {
+  const f = await import('./fixtures.js');
+  const countries = [f.COUNTRY_ALAND, f.COUNTRY_GHANA];
+  const states = [f.STATE_BRANDO, f.STATE_ECKERO, f.STATE_ASHANTI_REGION];
+  const cities = [f.CITY_BRANDO_VILLAGE, f.CITY_ECKERO_VILLAGE, f.CITY_KUMASI];
+  return { readFileSync: f.mockFsReader(countries, states, cities) };
+});
 
 // ─── getAllStates ─────────────────────────────────────────────────────────────
 

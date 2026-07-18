@@ -12,6 +12,10 @@ import {
   getCountryByPhoneCode,
   getCountryFlag,
   sortCountries,
+  getCountriesByCurrency,
+  getCountriesByContinent,
+  getCountriesByLanguage,
+  getCountriesByRegion,
 } from './modules/country.js';
 import {
   getAllStates,
@@ -70,6 +74,24 @@ export class CountryHelper {
 
   public sortCountries(countries?: ICountry[]): ICountry[] {
     return sortCountries(countries);
+  }
+
+  // ─── Cross-entity filter methods ─────────────────────────────────────────
+
+  public getCountriesByCurrency(currencyCode: string): ICountry[] {
+    return getCountriesByCurrency(currencyCode);
+  }
+
+  public getCountriesByContinent(continent: string): ICountry[] {
+    return getCountriesByContinent(continent);
+  }
+
+  public getCountriesByLanguage(language: string): ICountry[] {
+    return getCountriesByLanguage(language);
+  }
+
+  public getCountriesByRegion(regionName: string): ICountry[] {
+    return getCountriesByRegion(regionName);
   }
 
   // ─── Region methods ───────────────────────────────────────────────────────

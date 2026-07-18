@@ -1,81 +1,21 @@
 import { describe, test, expect, vi } from 'vitest';
 import { Country } from '../src/index.js';
 
-const MOCK_COUNTRIES = [
-  {
-    countryName: 'Åland Islands',
-    countryShortCode: 'AX',
-    phoneCode: '+358',
-    currencyCode: 'EUR',
-    latitude: '60.11666700',
-    longitude: '19.90000000',
-    timezones: [
-      { zoneName: 'Europe/Mariehamn', gmtOffset: 7200, gmtOffsetName: 'UTC+02:00', abbreviation: 'EEST', tzName: 'Eastern European Summer Time' },
-    ],
-    regions: [
-      { name: 'Brändö', shortCode: 'BR' },
-      { name: 'Eckerö', shortCode: 'EC' },
-    ],
-    capital: 'Mariehamn',
-    population: 30836,
-    area: 1582.93,
-    nativeName: 'Åland',
-    languages: ['Swedish'],
-    tld: ['.ax'],
-    unMember: false,
-    independent: false,
-  },
-  {
-    countryName: 'Ghana',
-    countryShortCode: 'GH',
-    phoneCode: '+233',
-    currencyCode: 'GHS',
-    latitude: '8.00000000',
-    longitude: '-2.00000000',
-    timezones: [
-      { zoneName: 'Africa/Accra', gmtOffset: 0, gmtOffsetName: 'UTC+00:00', abbreviation: 'GMT', tzName: 'Greenwich Mean Time' },
-    ],
-    regions: [{ name: 'Ashanti', shortCode: 'AH' }],
-    capital: 'Accra',
-    population: 32833031,
-    area: 238535,
-    continent: 'Africa',
-    demonym: 'Ghanaian',
-    languages: ['English'],
-    borders: ['TG', 'BF', 'CI'],
-    tld: ['.gh'],
-    unMember: true,
-    independent: true,
-  },
-];
-
-const MOCK_STATES = [
-  { name: 'Brändö', isoCode: 'BR', countryCode: 'AX', latitude: '60.41667', longitude: '21.05000' },
-  { name: 'Eckerö', isoCode: 'EC', countryCode: 'AX', latitude: '60.22500', longitude: '19.55000' },
-  { name: 'Ashanti Region', isoCode: 'AH', countryCode: 'GH', latitude: '6.74700', longitude: '-1.52000' },
-];
-
-const MOCK_CITIES: string[][] = [
-  ['Brändö Village', 'AX', 'BR', '60.41667', '21.05000'],
-  ['Eckerö Village', 'AX', 'EC', '60.22500', '19.55000'],
-  ['Kumasi', 'GH', 'AH', '6.68848', '-1.62443'],
-];
-
-vi.mock('fs', () => ({
-  readFileSync: (filePath: string) => {
-    const p = String(filePath);
-    if (p.includes('states.json'))    return JSON.stringify(MOCK_STATES);
-    if (p.includes('cities.json'))    return JSON.stringify(MOCK_CITIES);
-    if (p.includes('countries.json')) return JSON.stringify(MOCK_COUNTRIES);
-    return '[]';
-  },
-}));
+// vi.mock() is hoisted above imports, so fixture data must be pulled in via a
+// dynamic import inside the factory rather than referenced from a top-level import.
+vi.mock('fs', async () => {
+  const f = await import('./fixtures.js');
+  const countries = [f.COUNTRY_ALAND, f.COUNTRY_GHANA, f.COUNTRY_GERMANY, f.COUNTRY_TOGO];
+  const states = [f.STATE_BRANDO, f.STATE_ECKERO, f.STATE_ASHANTI_REGION];
+  const cities = [f.CITY_BRANDO_VILLAGE, f.CITY_ECKERO_VILLAGE, f.CITY_KUMASI];
+  return { readFileSync: f.mockFsReader(countries, states, cities) };
+});
 
 // ─── getAllCountries ──────────────────────────────────────────────────────────
 
 describe('Country.getAllCountries', () => {
   test('returns all countries', () => {
-    expect(Country.getAllCountries()).toHaveLength(2);
+    expect(Country.getAllCountries()).toHaveLength(4);
   });
 
   test('attaches countryFlag emoji to each country', () => {
@@ -196,15 +136,85 @@ describe('Country.getCountryFlag', () => {
 describe('Country.sortCountries', () => {
   test('sorts all countries alphabetically when called with no args', () => {
     const sorted = Country.sortCountries();
-    expect(sorted[0]!.countryName).toBe('Ghana');
-    expect(sorted[1]!.countryName).toBe('Åland Islands');
+    expect(sorted.map((c) => c.countryName)).toEqual([
+      'Germany',
+      'Ghana',
+      'Togo',
+      'Åland Islands',
+    ]);
   });
 
   test('sorts a provided array without mutating the original', () => {
     const original = Country.getAllCountries();
     const sorted = Country.sortCountries([...original]);
-    expect(sorted[0]!.countryName).toBe('Ghana');
+    expect(sorted[0]!.countryName).toBe('Germany');
     expect(original[0]!.countryName).toBe('Åland Islands');
+  });
+});
+
+// ─── cross-entity filters ──────────────────────────────────────────────────────
+
+describe('Country.getCountriesByCurrency', () => {
+  test('returns all countries sharing a currency', () => {
+    const results = Country.getCountriesByCurrency('EUR');
+    expect(results.map((c) => c.countryShortCode).sort()).toEqual(['AX', 'DE']);
+  });
+
+  test('is case-insensitive', () => {
+    expect(Country.getCountriesByCurrency('eur')).toHaveLength(2);
+  });
+
+  test('returns empty array for unknown currency', () => {
+    expect(Country.getCountriesByCurrency('XXX')).toHaveLength(0);
+  });
+
+  test('returns empty array for empty string', () => {
+    expect(Country.getCountriesByCurrency('')).toHaveLength(0);
+  });
+});
+
+describe('Country.getCountriesByContinent', () => {
+  test('returns all countries on a continent', () => {
+    const results = Country.getCountriesByContinent('Africa');
+    expect(results.map((c) => c.countryShortCode).sort()).toEqual(['GH', 'TG']);
+  });
+
+  test('is case-insensitive', () => {
+    expect(Country.getCountriesByContinent('africa')).toHaveLength(2);
+  });
+
+  test('returns empty array for a continent with no matches', () => {
+    expect(Country.getCountriesByContinent('Antarctica')).toHaveLength(0);
+  });
+});
+
+describe('Country.getCountriesByLanguage', () => {
+  test('returns countries speaking a language', () => {
+    const results = Country.getCountriesByLanguage('English');
+    expect(results.map((c) => c.countryShortCode)).toEqual(['GH']);
+  });
+
+  test('is case-insensitive', () => {
+    expect(Country.getCountriesByLanguage('french')).toHaveLength(1);
+  });
+
+  test('returns empty array for an unspoken language', () => {
+    expect(Country.getCountriesByLanguage('Klingon')).toHaveLength(0);
+  });
+});
+
+describe('Country.getCountriesByRegion', () => {
+  test('returns the country containing a named administrative region', () => {
+    const results = Country.getCountriesByRegion('Ashanti');
+    expect(results.map((c) => c.countryShortCode)).toEqual(['GH']);
+  });
+
+  test('is case-insensitive', () => {
+    expect(Country.getCountriesByRegion('bavaria')).toHaveLength(1);
+  });
+
+  test('returns empty array for an unknown region name', () => {
+    expect(Country.getCountriesByRegion('Nonexistent')).toHaveLength(0);
   });
 });
 

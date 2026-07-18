@@ -70,7 +70,7 @@ both `dr5hn` and `mledoze` are ODbL (share-alike) and REST Countries dropped its
       `query.wikidata.org`, CC0, no key needed) merged with a hardcoded ISO 4217 currency
       name/symbol table.
 - [x] **Phase 2** — `searchCountries()` / `searchStates()` / `searchCities()` fuzzy search.
-- [ ] **Phase 3** — Cross-entity filters: `getCountriesByCurrency`, `getCountriesByRegion`,
+- [x] **Phase 3** — Cross-entity filters: `getCountriesByCurrency`, `getCountriesByRegion`,
       `getCountriesByLanguage`, `getCountriesByContinent`. Depends on Phase 1.
 - [ ] **Phase 4** — Validation helpers: `isValidCountryCode`, `isValidPhoneCode`,
       `isValidStateCode`.
