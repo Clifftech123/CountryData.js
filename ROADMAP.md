@@ -29,24 +29,24 @@ commit (and one changeset) per phase, checked off below as each phase merges.
 | TLD (`.us`, `.de`) | — | REST Countries API (`tld`) |
 | UN membership / independence flag | — | REST Countries API (`unMember`, `independent`) |
 
-> REST Countries (`restcountries.com`) covers nearly all of the above — country-level only
-> (won't add capital/population/currency to individual *states* or *cities*). The v3.1
-> free/no-key endpoint is discontinued; v5 requires an API key. This is still fine here since
-> it's only called **once**, at build/dev time, inside a data-generation script to produce the
-> static JSON shipped in the package — end users of this library never call the API, so it
-> stays fully offline at runtime.
+> Any external call happens only **once**, at build/dev time, inside a data-generation script
+> to produce the static JSON shipped in the package — end users of this library never call
+> any API, so it stays fully offline at runtime.
 
 ## Data source options & licensing (checked)
 
 | Source | Good for | License | Caveat |
 |---|---|---|---|
-| REST Countries API (v5) | Capital, population, area, currency name/symbol, languages, borders, TLD, demonyms, continents | No copyleft/attribution burden found | Country-level only; requires an API key (v3.1 free/no-key tier discontinued) |
+| **Wikidata (SPARQL query service)** | Capital, population, area, TLD, continent, UN membership, independence, borders, languages, demonyms, native/official name | **CC0** (public domain) — no attribution, no copyleft, no key, no cost | Free-text/query complexity; some fields sparse for micro-states, need fallback handling |
+| ISO 4217 standard (hardcoded table) | Currency name + symbol | Not copyrightable (a standard's factual code list) | Small (~180 rows), maintained by hand, no fetch needed |
+| REST Countries API (v5) | Same fields as Wikidata, simpler REST shape | No copyleft found | **Rejected** — no free tier as of 2026; cheapest plan is $15/mo, not worth it when Wikidata covers the same ground for free |
 | `dr5hn/countries-states-cities-database` | Broadest per-city/state coverage (postcodes, native names, 19 languages), also boundary polygons | **ODbL v1.0** | Share-alike: redistributing as part of an MIT package may obligate keeping that data under ODbL + attribution |
+| `mledoze/countries` | Capital, area, currencies, languages, borders, tld, demonyms, native name, unMember, independent (no population, no continent enum) | **ODbL v1.0** | Same share-alike issue as `dr5hn` — rejected for the same reason |
 | `harpreetkhalsagtbit/country-state-city` (source of the `country-state-city` npm package) | — | **GPL-3.0** | Its data schema is functionally identical to this library's current dataset — worth double-checking provenance/licensing of our existing data, but do **not** pull *additional* fields from here: GPL-3.0 is copyleft and would conflict with MIT distribution |
 
-**Decision:** use REST Countries (v5) for the new country-level fields via a one-time build
-script; avoid pulling additional data from the ODbL/GPL sources without a closer license
-review first.
+**Decision:** Wikidata (CC0) + a hand-maintained ISO 4217 currency table for the new
+country-level fields, fetched via a one-time build script. No payment, no copyleft risk —
+both `dr5hn` and `mledoze` are ODbL (share-alike) and REST Countries dropped its free tier.
 
 ## Missing functionality
 
@@ -66,8 +66,9 @@ review first.
 
 - [ ] **Phase 1** — Capital, population, area, currency name/symbol, native/official name,
       demonym, continent, languages, borders, TLD, unMember/independent. New optional
-      `ICountry` fields + `scripts/fetch-restcountries.cjs` build-time fetch (reads
-      `RESTCOUNTRIES_API_KEY` from env, never committed).
+      `ICountry` fields + `scripts/fetch-wikidata.cjs` build-time fetch (SPARQL query against
+      `query.wikidata.org`, CC0, no key needed) merged with a hardcoded ISO 4217 currency
+      name/symbol table.
 - [ ] **Phase 2** — `searchCountries()` / `searchStates()` / `searchCities()` fuzzy search.
 - [ ] **Phase 3** — Cross-entity filters: `getCountriesByCurrency`, `getCountriesByRegion`,
       `getCountriesByLanguage`, `getCountriesByContinent`. Depends on Phase 1.
