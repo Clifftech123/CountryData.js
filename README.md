@@ -8,13 +8,23 @@
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![CI](https://github.com/Clifftech123/CountryData.js/actions/workflows/main.yml/badge.svg)](https://github.com/Clifftech123/CountryData.js/actions/workflows/main.yml) | [![codecov](https://codecov.io/github/Clifftech123/CountryData.js/graph/badge.svg?token=42Y3GT9MKN)](https://codecov.io/github/Clifftech123/CountryData.js) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Clifftech123_CountryData.js&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Clifftech123_CountryData.js) |
 
+[![npm version](https://img.shields.io/npm/v/countrydata.js)](https://www.npmjs.com/package/countrydata.js)
 [![NPM Downloads](https://img.shields.io/npm/d18m/countrydata.js)](https://www.npmjs.com/package/countrydata.js)
+[![License: MIT](https://img.shields.io/npm/l/countrydata.js)](./LICENSE)
 
 ## Features
 
-- **250 countries** name, ISO code, phone code, flag emoji, currency code, latitude/longitude, timezones, and regions
+- **250 countries** — name, ISO code, phone code, flag emoji, currency (code/name/symbol),
+  capital, population, area, continent, native/official name, demonym, languages, bordering
+  countries, TLD, UN membership, latitude/longitude, timezones, and regions
 - **4 963 states & provinces** with ISO codes and coordinates
-- **148 000+ cities** linked to their country and state, lazily loaded
+- **148 000+ cities** linked to their country and state, lazily loaded, with paginated access
+- **Fuzzy search** — case- and diacritic-insensitive (`Search.searchCountries()`, `searchStates()`, `searchCities()`)
+- **Cross-entity filters** — by currency, continent, language, or admin region
+- **Validation helpers** — `isValidCountryCode()`, `isValidPhoneCode()`, `isValidStateCode()`
+- **Geo utilities** — Haversine distance, nearest country/city lookups
+- **i18n** — translated country names in 7 locales via `getCountryName(code, locale)`
+- **CLI** — `npx countrydata-export` dumps any dataset as CSV or SQL
 - Synchronous API with O(1) lookups via Map indexes
 - Works in both **ESM** and **CommonJS** environments
 - Full **TypeScript** types included
