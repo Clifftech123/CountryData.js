@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import type { ICity } from '../shared/interface.js';
+import type { ICity, ICityPaginationOptions, IPaginatedCities } from '../shared/interface.js';
 import { resolveDataPath, convertCityArrays } from '../shared/helpers.js';
 
 // ─── cache ───────────────────────────────────────────────────────────────────
@@ -68,6 +68,33 @@ export function sortCities(cities: ICity[] = getAllCities()): ICity[] {
   });
 }
 
+const DEFAULT_PAGE_SIZE = 50;
+
+// Slices an already-indexed array (byCountryCode/byStateKey) rather than the
+// full ~148k-city cache whenever countryCode/stateCode narrows the source.
+export function getCitiesPaginated(options: ICityPaginationOptions = {}): IPaginatedCities {
+  const { countryCode, stateCode, page = 1, pageSize = DEFAULT_PAGE_SIZE } = options;
+
+  const source =
+    countryCode && stateCode
+      ? getCitiesOfState(countryCode, stateCode)
+      : countryCode
+        ? getCitiesOfCountry(countryCode)
+        : getAllCities();
+
+  const safePage = Math.max(1, page);
+  const start = (safePage - 1) * pageSize;
+  const items = source.slice(start, start + pageSize);
+
+  return {
+    items,
+    page: safePage,
+    pageSize,
+    total: source.length,
+    hasMore: start + items.length < source.length,
+  };
+}
+
 // ─── module export (City.getCitiesOfState() style) ───────────────────────────
 
 export default {
@@ -75,4 +102,5 @@ export default {
   getCitiesOfCountry,
   getCitiesOfState,
   sortCities,
+  getCitiesPaginated,
 };

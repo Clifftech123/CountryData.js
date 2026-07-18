@@ -136,6 +136,17 @@ export function isValidPhoneCode(phoneCode: string): boolean {
   return getCountryByPhoneCode(phoneCode) !== undefined;
 }
 
+// ─── i18n ────────────────────────────────────────────────────────────────────
+
+// Falls back to the base (English) countryName when the locale is "en", missing,
+// or has no translation for that country — never returns undefined for a valid code.
+export function getCountryName(isoCode: string, locale?: string): string | undefined {
+  const country = getCountryByCode(isoCode);
+  if (!country) return undefined;
+  if (!locale || locale === 'en') return country.countryName;
+  return country.translations?.[locale] ?? country.countryName;
+}
+
 // ─── module export (Country.getAllCountries() style) ──────────────────────────
 
 export default {
@@ -150,4 +161,5 @@ export default {
   getCountriesByRegion,
   isValidCountryCode,
   isValidPhoneCode,
+  getCountryName,
 };

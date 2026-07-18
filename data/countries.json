@@ -161,29 +161,38 @@
     "nativeName": "افغانستان",
     "demonym": "Afghan",
     "languages": [
-      "Uzbek",
-      "Balochi",
-      "Pamir",
-      "Turkmen",
       "Arabic",
       "Pashto",
-      "Pashayi",
+      "Turkmen",
       "Nuristani",
-      "Dari"
+      "Dari",
+      "Pashayi",
+      "Pamir",
+      "Uzbek",
+      "Balochi"
     ],
     "tld": [
       ".af"
     ],
     "borders": [
-      "CN",
-      "UZ",
       "IR",
       "PK",
       "TJ",
-      "TM"
+      "TM",
+      "CN",
+      "UZ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أفغانستان",
+      "zh": "阿富汗",
+      "fr": "Afghanistan",
+      "ru": "Афганистан",
+      "es": "Afganistán",
+      "pt": "Afeganistão",
+      "de": "Afghanistan"
+    }
   },
   {
     "countryName": "Åland Islands",
@@ -278,7 +287,16 @@
       ".ax"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر أولاند",
+      "zh": "奥兰",
+      "fr": "Åland",
+      "ru": "Аландские острова",
+      "es": "Åland",
+      "pt": "Åland",
+      "de": "Åland"
+    }
   },
   {
     "countryName": "Albania",
@@ -366,7 +384,16 @@
       "XK"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ألبانيا",
+      "zh": "阿爾巴尼亞",
+      "fr": "Albanie",
+      "ru": "Албания",
+      "es": "Albania",
+      "pt": "Albânia",
+      "de": "Albanien"
+    }
   },
   {
     "countryName": "Algeria",
@@ -585,8 +612,8 @@
     "nativeName": "الجزائر",
     "demonym": "Algerian",
     "languages": [
-      "Standard Algerian Berber",
-      "Arabic"
+      "Arabic",
+      "Standard Algerian Berber"
     ],
     "tld": [
       ".dz"
@@ -603,7 +630,16 @@
       "EH"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الجزائر",
+      "zh": "阿爾及利亞",
+      "fr": "Algérie",
+      "ru": "Алжир",
+      "es": "Argelia",
+      "pt": "Argélia",
+      "de": "Algerien"
+    }
   },
   {
     "countryName": "American Samoa",
@@ -662,7 +698,16 @@
       ".as"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "ساموا الأمريكية",
+      "zh": "美屬薩摩亞",
+      "fr": "Samoa américaines",
+      "ru": "Американское Самоа",
+      "es": "Samoa Americana",
+      "pt": "Samoa Americana",
+      "de": "Amerikanisch-Samoa"
+    }
   },
   {
     "countryName": "Andorra",
@@ -727,7 +772,16 @@
       "FR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أندورا",
+      "zh": "安道尔",
+      "fr": "Andorre",
+      "ru": "Андорра",
+      "es": "Andorra",
+      "pt": "Andorra",
+      "de": "Andorra"
+    }
   },
   {
     "countryName": "Angola",
@@ -840,7 +894,16 @@
       "NA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أنغولا",
+      "zh": "安哥拉",
+      "fr": "Angola",
+      "ru": "Ангола",
+      "es": "Angola",
+      "pt": "Angola",
+      "de": "Angola"
+    }
   },
   {
     "countryName": "Anguilla",
@@ -962,7 +1025,16 @@
       ".ai"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "أنغويلا",
+      "zh": "安圭拉",
+      "fr": "Anguilla",
+      "ru": "Ангилья",
+      "es": "Anguila",
+      "pt": "Anguila",
+      "de": "Anguilla"
+    }
   },
   {
     "countryName": "Antarctica",
@@ -1056,7 +1128,16 @@
       ".aq"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "القارة القطبية الجنوبية",
+      "zh": "南極洲",
+      "fr": "Antarctique",
+      "ru": "Антарктида",
+      "es": "Antártida",
+      "pt": "Antártida",
+      "de": "Antarktika"
+    }
   },
   {
     "countryName": "Antigua and Barbuda",
@@ -1221,7 +1302,16 @@
       "GB"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أنتيغوا وباربودا",
+      "zh": "安提瓜和巴布达",
+      "fr": "Antigua-et-Barbuda",
+      "ru": "Антигуа и Барбуда",
+      "es": "Antigua y Barbuda",
+      "pt": "Antígua e Barbuda",
+      "de": "Antigua und Barbuda"
+    }
   },
   {
     "countryName": "Argentina",
@@ -1435,7 +1525,16 @@
       "BO"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الأرجنتين",
+      "zh": "阿根廷",
+      "fr": "Argentine",
+      "ru": "Аргентина",
+      "es": "Argentina",
+      "pt": "Argentina",
+      "de": "Argentinien"
+    }
   },
   {
     "countryName": "Armenia",
@@ -1520,7 +1619,16 @@
       "IR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أرمينيا",
+      "zh": "亞美尼亞",
+      "fr": "Arménie",
+      "ru": "Армения",
+      "es": "Armenia",
+      "pt": "Arménia",
+      "de": "Armenien"
+    }
   },
   {
     "countryName": "Aruba",
@@ -1557,7 +1665,16 @@
       ".aw"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "أروبا",
+      "zh": "阿魯巴",
+      "fr": "Aruba",
+      "ru": "Аруба",
+      "es": "Aruba",
+      "pt": "Aruba",
+      "de": "Aruba"
+    }
   },
   {
     "countryName": "Australia",
@@ -1698,25 +1815,34 @@
     "area": 7692024,
     "continent": "Oceania",
     "nativeName": "Australia",
-    "demonym": "Australians",
+    "demonym": "Australian",
     "languages": [
-      "Auslan",
-      "Australian English"
+      "Australian English",
+      "Auslan"
     ],
     "tld": [
       ".au"
     ],
     "borders": [
+      "PG",
+      "NC",
       "ID",
       "TL",
       "NZ",
       "SB",
-      "VU",
-      "PG",
-      "NC"
+      "VU"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أستراليا",
+      "zh": "澳大利亚",
+      "fr": "Australie",
+      "ru": "Австралия",
+      "es": "Australia",
+      "pt": "Austrália",
+      "de": "Australien"
+    }
   },
   {
     "countryName": "Austria",
@@ -1796,7 +1922,16 @@
       "LI"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "النمسا",
+      "zh": "奧地利",
+      "fr": "Autriche",
+      "ru": "Австрия",
+      "es": "Austria",
+      "pt": "Áustria",
+      "de": "Österreich"
+    }
   },
   {
     "countryName": "Azerbaijan",
@@ -2088,7 +2223,7 @@
     "population": 10180770,
     "area": 86600,
     "continent": "Asia",
-    "nativeName": "Azərbaycan",
+    "nativeName": "Azərbaycan Respublikası",
     "demonym": "Azeri",
     "languages": [
       "Azerbaijani Sign Language",
@@ -2098,14 +2233,23 @@
       ".az"
     ],
     "borders": [
-      "TR",
-      "RU",
       "GE",
       "AM",
-      "IR"
+      "IR",
+      "TR",
+      "RU"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أذربيجان",
+      "zh": "阿塞拜疆",
+      "fr": "Azerbaïdjan",
+      "ru": "Азербайджан",
+      "es": "Azerbaiyán",
+      "pt": "Azerbaijão",
+      "de": "Aserbaidschan"
+    }
   },
   {
     "countryName": "Bahamas",
@@ -2280,7 +2424,16 @@
       "TC"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جزر البهاما",
+      "zh": "巴哈馬",
+      "fr": "Bahamas",
+      "ru": "Багамские Острова",
+      "es": "Bahamas",
+      "pt": "Bahamas",
+      "de": "Bahamas"
+    }
   },
   {
     "countryName": "Bahrain",
@@ -2337,7 +2490,16 @@
       "SA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "البحرين",
+      "zh": "巴林",
+      "fr": "Bahreïn",
+      "ru": "Бахрейн",
+      "es": "Baréin",
+      "pt": "Bahrein",
+      "de": "Bahrain"
+    }
   },
   {
     "countryName": "Bangladesh",
@@ -2407,7 +2569,16 @@
       "MM"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بنغلاديش",
+      "zh": "孟加拉國",
+      "fr": "Bangladesh",
+      "ru": "Бангладеш",
+      "es": "Bangladés",
+      "pt": "Bangladesh",
+      "de": "Bangladesch"
+    }
   },
   {
     "countryName": "Barbados",
@@ -2486,7 +2657,16 @@
       ".bb"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "باربادوس",
+      "zh": "巴巴多斯",
+      "fr": "Barbade",
+      "ru": "Барбадос",
+      "es": "Barbados",
+      "pt": "Barbados",
+      "de": "Barbados"
+    }
   },
   {
     "countryName": "Belarus",
@@ -2556,7 +2736,16 @@
       "UA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بيلاروس",
+      "zh": "白俄羅斯",
+      "fr": "Biélorussie",
+      "ru": "Беларусь",
+      "es": "Bielorrusia",
+      "pt": "Bielorrússia",
+      "de": "Belarus"
+    }
   },
   {
     "countryName": "Belgium",
@@ -2592,23 +2781,32 @@
     "population": 11825551,
     "area": 30688,
     "continent": "Europe",
-    "nativeName": "Königreich Belgien",
+    "nativeName": "Royaume de Belgique",
     "demonym": "Belgian",
     "languages": [
+      "Dutch",
       "French",
-      "German",
-      "Dutch"
+      "German"
     ],
     "tld": [
       ".be"
     ],
     "borders": [
+      "DE",
       "LU",
-      "FR",
-      "DE"
+      "FR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بلجيكا",
+      "zh": "比利時",
+      "fr": "Belgique",
+      "ru": "Бельгия",
+      "es": "Bélgica",
+      "pt": "Bélgica",
+      "de": "Belgien"
+    }
   },
   {
     "countryName": "Belize",
@@ -2670,7 +2868,16 @@
       "GT"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بليز",
+      "zh": "伯利兹",
+      "fr": "Belize",
+      "ru": "Белиз",
+      "es": "Belice",
+      "pt": "Belize",
+      "de": "Belize"
+    }
   },
   {
     "countryName": "Benin",
@@ -2757,7 +2964,16 @@
       "NG"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بنين",
+      "zh": "貝南",
+      "fr": "Bénin",
+      "ru": "Бенин",
+      "es": "Benín",
+      "pt": "Benim",
+      "de": "Benin"
+    }
   },
   {
     "countryName": "Bermuda",
@@ -2835,7 +3051,16 @@
       ".bm"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "برمودا",
+      "zh": "百慕大",
+      "fr": "Bermudes",
+      "ru": "Бермудские Острова",
+      "es": "Bermudas",
+      "pt": "Bermudas",
+      "de": "Bermuda"
+    }
   },
   {
     "countryName": "Bhutan",
@@ -2952,7 +3177,16 @@
       "IN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بوتان",
+      "zh": "不丹",
+      "fr": "Bhoutan",
+      "ru": "Бутан",
+      "es": "Bután",
+      "pt": "Butão",
+      "de": "Bhutan"
+    }
   },
   {
     "countryName": "Bolivia",
@@ -3016,9 +3250,9 @@
     "nativeName": "Wuliwya Suyu",
     "demonym": "Bolivian",
     "languages": [
+      "Aymara",
       "Spanish",
       "Quechua",
-      "Aymara",
       "Guarani"
     ],
     "tld": [
@@ -3032,7 +3266,16 @@
       "PY"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بوليفيا",
+      "zh": "玻利維亞",
+      "fr": "Bolivie",
+      "ru": "Боливия",
+      "es": "Bolivia",
+      "pt": "Bolívia",
+      "de": "Bolivien"
+    }
   },
   {
     "countryName": "Bonaire, Sint Eustatius and Saba",
@@ -3069,16 +3312,25 @@
     "continent": "North America",
     "nativeName": "Caribisch Nederland",
     "languages": [
-      "English",
       "Dutch",
+      "English",
       "Papiamento"
     ],
     "tld": [
-      ".bq",
-      ".nl"
+      ".nl",
+      ".bq"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "الجزر الكاريبية الهولندية",
+      "zh": "荷蘭加勒比區",
+      "fr": "Pays-Bas caribéens",
+      "ru": "Бонайре, Синт-Эстатиус и Саба",
+      "es": "Caribe neerlandés",
+      "pt": "Países Baixos Caribenhos",
+      "de": "Karibische Niederlande"
+    }
   },
   {
     "countryName": "Bosnia and Herzegovina",
@@ -3119,8 +3371,8 @@
     "demonym": "Bosnian",
     "languages": [
       "Croatian",
-      "Serbian",
-      "Bosnian"
+      "Bosnian",
+      "Serbian"
     ],
     "tld": [
       ".ba"
@@ -3131,7 +3383,16 @@
       "RS"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "البوسنة والهرسك",
+      "zh": "波斯尼亚和黑塞哥维那",
+      "fr": "Bosnie-Herzégovine",
+      "ru": "Босния и Герцеговина",
+      "es": "Bosnia y Herzegovina",
+      "pt": "Bósnia e Herzegovina",
+      "de": "Bosnien und Herzegowina"
+    }
   },
   {
     "countryName": "Botswana",
@@ -3207,7 +3468,16 @@
       "NA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بوتسوانا",
+      "zh": "波札那",
+      "fr": "Botswana",
+      "ru": "Ботсвана",
+      "es": "Botsuana",
+      "pt": "Botsuana",
+      "de": "Botswana"
+    }
   },
   {
     "countryName": "Bouvet Island",
@@ -3238,7 +3508,16 @@
       ".bv"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزيرة بوفيه",
+      "zh": "布韦岛",
+      "fr": "île Bouvet",
+      "ru": "Остров Буве",
+      "es": "Isla Bouvet",
+      "pt": "Ilha Bouvet",
+      "de": "Bouvetinsel"
+    }
   },
   {
     "countryName": "Brazil",
@@ -3476,7 +3755,7 @@
     "area": 8515767,
     "continent": "South America",
     "nativeName": "República Federativa do Brasil",
-    "demonym": "Brazilians",
+    "demonym": "Brazilian",
     "languages": [
       "Portuguese"
     ],
@@ -3497,7 +3776,16 @@
       "GF"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "البرازيل",
+      "zh": "巴西",
+      "fr": "Brésil",
+      "ru": "Бразилия",
+      "es": "Brasil",
+      "pt": "Brasil",
+      "de": "Brasilien"
+    }
   },
   {
     "countryName": "British Indian Ocean Territory",
@@ -3535,7 +3823,16 @@
       ".io"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "إقليم المحيط الهندي البريطاني",
+      "zh": "英屬印度洋領地",
+      "fr": "Territoire britannique de l’océan Indien",
+      "ru": "Британская территория в Индийском океане",
+      "es": "Territorio Británico del Océano Índico",
+      "pt": "Território Britânico do Oceano Índico",
+      "de": "Britisches Territorium im Indischen Ozean"
+    }
   },
   {
     "countryName": "Brunei Darussalam",
@@ -3587,7 +3884,16 @@
       "MY"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بروناي",
+      "zh": "汶莱",
+      "fr": "Brunei",
+      "ru": "Бруней",
+      "es": "Brunéi",
+      "pt": "Brunei",
+      "de": "Brunei"
+    }
   },
   {
     "countryName": "Bulgaria",
@@ -3741,7 +4047,16 @@
       "RS"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بلغاريا",
+      "zh": "保加利亚",
+      "fr": "Bulgarie",
+      "ru": "Болгария",
+      "es": "Bulgaria",
+      "pt": "Bulgária",
+      "de": "Bulgarien"
+    }
   },
   {
     "countryName": "Burkina Faso",
@@ -3949,9 +4264,9 @@
     "nativeName": "Burkina Faso",
     "demonym": "Burkinabe",
     "languages": [
+      "Dioula",
       "Bissa",
-      "Mooré",
-      "Dioula"
+      "Mooré"
     ],
     "tld": [
       ".bf"
@@ -3965,7 +4280,16 @@
       "NE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بوركينا فاسو",
+      "zh": "布吉納法索",
+      "fr": "Burkina Faso",
+      "ru": "Буркина-Фасо",
+      "es": "Burkina Faso",
+      "pt": "Burquina Fasso",
+      "de": "Burkina Faso"
+    }
   },
   {
     "countryName": "Burundi",
@@ -4061,9 +4385,9 @@
     "nativeName": "Uburundi",
     "demonym": "Burundian",
     "languages": [
-      "Kirundi",
       "French",
-      "English"
+      "English",
+      "Kirundi"
     ],
     "tld": [
       ".bi"
@@ -4074,7 +4398,16 @@
       "RW"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بوروندي",
+      "zh": "蒲隆地",
+      "fr": "Burundi",
+      "ru": "Бурунди",
+      "es": "Burundi",
+      "pt": "Burundi",
+      "de": "Burundi"
+    }
   },
   {
     "countryName": "Cambodia",
@@ -4213,7 +4546,16 @@
       "VN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كمبوديا",
+      "zh": "柬埔寨",
+      "fr": "Cambodge",
+      "ru": "Камбоджа",
+      "es": "Camboya",
+      "pt": "Camboja",
+      "de": "Kambodscha"
+    }
   },
   {
     "countryName": "Cameroon",
@@ -4296,7 +4638,16 @@
       "NG"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الكاميرون",
+      "zh": "喀麦隆",
+      "fr": "Cameroun",
+      "ru": "Камерун",
+      "es": "Camerún",
+      "pt": "Camarões",
+      "de": "Kamerun"
+    }
   },
   {
     "countryName": "Canada",
@@ -4575,7 +4926,16 @@
       "US"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كندا",
+      "zh": "加拿大",
+      "fr": "Canada",
+      "ru": "Канада",
+      "es": "Canadá",
+      "pt": "Canadá",
+      "de": "Kanada"
+    }
   },
   {
     "countryName": "Cape Verde",
@@ -4685,7 +5045,16 @@
       ".cv"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الرأس الأخضر",
+      "zh": "佛得角",
+      "fr": "Cap-Vert",
+      "ru": "Кабо-Верде",
+      "es": "Cabo Verde",
+      "pt": "Cabo Verde",
+      "de": "Kap Verde"
+    }
   },
   {
     "countryName": "Cayman Islands",
@@ -4742,7 +5111,16 @@
       ".ky"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر كايمان",
+      "zh": "開曼群島",
+      "fr": "îles Caïmans",
+      "ru": "Каймановы Острова",
+      "es": "Islas Caimán",
+      "pt": "Ilhas Cayman",
+      "de": "Cayman Islands"
+    }
   },
   {
     "countryName": "Central African Republic",
@@ -4853,7 +5231,16 @@
       "CM"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جمهورية إفريقيا الوسطى",
+      "zh": "中非共和國",
+      "fr": "République centrafricaine",
+      "ru": "Центральноафриканская Республика",
+      "es": "República Centroafricana",
+      "pt": "República Centro-Africana",
+      "de": "Zentralafrikanische Republik"
+    }
   },
   {
     "countryName": "Chad",
@@ -4984,7 +5371,16 @@
       "SD"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تشاد",
+      "zh": "乍得",
+      "fr": "Tchad",
+      "ru": "Чад",
+      "es": "Chad",
+      "pt": "Chade",
+      "de": "Tschad"
+    }
   },
   {
     "countryName": "Chile",
@@ -5105,7 +5501,16 @@
       "BO"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تشيلي",
+      "zh": "智利",
+      "fr": "Chili",
+      "ru": "Чили",
+      "es": "Chile",
+      "pt": "Chile",
+      "de": "Chile"
+    }
   },
   {
     "countryName": "China",
@@ -5298,7 +5703,16 @@
       "BT"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الصين",
+      "zh": "中华人民共和国",
+      "fr": "République populaire de Chine",
+      "ru": "Китай",
+      "es": "República Popular China",
+      "pt": "China",
+      "de": "Volksrepublik China"
+    }
   },
   {
     "countryName": "Christmas Island",
@@ -5335,7 +5749,16 @@
       ".cx"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزيرة عيد الميلاد",
+      "zh": "聖誕島",
+      "fr": "île Christmas",
+      "ru": "Остров Рождества",
+      "es": "Isla de Navidad",
+      "pt": "Ilha Christmas",
+      "de": "Weihnachtsinsel"
+    }
   },
   {
     "countryName": "Cocos (Keeling) Islands",
@@ -5391,7 +5814,16 @@
       ".cc"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر كوكوس",
+      "zh": "科科斯（基林）群島",
+      "fr": "îles Cocos",
+      "ru": "Кокосовые острова",
+      "es": "islas Cocos",
+      "pt": "Ilhas Cocos",
+      "de": "Kokosinseln"
+    }
   },
   {
     "countryName": "Colombia",
@@ -5565,7 +5997,16 @@
       "NI"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كولومبيا",
+      "zh": "哥伦比亚",
+      "fr": "Colombie",
+      "ru": "Колумбия",
+      "es": "Colombia",
+      "pt": "Colômbia",
+      "de": "Kolumbien"
+    }
   },
   {
     "countryName": "Comoros",
@@ -5620,7 +6061,16 @@
       "SC"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جزر القمر",
+      "zh": "葛摩",
+      "fr": "Comores",
+      "ru": "Коморы",
+      "es": "Comoras",
+      "pt": "Comores",
+      "de": "Komoren"
+    }
   },
   {
     "countryName": "Congo, Republic of the (Brazzaville)",
@@ -5709,7 +6159,16 @@
       "CM"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جمهورية الكونغو",
+      "zh": "剛果共和國",
+      "fr": "République du Congo",
+      "ru": "Республика Конго",
+      "es": "Congo",
+      "pt": "República do Congo",
+      "de": "Republik Kongo"
+    }
   },
   {
     "countryName": "Congo, the Democratic Republic of the (Kinshasa)",
@@ -5806,7 +6265,16 @@
       "SD"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جمهورية الكونغو الديمقراطية",
+      "zh": "刚果民主共和国",
+      "fr": "République démocratique du Congo",
+      "ru": "Демократическая Республика Конго",
+      "es": "República Democrática del Congo",
+      "pt": "República Democrática do Congo",
+      "de": "Demokratische Republik Kongo"
+    }
   },
   {
     "countryName": "Cook Islands",
@@ -5877,7 +6345,16 @@
       ".ck"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر كوك",
+      "zh": "库克群岛",
+      "fr": "Îles Cook",
+      "ru": "Острова Кука",
+      "es": "Islas Cook",
+      "pt": "Ilhas Cook",
+      "de": "Cookinseln"
+    }
   },
   {
     "countryName": "Costa Rica",
@@ -5943,7 +6420,16 @@
       "NI"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كوستاريكا",
+      "zh": "哥斯达黎加",
+      "fr": "Costa Rica",
+      "ru": "Коста-Рика",
+      "es": "Costa Rica",
+      "pt": "Costa Rica",
+      "de": "Costa Rica"
+    }
   },
   {
     "countryName": "Côte d'Ivoire, Republic of",
@@ -6060,7 +6546,16 @@
       "LR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ساحل العاج",
+      "zh": "科特迪瓦",
+      "fr": "Côte d'Ivoire",
+      "ru": "Кот-д’Ивуар",
+      "es": "Costa de Marfil",
+      "pt": "Costa do Marfim",
+      "de": "Elfenbeinküste"
+    }
   },
   {
     "countryName": "Croatia",
@@ -6184,7 +6679,16 @@
       "RS"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كرواتيا",
+      "zh": "克羅地亞",
+      "fr": "Croatie",
+      "ru": "Хорватия",
+      "es": "Croacia",
+      "pt": "Croácia",
+      "de": "Kroatien"
+    }
   },
   {
     "countryName": "Cuba",
@@ -6286,7 +6790,16 @@
       "GB"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كوبا",
+      "zh": "古巴",
+      "fr": "Cuba",
+      "ru": "Куба",
+      "es": "Cuba",
+      "pt": "Cuba",
+      "de": "Kuba"
+    }
   },
   {
     "countryName": "Curaçao",
@@ -6326,7 +6839,16 @@
       ".cw"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "كوراساو",
+      "zh": "库拉索",
+      "fr": "Curaçao",
+      "ru": "Кюрасао",
+      "es": "Curazao",
+      "pt": "Curaçau",
+      "de": "Curaçao"
+    }
   },
   {
     "countryName": "Cyprus",
@@ -6397,7 +6919,16 @@
       "IL"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "قبرص",
+      "zh": "塞浦路斯",
+      "fr": "Chypre",
+      "ru": "Кипр",
+      "es": "Chipre",
+      "pt": "Chipre",
+      "de": "Zypern"
+    }
   },
   {
     "countryName": "Czech Republic",
@@ -6493,7 +7024,16 @@
       "SK"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جمهورية التشيك",
+      "zh": "捷克",
+      "fr": "Tchéquie",
+      "ru": "Чехия",
+      "es": "República Checa",
+      "pt": "Chéquia",
+      "de": "Tschechien"
+    }
   },
   {
     "countryName": "Denmark",
@@ -6591,7 +7131,16 @@
       "DE"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "الدنمارك",
+      "zh": "丹麥",
+      "fr": "Danemark",
+      "ru": "Дания",
+      "es": "Dinamarca",
+      "pt": "Dinamarca",
+      "de": "Dänemark"
+    }
   },
   {
     "countryName": "Djibouti",
@@ -6650,7 +7199,16 @@
       "SO"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جيبوتي",
+      "zh": "吉布提",
+      "fr": "Djibouti",
+      "ru": "Джибути",
+      "es": "Yibuti",
+      "pt": "Djibouti",
+      "de": "Dschibuti"
+    }
   },
   {
     "countryName": "Dominica",
@@ -6727,7 +7285,16 @@
       "VE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "دومينيكا",
+      "zh": "多米尼克",
+      "fr": "Dominique",
+      "ru": "Доминика",
+      "es": "Dominica",
+      "pt": "Dominica",
+      "de": "Dominica"
+    }
   },
   {
     "countryName": "Dominican Republic",
@@ -6802,7 +7369,16 @@
       "TC"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جمهورية الدومينيكان",
+      "zh": "多明尼加",
+      "fr": "République dominicaine",
+      "ru": "Доминиканская Республика",
+      "es": "República Dominicana",
+      "pt": "República Dominicana",
+      "de": "Dominikanische Republik"
+    }
   },
   {
     "countryName": "Ecuador",
@@ -6933,8 +7509,8 @@
     "demonym": "Ecuadoran",
     "languages": [
       "Spanish",
-      "Shuar",
-      "Northern Quichua"
+      "Northern Quichua",
+      "Shuar"
     ],
     "tld": [
       ".ec"
@@ -6944,7 +7520,16 @@
       "CO"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الإكوادور",
+      "zh": "厄瓜多尔",
+      "fr": "Équateur",
+      "ru": "Эквадор",
+      "es": "Ecuador",
+      "pt": "Equador",
+      "de": "Ecuador"
+    }
   },
   {
     "countryName": "Egypt",
@@ -7100,7 +7685,16 @@
       "PS"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "مصر",
+      "zh": "埃及",
+      "fr": "Égypte",
+      "ru": "Египет",
+      "es": "Egipto",
+      "pt": "Egito",
+      "de": "Ägypten"
+    }
   },
   {
     "countryName": "El Salvador",
@@ -7193,7 +7787,16 @@
       "HN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "السلفادور",
+      "zh": "薩爾瓦多",
+      "fr": "Salvador",
+      "ru": "Сальвадор",
+      "es": "El Salvador",
+      "pt": "El Salvador",
+      "de": "El Salvador"
+    }
   },
   {
     "countryName": "Equatorial Guinea",
@@ -7261,7 +7864,16 @@
       "ST"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "غينيا الاستوائية",
+      "zh": "赤道几内亚",
+      "fr": "Guinée équatoriale",
+      "ru": "Экваториальная Гвинея",
+      "es": "Guinea Ecuatorial",
+      "pt": "Guiné Equatorial",
+      "de": "Äquatorialguinea"
+    }
   },
   {
     "countryName": "Eritrea",
@@ -7325,7 +7937,16 @@
       "SD"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "إرتريا",
+      "zh": "厄立特里亞",
+      "fr": "Érythrée",
+      "ru": "Эритрея",
+      "es": "Eritrea",
+      "pt": "Eritreia",
+      "de": "Eritrea"
+    }
   },
   {
     "countryName": "Estonia",
@@ -7422,7 +8043,16 @@
       "LV"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "إستونيا",
+      "zh": "愛沙尼亞",
+      "fr": "Estonie",
+      "ru": "Эстония",
+      "es": "Estonia",
+      "pt": "Estónia",
+      "de": "Estland"
+    }
   },
   {
     "countryName": "Ethiopia",
@@ -7507,7 +8137,16 @@
       "SD"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "إثيوبيا",
+      "zh": "埃塞俄比亚",
+      "fr": "Éthiopie",
+      "ru": "Эфиопия",
+      "es": "Etiopía",
+      "pt": "Etiópia",
+      "de": "Äthiopien"
+    }
   },
   {
     "countryName": "Falkland Islands (Islas Malvinas)",
@@ -7541,7 +8180,16 @@
       ".fk"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر فوكلاند",
+      "zh": "福克蘭群島",
+      "fr": "îles Malouines",
+      "ru": "Фолклендские острова",
+      "es": "Islas Malvinas",
+      "pt": "Ilhas Malvinas",
+      "de": "Falklandinseln"
+    }
   },
   {
     "countryName": "Faroe Islands",
@@ -7604,7 +8252,16 @@
       "IS"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر فارو",
+      "zh": "法罗群岛",
+      "fr": "îles Féroé",
+      "ru": "Фарерские острова",
+      "es": "Islas Feroe",
+      "pt": "Ilhas Feroe",
+      "de": "Färöer"
+    }
   },
   {
     "countryName": "Fiji",
@@ -7703,7 +8360,16 @@
       "SB"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "فيجي",
+      "zh": "斐濟",
+      "fr": "Fidji",
+      "ru": "Фиджи",
+      "es": "Fiyi",
+      "pt": "Fiji",
+      "de": "Fidschi"
+    }
   },
   {
     "countryName": "Finland",
@@ -7766,7 +8432,16 @@
       "RU"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "فنلندا",
+      "zh": "芬蘭",
+      "fr": "Finlande",
+      "ru": "Финляндия",
+      "es": "Finlandia",
+      "pt": "Finlândia",
+      "de": "Finnland"
+    }
   },
   {
     "countryName": "France",
@@ -7916,7 +8591,16 @@
       "NL"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "فرنسا",
+      "zh": "法國",
+      "fr": "France",
+      "ru": "Франция",
+      "es": "Francia",
+      "pt": "França",
+      "de": "Frankreich"
+    }
   },
   {
     "countryName": "French Guiana",
@@ -7957,7 +8641,16 @@
       "SR"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "غويانا الفرنسية",
+      "zh": "法屬圭亞那",
+      "fr": "Guyane",
+      "ru": "Французская Гвиана",
+      "es": "Guayana Francesa",
+      "pt": "Guiana Francesa",
+      "de": "Französisch-Guayana"
+    }
   },
   {
     "countryName": "French Polynesia",
@@ -8019,7 +8712,16 @@
       ".pf"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "بولنيزيا الفرنسية",
+      "zh": "法屬玻里尼西亞",
+      "fr": "Polynésie française",
+      "ru": "Французская Полинезия",
+      "es": "Polinesia Francesa",
+      "pt": "Polinésia Francesa",
+      "de": "Französisch-Polynesien"
+    }
   },
   {
     "countryName": "French Southern and Antarctic Lands",
@@ -8064,7 +8766,16 @@
       ".tf"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "أراض فرنسية جنوبية وأنتارتيكية",
+      "zh": "法属南部和南极领地",
+      "fr": "Terres australes et antarctiques françaises",
+      "ru": "Французские Южные и Антарктические территории",
+      "es": "Tierras Australes y Antárticas Francesas",
+      "pt": "Terras Austrais e Antárticas Francesas",
+      "de": "Französische Süd- und Antarktisgebiete"
+    }
   },
   {
     "countryName": "Gabon",
@@ -8140,7 +8851,16 @@
       "ST"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الغابون",
+      "zh": "加蓬",
+      "fr": "Gabon",
+      "ru": "Габон",
+      "es": "Gabón",
+      "pt": "Gabão",
+      "de": "Gabun"
+    }
   },
   {
     "countryName": "Gambia, The",
@@ -8201,7 +8921,16 @@
       "SN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "غامبيا",
+      "zh": "岡比亞",
+      "fr": "Gambie",
+      "ru": "Гамбия",
+      "es": "Gambia",
+      "pt": "Gâmbia",
+      "de": "Gambia"
+    }
   },
   {
     "countryName": "Georgia",
@@ -8289,7 +9018,16 @@
       "AM"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جورجيا",
+      "zh": "格鲁吉亚",
+      "fr": "Géorgie",
+      "ru": "Грузия",
+      "es": "Georgia",
+      "pt": "Geórgia",
+      "de": "Georgien"
+    }
   },
   {
     "countryName": "Germany",
@@ -8403,7 +9141,16 @@
       "CZ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ألمانيا",
+      "zh": "德國",
+      "fr": "Allemagne",
+      "ru": "Германия",
+      "es": "Alemania",
+      "pt": "Alemanha",
+      "de": "Deutschland"
+    }
   },
   {
     "countryName": "Ghana",
@@ -8499,7 +9246,16 @@
       "CI"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "غانا",
+      "zh": "迦納",
+      "fr": "Ghana",
+      "ru": "Гана",
+      "es": "Ghana",
+      "pt": "Gana",
+      "de": "Ghana"
+    }
   },
   {
     "countryName": "Gibraltar",
@@ -8539,7 +9295,16 @@
       "ES"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جبل طارق",
+      "zh": "直布羅陀",
+      "fr": "Gibraltar",
+      "ru": "Гибралтар",
+      "es": "Gibraltar",
+      "pt": "Gibraltar",
+      "de": "Gibraltar"
+    }
   },
   {
     "countryName": "Greece",
@@ -8636,7 +9401,16 @@
       "AL"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "اليونان",
+      "zh": "希腊",
+      "fr": "Grèce",
+      "ru": "Греция",
+      "es": "Grecia",
+      "pt": "Grécia",
+      "de": "Griechenland"
+    }
   },
   {
     "countryName": "Greenland",
@@ -8711,7 +9485,16 @@
       "IS"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "غرينلاند",
+      "zh": "格陵兰",
+      "fr": "Groenland",
+      "ru": "Гренландия",
+      "es": "Groenlandia",
+      "pt": "Gronelândia",
+      "de": "Grönland"
+    }
   },
   {
     "countryName": "Grenada",
@@ -8777,7 +9560,16 @@
       "VE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "غرنادة",
+      "zh": "格瑞那達",
+      "fr": "Grenade",
+      "ru": "Гренада",
+      "es": "Granada",
+      "pt": "Granada",
+      "de": "Grenada"
+    }
   },
   {
     "countryName": "Guadeloupe",
@@ -8810,7 +9602,16 @@
       ".gp"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "غوادلوب",
+      "zh": "瓜德羅普",
+      "fr": "Guadeloupe",
+      "ru": "Гваделупа",
+      "es": "Guadalupe",
+      "pt": "Guadalupe",
+      "de": "Guadeloupe"
+    }
   },
   {
     "countryName": "Guam",
@@ -8852,7 +9653,16 @@
       "MP"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "غوام",
+      "zh": "關島",
+      "fr": "Guam",
+      "ru": "Гуам",
+      "es": "Guam",
+      "pt": "Guam",
+      "de": "Guam"
+    }
   },
   {
     "countryName": "Guatemala",
@@ -8979,7 +9789,16 @@
       "SV"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "غواتيمالا",
+      "zh": "危地马拉",
+      "fr": "Guatemala",
+      "ru": "Гватемала",
+      "es": "Guatemala",
+      "pt": "Guatemala",
+      "de": "Guatemala"
+    }
   },
   {
     "countryName": "Guernsey",
@@ -9042,7 +9861,16 @@
       ".gg"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "غيرنزي",
+      "zh": "根西",
+      "fr": "Guernesey",
+      "ru": "Гернси",
+      "es": "Guernsey",
+      "pt": "Guernsey",
+      "de": "Guernsey"
+    }
   },
   {
     "countryName": "Guinea",
@@ -9116,7 +9944,16 @@
       "SL"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "غينيا",
+      "zh": "几内亚",
+      "fr": "Guinée",
+      "ru": "Гвинея",
+      "es": "Guinea",
+      "pt": "Guiné",
+      "de": "Guinea"
+    }
   },
   {
     "countryName": "Guinea-Bissau",
@@ -9189,7 +10026,16 @@
       "SN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "غينيا بيساو",
+      "zh": "畿內亞比紹",
+      "fr": "Guinée-Bissau",
+      "ru": "Гвинея-Бисау",
+      "es": "Guinea-Bisáu",
+      "pt": "Guiné-Bissau",
+      "de": "Guinea-Bissau"
+    }
   },
   {
     "countryName": "Guyana",
@@ -9268,7 +10114,16 @@
       "SR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "غيانا",
+      "zh": "圭亚那",
+      "fr": "Guyana",
+      "ru": "Гайана",
+      "es": "Guyana",
+      "pt": "Guiana",
+      "de": "Guyana"
+    }
   },
   {
     "countryName": "Haiti",
@@ -9347,7 +10202,16 @@
       "TC"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "هايتي",
+      "zh": "海地",
+      "fr": "Haïti",
+      "ru": "Гаити",
+      "es": "Haití",
+      "pt": "Haiti",
+      "de": "Haiti"
+    }
   },
   {
     "countryName": "Heard Island and McDonald Islands",
@@ -9381,7 +10245,16 @@
       ".hm"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزيرة هيرد وجزر ماكدونالد",
+      "zh": "赫德島和麥克唐納群島",
+      "fr": "îles Heard-et-MacDonald",
+      "ru": "Остров Херд и острова Макдональд",
+      "es": "Islas Heard y McDonald",
+      "pt": "Ilha Heard e Ilhas McDonald",
+      "de": "Heard und McDonaldinseln"
+    }
   },
   {
     "countryName": "Holy See (Vatican City)",
@@ -9422,7 +10295,16 @@
       "IT"
     ],
     "unMember": false,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الفاتيكان",
+      "zh": "梵蒂岡城國",
+      "fr": "Vatican",
+      "ru": "Ватикан",
+      "es": "Ciudad del Vaticano",
+      "pt": "Vaticano",
+      "de": "Vatikanstadt"
+    }
   },
   {
     "countryName": "Honduras",
@@ -9532,7 +10414,16 @@
       "NI"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "هندوراس",
+      "zh": "洪都拉斯",
+      "fr": "Honduras",
+      "ru": "Гондурас",
+      "es": "Honduras",
+      "pt": "Honduras",
+      "de": "Honduras"
+    }
   },
   {
     "countryName": "Hong Kong",
@@ -9569,7 +10460,16 @@
       ".hk"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "هونغ كونغ",
+      "zh": "香港",
+      "fr": "Hong Kong",
+      "ru": "Гонконг",
+      "es": "Hong Kong",
+      "pt": "Hong Kong",
+      "de": "Hongkong"
+    }
   },
   {
     "countryName": "Hungary",
@@ -9783,7 +10683,16 @@
       "RS"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "المجر",
+      "zh": "匈牙利",
+      "fr": "Hongrie",
+      "ru": "Венгрия",
+      "es": "Hungría",
+      "pt": "Hungria",
+      "de": "Ungarn"
+    }
   },
   {
     "countryName": "Iceland",
@@ -9851,7 +10760,16 @@
       "FO"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "آيسلندا",
+      "zh": "冰島",
+      "fr": "Islande",
+      "ru": "Исландия",
+      "es": "Islandia",
+      "pt": "Islândia",
+      "de": "Island"
+    }
   },
   {
     "countryName": "India",
@@ -10023,21 +10941,21 @@
     "nativeName": "भारत",
     "demonym": "Indian",
     "languages": [
-      "English",
-      "Hindi"
+      "Hindi",
+      "English"
     ],
     "tld": [
-      ".भारत",
-      ".بھارت",
-      ".ભારત",
-      ".ভারত",
-      ".ভাৰত",
       ".భారత్",
       ".இந்தியா",
       ".ਭਾਰਤ",
+      ".भारत",
+      ".بھارت",
+      ".ভাৰত",
       ".ಭಾರತ",
       ".ഭാരതം",
       ".ଭାରତ",
+      ".ભારત",
+      ".ভারত",
       ".in"
     ],
     "borders": [
@@ -10052,7 +10970,16 @@
       "BT"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الهند",
+      "zh": "印度",
+      "fr": "Inde",
+      "ru": "Индия",
+      "es": "India",
+      "pt": "Índia",
+      "de": "Indien"
+    }
   },
   {
     "countryName": "Indonesia",
@@ -10250,7 +11177,16 @@
       "PH"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "إندونيسيا",
+      "zh": "印度尼西亚",
+      "fr": "Indonésie",
+      "ru": "Индонезия",
+      "es": "Indonesia",
+      "pt": "Indonésia",
+      "de": "Indonesien"
+    }
   },
   {
     "countryName": "Iran, Islamic Republic of",
@@ -10422,7 +11358,16 @@
       "AF"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "إيران",
+      "zh": "伊朗",
+      "fr": "Iran",
+      "ru": "Иран",
+      "es": "Irán",
+      "pt": "Irão",
+      "de": "Iran"
+    }
   },
   {
     "countryName": "Iraq",
@@ -10522,22 +11467,31 @@
     "nativeName": "Iraq",
     "demonym": "Iraqi",
     "languages": [
-      "Kurdish",
-      "Arabic"
+      "Arabic",
+      "Kurdish"
     ],
     "tld": [
       ".iq"
     ],
     "borders": [
-      "KW",
-      "SA",
-      "SY",
       "TR",
       "IR",
-      "JO"
+      "JO",
+      "KW",
+      "SA",
+      "SY"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "العراق",
+      "zh": "伊拉克",
+      "fr": "Irak",
+      "ru": "Ирак",
+      "es": "Irak",
+      "pt": "Iraque",
+      "de": "Irak"
+    }
   },
   {
     "countryName": "Ireland",
@@ -10679,7 +11633,16 @@
       "GB"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جمهورية أيرلندا",
+      "zh": "愛爾蘭共和國",
+      "fr": "Irlande",
+      "ru": "Ирландия",
+      "es": "Irlanda",
+      "pt": "República da Irlanda",
+      "de": "Irland"
+    }
   },
   {
     "countryName": "Isle of Man",
@@ -10717,7 +11680,16 @@
       ".im"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزيرة مان",
+      "zh": "马恩岛",
+      "fr": "Île de Man",
+      "ru": "Остров Мэн",
+      "es": "Isla de Man",
+      "pt": "Ilha de Man",
+      "de": "Isle of Man"
+    }
   },
   {
     "countryName": "Israel",
@@ -10781,7 +11753,16 @@
       "SY"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "إسرائيل",
+      "zh": "以色列",
+      "fr": "Israël",
+      "ru": "Израиль",
+      "es": "Israel",
+      "pt": "Israel",
+      "de": "Israel"
+    }
   },
   {
     "countryName": "Italy",
@@ -10903,7 +11884,16 @@
       "SM"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "إيطاليا",
+      "zh": "意大利",
+      "fr": "Italie",
+      "ru": "Италия",
+      "es": "Italia",
+      "pt": "Itália",
+      "de": "Italien"
+    }
   },
   {
     "countryName": "Jamaica",
@@ -10997,7 +11987,16 @@
       "GB"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جامايكا",
+      "zh": "牙買加",
+      "fr": "Jamaïque",
+      "ru": "Ямайка",
+      "es": "Jamaica",
+      "pt": "Jamaica",
+      "de": "Jamaika"
+    }
   },
   {
     "countryName": "Japan",
@@ -11226,7 +12225,16 @@
       "PH"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "اليابان",
+      "zh": "日本",
+      "fr": "Japon",
+      "ru": "Япония",
+      "es": "Japón",
+      "pt": "Japão",
+      "de": "Japan"
+    }
   },
   {
     "countryName": "Jersey",
@@ -11265,7 +12273,13 @@
       ".je"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جيرزي",
+      "zh": "澤西",
+      "fr": "Jersey",
+      "ru": "Джерси"
+    }
   },
   {
     "countryName": "Jordan",
@@ -11354,7 +12368,16 @@
       "PS"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الأردن",
+      "zh": "約旦",
+      "fr": "Jordanie",
+      "ru": "Иордания",
+      "es": "Jordania",
+      "pt": "Jordânia",
+      "de": "Jordanien"
+    }
   },
   {
     "countryName": "Kazakhstan",
@@ -11482,7 +12505,7 @@
     "capital": "Astana",
     "population": 20139914,
     "area": 2724900,
-    "continent": "Asia",
+    "continent": "Europe",
     "nativeName": "Қазақстан",
     "demonym": "Kazakhstani",
     "languages": [
@@ -11494,14 +12517,23 @@
       ".kz"
     ],
     "borders": [
-      "TM",
       "CN",
       "RU",
       "UZ",
-      "KG"
+      "KG",
+      "TM"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كازاخستان",
+      "zh": "哈萨克斯坦",
+      "fr": "Kazakhstan",
+      "ru": "Казахстан",
+      "es": "Kazajistán",
+      "pt": "Cazaquistão",
+      "de": "Kasachstan"
+    }
   },
   {
     "countryName": "Kenya",
@@ -11732,7 +12764,16 @@
       "SD"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كينيا",
+      "zh": "肯尼亚",
+      "fr": "Kenya",
+      "ru": "Кения",
+      "es": "Kenia",
+      "pt": "Quénia",
+      "de": "Kenia"
+    }
   },
   {
     "countryName": "Kiribati",
@@ -11869,7 +12910,16 @@
       "FR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كيريباتي",
+      "zh": "吉里巴斯",
+      "fr": "Kiribati",
+      "ru": "Кирибати",
+      "es": "Kiribati",
+      "pt": "Quiribáti",
+      "de": "Kiribati"
+    }
   },
   {
     "countryName": "Korea, Democratic People's Republic of",
@@ -11952,7 +13002,16 @@
       "KR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كوريا الشمالية",
+      "zh": "朝鮮民主主義人民共和國",
+      "fr": "Corée du Nord",
+      "ru": "КНДР",
+      "es": "Corea del Norte",
+      "pt": "Coreia do Norte",
+      "de": "Nordkorea"
+    }
   },
   {
     "countryName": "Korea, Republic of",
@@ -12061,7 +13120,16 @@
       "KP"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كوريا الجنوبية",
+      "zh": "大韩民国",
+      "fr": "Corée du Sud",
+      "ru": "Республика Корея",
+      "es": "Corea del Sur",
+      "pt": "Coreia do Sul",
+      "de": "Südkorea"
+    }
   },
   {
     "countryName": "Kosovo",
@@ -12097,7 +13165,16 @@
       "RS"
     ],
     "unMember": false,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "كوسوفو",
+      "zh": "科索沃",
+      "fr": "Kosovo",
+      "ru": "Республика Косово",
+      "es": "Kosovo",
+      "pt": "Kosovo",
+      "de": "Kosovo"
+    }
   },
   {
     "countryName": "Kuwait",
@@ -12159,7 +13236,16 @@
       "SA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الكويت",
+      "zh": "科威特",
+      "fr": "Koweït",
+      "ru": "Кувейт",
+      "es": "Kuwait",
+      "pt": "Kuwait",
+      "de": "Kuwait"
+    }
   },
   {
     "countryName": "Kyrgyzstan",
@@ -12230,7 +13316,16 @@
       "TJ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "قرغيزستان",
+      "zh": "吉尔吉斯斯坦",
+      "fr": "Kirghizistan",
+      "ru": "Кыргызстан",
+      "es": "Kirguistán",
+      "pt": "Quirguistão",
+      "de": "Kirgisistan"
+    }
   },
   {
     "countryName": "Laos",
@@ -12338,7 +13433,16 @@
       "VN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "لاوس",
+      "zh": "老撾",
+      "fr": "Laos",
+      "ru": "Лаос",
+      "es": "Laos",
+      "pt": "Laos",
+      "de": "Laos"
+    }
   },
   {
     "countryName": "Latvia",
@@ -12854,7 +13958,16 @@
       "EE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "لاتفيا",
+      "zh": "拉脫維亞",
+      "fr": "Lettonie",
+      "ru": "Латвия",
+      "es": "Letonia",
+      "pt": "Letónia",
+      "de": "Lettland"
+    }
   },
   {
     "countryName": "Lebanon",
@@ -12924,7 +14037,16 @@
       "SY"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "لبنان",
+      "zh": "黎巴嫩",
+      "fr": "Liban",
+      "ru": "Ливан",
+      "es": "Líbano",
+      "pt": "Líbano",
+      "de": "Libanon"
+    }
   },
   {
     "countryName": "Lesotho",
@@ -13002,7 +14124,16 @@
       "ZA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ليسوتو",
+      "zh": "莱索托",
+      "fr": "Lesotho",
+      "ru": "Лесото",
+      "es": "Lesoto",
+      "pt": "Lesoto",
+      "de": "Lesotho"
+    }
   },
   {
     "countryName": "Liberia",
@@ -13101,7 +14232,16 @@
       "SL"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ليبيريا",
+      "zh": "利比里亞",
+      "fr": "Liberia",
+      "ru": "Либерия",
+      "es": "Liberia",
+      "pt": "Libéria",
+      "de": "Liberia"
+    }
   },
   {
     "countryName": "Libya",
@@ -13231,7 +14371,16 @@
       "SD"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ليبيا",
+      "zh": "利比亞",
+      "fr": "Libye",
+      "ru": "Ливия",
+      "es": "Libia",
+      "pt": "Líbia",
+      "de": "Libyen"
+    }
   },
   {
     "countryName": "Liechtenstein",
@@ -13312,7 +14461,16 @@
       "AT"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ليختنشتاين",
+      "zh": "列支敦斯登",
+      "fr": "Liechtenstein",
+      "ru": "Лихтенштейн",
+      "es": "Liechtenstein",
+      "pt": "Liechtenstein",
+      "de": "Liechtenstein"
+    }
   },
   {
     "countryName": "Lithuania",
@@ -13392,7 +14550,16 @@
       "LV"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "لتوانيا",
+      "zh": "立陶宛",
+      "fr": "Lituanie",
+      "ru": "Литва",
+      "es": "Lituania",
+      "pt": "Lituânia",
+      "de": "Litauen"
+    }
   },
   {
     "countryName": "Luxembourg",
@@ -13481,7 +14648,16 @@
       "DE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "لوكسمبورغ",
+      "zh": "卢森堡",
+      "fr": "Luxembourg",
+      "ru": "Люксембург",
+      "es": "Luxemburgo",
+      "pt": "Luxemburgo",
+      "de": "Luxemburg"
+    }
   },
   {
     "countryName": "Macao",
@@ -13517,7 +14693,16 @@
       ".mo"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "ماكاو",
+      "zh": "澳門",
+      "fr": "Macao",
+      "ru": "Макао",
+      "es": "Macao",
+      "pt": "Macau",
+      "de": "Macau"
+    }
   },
   {
     "countryName": "Macedonia, Republic of",
@@ -13842,7 +15027,16 @@
       "XK"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "مقدونيا الشمالية",
+      "zh": "北马其顿",
+      "fr": "Macédoine du Nord",
+      "ru": "Северная Македония",
+      "es": "Macedonia del Norte",
+      "pt": "Macedónia do Norte",
+      "de": "Nordmazedonien"
+    }
   },
   {
     "countryName": "Madagascar",
@@ -13906,7 +15100,16 @@
       "SC"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "مدغشقر",
+      "zh": "馬達加斯加",
+      "fr": "Madagascar",
+      "ru": "Мадагаскар",
+      "es": "Madagascar",
+      "pt": "Madagáscar",
+      "de": "Madagaskar"
+    }
   },
   {
     "countryName": "Malawi",
@@ -14050,12 +15253,21 @@
       ".mw"
     ],
     "borders": [
-      "MZ",
       "TZ",
-      "ZM"
+      "ZM",
+      "MZ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ملاوي",
+      "zh": "馬拉威",
+      "fr": "Malawi",
+      "ru": "Малави",
+      "es": "Malaui",
+      "pt": "Malawi",
+      "de": "Malawi"
+    }
   },
   {
     "countryName": "Malaysia",
@@ -14166,7 +15378,16 @@
       "PH"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ماليزيا",
+      "zh": "馬來西亞",
+      "fr": "Malaisie",
+      "ru": "Малайзия",
+      "es": "Malasia",
+      "pt": "Malásia",
+      "de": "Malaysia"
+    }
   },
   {
     "countryName": "Maldives",
@@ -14286,7 +15507,16 @@
       "GB"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "المالديف",
+      "zh": "馬爾代夫",
+      "fr": "Maldives",
+      "ru": "Мальдивы",
+      "es": "Maldivas",
+      "pt": "Maldivas",
+      "de": "Malediven"
+    }
   },
   {
     "countryName": "Mali",
@@ -14350,18 +15580,18 @@
     "demonym": "Malian",
     "languages": [
       "Bambara",
-      "Senufo",
       "Fula",
+      "Senufo",
+      "Soninke",
+      "Bobo",
+      "Tamasheq",
       "Bozo",
+      "Dogon",
       "Kassonke",
       "Hassaniya Arabic",
       "Songhay",
-      "Soninke",
       "Maninka",
-      "Minyanka",
-      "Dogon",
-      "Tamasheq",
-      "Bobo"
+      "Minyanka"
     ],
     "tld": [
       ".ml"
@@ -14376,7 +15606,16 @@
       "SN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "مالي",
+      "zh": "马里",
+      "fr": "Mali",
+      "ru": "Мали",
+      "es": "Mali",
+      "pt": "Mali",
+      "de": "Mali"
+    }
   },
   {
     "countryName": "Malta",
@@ -14685,7 +15924,16 @@
       "IT"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "مالطا",
+      "zh": "馬耳他",
+      "fr": "Malte",
+      "ru": "Мальта",
+      "es": "Malta",
+      "pt": "Malta",
+      "de": "Malta"
+    }
   },
   {
     "countryName": "Marshall Islands",
@@ -14821,7 +16069,16 @@
       "KI"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جزر مارشال",
+      "zh": "馬紹爾群島",
+      "fr": "Îles Marshall",
+      "ru": "Маршалловы Острова",
+      "es": "Islas Marshall",
+      "pt": "Ilhas Marshall",
+      "de": "Marshallinseln"
+    }
   },
   {
     "countryName": "Martinique",
@@ -14853,7 +16110,16 @@
       ".mq"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "مارتينيك",
+      "zh": "馬提尼克",
+      "fr": "Martinique",
+      "ru": "Мартиника",
+      "es": "Martinica",
+      "pt": "Martinica",
+      "de": "Martinique"
+    }
   },
   {
     "countryName": "Mauritania",
@@ -14952,7 +16218,16 @@
       "ML"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "موريتانيا",
+      "zh": "毛里塔尼亞",
+      "fr": "Mauritanie",
+      "ru": "Мавритания",
+      "es": "Mauritania",
+      "pt": "Mauritânia",
+      "de": "Mauretanien"
+    }
   },
   {
     "countryName": "Mauritius",
@@ -15056,7 +16331,16 @@
       "SC"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "موريشيوس",
+      "zh": "毛里求斯",
+      "fr": "Maurice",
+      "ru": "Маврикий",
+      "es": "Mauricio",
+      "pt": "Maurícia",
+      "de": "Mauritius"
+    }
   },
   {
     "countryName": "Mayotte",
@@ -15144,7 +16428,7 @@
         "shortCode": "17"
       }
     ],
-    "capital": "Dzaoudzi",
+    "capital": "Mamoudzou",
     "population": 320901,
     "area": 374,
     "continent": "Africa",
@@ -15161,7 +16445,16 @@
       "MG"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "مايوت",
+      "zh": "马约特",
+      "fr": "Mayotte",
+      "ru": "Майотта",
+      "es": "Mayotte",
+      "pt": "Mayotte",
+      "de": "Mayotte"
+    }
   },
   {
     "countryName": "Mexico",
@@ -15400,7 +16693,16 @@
       "GT"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "المكسيك",
+      "zh": "墨西哥",
+      "fr": "Mexique",
+      "ru": "Мексика",
+      "es": "México",
+      "pt": "México",
+      "de": "Mexiko"
+    }
   },
   {
     "countryName": "Micronesia, Federated States of",
@@ -15468,7 +16770,16 @@
       "PW"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ولايات ميكرونيسيا المتحدة",
+      "zh": "密克罗尼西亚联邦",
+      "fr": "États fédérés de Micronésie",
+      "ru": "Федеративные Штаты Микронезии",
+      "es": "Estados Federados de Micronesia",
+      "pt": "Micronésia",
+      "de": "Föderierte Staaten von Mikronesien"
+    }
   },
   {
     "countryName": "Moldova",
@@ -15653,7 +16964,16 @@
       "RO"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "مولدوفا",
+      "zh": "摩爾多瓦",
+      "fr": "Moldavie",
+      "ru": "Молдова",
+      "es": "Moldavia",
+      "pt": "Moldávia",
+      "de": "Moldau"
+    }
   },
   {
     "countryName": "Monaco",
@@ -15757,7 +17077,16 @@
       "FR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "موناكو",
+      "zh": "摩納哥",
+      "fr": "Monaco",
+      "ru": "Монако",
+      "es": "Mónaco",
+      "pt": "Mónaco",
+      "de": "Monaco"
+    }
   },
   {
     "countryName": "Mongolia",
@@ -15877,7 +17206,7 @@
     "continent": "Asia",
     "officialName": "Mongolia",
     "nativeName": "Монгол Улс",
-    "demonym": "Mongol",
+    "demonym": "Mongolian",
     "languages": [
       "Mongolian"
     ],
@@ -15889,7 +17218,16 @@
       "RU"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "منغوليا",
+      "zh": "蒙古國",
+      "fr": "Mongolie",
+      "ru": "Монголия",
+      "es": "Mongolia",
+      "pt": "Mongólia",
+      "de": "Mongolei"
+    }
   },
   {
     "countryName": "Montenegro",
@@ -16021,7 +17359,16 @@
       "XK"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الجبل الأسود",
+      "zh": "蒙特內哥羅",
+      "fr": "Monténégro",
+      "ru": "Черногория",
+      "es": "Montenegro",
+      "pt": "Montenegro",
+      "de": "Montenegro"
+    }
   },
   {
     "countryName": "Montserrat",
@@ -16064,7 +17411,16 @@
       ".ms"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "مونتسيرات",
+      "zh": "蒙塞拉特島",
+      "fr": "Montserrat",
+      "ru": "Монтсеррат",
+      "es": "Montserrat",
+      "pt": "Monserrate",
+      "de": "Montserrat"
+    }
   },
   {
     "countryName": "Morocco",
@@ -16164,7 +17520,16 @@
       "EH"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "المغرب",
+      "zh": "摩洛哥",
+      "fr": "Maroc",
+      "ru": "Марокко",
+      "es": "Marruecos",
+      "pt": "Marrocos",
+      "de": "Marokko"
+    }
   },
   {
     "countryName": "Mozambique",
@@ -16250,7 +17615,16 @@
       "SZ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "موزمبيق",
+      "zh": "莫桑比克",
+      "fr": "Mozambique",
+      "ru": "Мозамбик",
+      "es": "Mozambique",
+      "pt": "Moçambique",
+      "de": "Mosambik"
+    }
   },
   {
     "countryName": "Myanmar",
@@ -16351,7 +17725,16 @@
       "BD"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ميانمار",
+      "zh": "緬甸",
+      "fr": "Birmanie",
+      "ru": "Мьянма",
+      "es": "Birmania",
+      "pt": "Myanmar",
+      "de": "Myanmar"
+    }
   },
   {
     "countryName": "Namibia",
@@ -16447,7 +17830,16 @@
       "BW"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ناميبيا",
+      "zh": "纳米比亚",
+      "fr": "Namibie",
+      "ru": "Намибия",
+      "es": "Namibia",
+      "pt": "Namíbia",
+      "de": "Namibia"
+    }
   },
   {
     "countryName": "Nauru",
@@ -16538,7 +17930,16 @@
       ".nr"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ناورو",
+      "zh": "瑙鲁",
+      "fr": "Nauru",
+      "ru": "Науру",
+      "es": "Nauru",
+      "pt": "Nauru",
+      "de": "Nauru"
+    }
   },
   {
     "countryName": "Nepal",
@@ -16631,7 +18032,16 @@
       "IN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "نيبال",
+      "zh": "尼泊爾",
+      "fr": "Népal",
+      "ru": "Непал",
+      "es": "Nepal",
+      "pt": "Nepal",
+      "de": "Nepal"
+    }
   },
   {
     "countryName": "Netherlands",
@@ -16718,7 +18128,16 @@
       "VE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "مملكة هولندا",
+      "zh": "荷兰王国",
+      "fr": "Royaume des Pays-Bas",
+      "ru": "Королевство Нидерландов",
+      "es": "Reino de los Países Bajos",
+      "pt": "Reino dos Países Baixos",
+      "de": "Königreich der Niederlande"
+    }
   },
   {
     "countryName": "New Caledonia",
@@ -16763,7 +18182,16 @@
       "AU"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "كاليدونيا الجديدة",
+      "zh": "新喀里多尼亞",
+      "fr": "Nouvelle-Calédonie",
+      "ru": "Новая Каледония",
+      "es": "Nueva Caledonia",
+      "pt": "Nova Caledónia",
+      "de": "Neukaledonien"
+    }
   },
   {
     "countryName": "New Zealand",
@@ -16867,8 +18295,8 @@
     "demonym": "New Zealander",
     "languages": [
       "English",
-      "New Zealand Sign Language",
-      "Māori"
+      "Māori",
+      "New Zealand Sign Language"
     ],
     "tld": [
       ".nz"
@@ -16877,7 +18305,16 @@
       "AU"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "نيوزيلندا",
+      "zh": "新西兰",
+      "fr": "Nouvelle-Zélande",
+      "ru": "Новая Зеландия",
+      "es": "Nueva Zelanda",
+      "pt": "Nova Zelândia",
+      "de": "Neuseeland"
+    }
   },
   {
     "countryName": "Nicaragua",
@@ -16983,7 +18420,16 @@
       "CR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "نيكاراغوا",
+      "zh": "尼加拉瓜",
+      "fr": "Nicaragua",
+      "ru": "Никарагуа",
+      "es": "Nicaragua",
+      "pt": "Nicarágua",
+      "de": "Nicaragua"
+    }
   },
   {
     "countryName": "Niger",
@@ -17057,7 +18503,16 @@
       "NG"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "النيجر",
+      "zh": "尼日尔",
+      "fr": "Niger",
+      "ru": "Нигер",
+      "es": "Níger",
+      "pt": "Níger",
+      "de": "Niger"
+    }
   },
   {
     "countryName": "Nigeria",
@@ -17245,7 +18700,16 @@
       "ST"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "نيجيريا",
+      "zh": "奈及利亞",
+      "fr": "Nigeria",
+      "ru": "Нигерия",
+      "es": "Nigeria",
+      "pt": "Nigéria",
+      "de": "Nigeria"
+    }
   },
   {
     "countryName": "Niue",
@@ -17283,7 +18747,16 @@
       ".nu"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "نييوي",
+      "zh": "紐埃",
+      "fr": "Niue",
+      "ru": "Ниуэ",
+      "es": "Niue",
+      "pt": "Niue",
+      "de": "Niue"
+    }
   },
   {
     "countryName": "Norfolk Island",
@@ -17321,7 +18794,16 @@
       ".nf"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزيرة نورفولك",
+      "zh": "诺福克岛",
+      "fr": "île Norfolk",
+      "ru": "Норфолк",
+      "es": "Isla Norfolk",
+      "pt": "Ilha Norfolk",
+      "de": "Norfolkinsel"
+    }
   },
   {
     "countryName": "Northern Mariana Islands",
@@ -17362,14 +18844,23 @@
     "demonym": "Northern Marianan",
     "languages": [
       "English",
-      "Chamorro",
-      "Carolinian"
+      "Carolinian",
+      "Chamorro"
     ],
     "tld": [
       ".mp"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر ماريانا الشمالية",
+      "zh": "北马里亚纳群岛",
+      "fr": "îles Mariannes du Nord",
+      "ru": "Северные Марианские Острова",
+      "es": "Islas Marianas del Norte",
+      "pt": "Marianas Setentrionais",
+      "de": "Nördliche Marianen"
+    }
   },
   {
     "countryName": "Norway",
@@ -17481,8 +18972,8 @@
     "demonym": "Norwegian",
     "languages": [
       "Nynorsk",
-      "Norwegian",
       "Bokmål",
+      "Norwegian",
       "Sámi"
     ],
     "tld": [
@@ -17494,7 +18985,16 @@
       "RU"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "النرويج",
+      "zh": "挪威",
+      "fr": "Norvège",
+      "ru": "Норвегия",
+      "es": "Noruega",
+      "pt": "Noruega",
+      "de": "Norwegen"
+    }
   },
   {
     "countryName": "Oman",
@@ -17577,7 +19077,16 @@
       "AE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سلطنة عمان",
+      "zh": "阿曼",
+      "fr": "Oman",
+      "ru": "Оман",
+      "es": "Omán",
+      "pt": "Omã",
+      "de": "Oman"
+    }
   },
   {
     "countryName": "Pakistan",
@@ -17633,23 +19142,32 @@
     "population": 223773700,
     "area": 881913,
     "continent": "Asia",
-    "nativeName": "پاکستان",
+    "nativeName": "Pakistan",
     "demonym": "Pakistani",
     "languages": [
-      "English",
-      "Urdu"
+      "Urdu",
+      "English"
     ],
     "tld": [
       ".pk"
     ],
     "borders": [
+      "CN",
       "IN",
       "IR",
-      "AF",
-      "CN"
+      "AF"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "باكستان",
+      "zh": "巴基斯坦",
+      "fr": "Pakistan",
+      "ru": "Пакистан",
+      "es": "Pakistán",
+      "pt": "Paquistão",
+      "de": "Pakistan"
+    }
   },
   {
     "countryName": "Palau",
@@ -17754,7 +19272,16 @@
       "ID"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بالاو",
+      "zh": "帛琉",
+      "fr": "Palaos",
+      "ru": "Палау",
+      "es": "Palaos",
+      "pt": "Palau",
+      "de": "Palau"
+    }
   },
   {
     "countryName": "Palestine, State of",
@@ -17863,7 +19390,16 @@
       "JO"
     ],
     "unMember": false,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "دولة فلسطين",
+      "zh": "巴勒斯坦",
+      "fr": "État de Palestine",
+      "ru": "Государство Палестина",
+      "es": "Palestina",
+      "pt": "Estado da Palestina",
+      "de": "Palästina"
+    }
   },
   {
     "countryName": "Panama",
@@ -17953,7 +19489,16 @@
       "CR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بنما",
+      "zh": "巴拿馬",
+      "fr": "Panama",
+      "ru": "Панама",
+      "es": "Panamá",
+      "pt": "Panamá",
+      "de": "Panama"
+    }
   },
   {
     "countryName": "Papua New Guinea",
@@ -18091,7 +19636,16 @@
       "FM"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بابوا غينيا الجديدة",
+      "zh": "巴布亚新几内亚",
+      "fr": "Papouasie-Nouvelle-Guinée",
+      "ru": "Папуа — Новая Гвинея",
+      "es": "Papúa Nueva Guinea",
+      "pt": "Papua-Nova Guiné",
+      "de": "Papua-Neuguinea"
+    }
   },
   {
     "countryName": "Paraguay",
@@ -18198,7 +19752,16 @@
       "BO"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "باراغواي",
+      "zh": "巴拉圭",
+      "fr": "Paraguay",
+      "ru": "Парагвай",
+      "es": "Paraguay",
+      "pt": "Paraguai",
+      "de": "Paraguay"
+    }
   },
   {
     "countryName": "Peru",
@@ -18330,8 +19893,8 @@
     "demonym": "Peruvian",
     "languages": [
       "Spanish",
-      "Aymara",
-      "Quechua"
+      "Quechua",
+      "Aymara"
     ],
     "tld": [
       ".pe"
@@ -18344,7 +19907,16 @@
       "BO"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بيرو",
+      "zh": "秘鲁",
+      "fr": "Pérou",
+      "ru": "Перу",
+      "es": "Perú",
+      "pt": "Peru",
+      "de": "Peru"
+    }
   },
   {
     "countryName": "Philippines",
@@ -18690,7 +20262,7 @@
     "continent": "Asia",
     "officialName": "Republic of the Philippines",
     "nativeName": "Philippines",
-    "demonym": "Filipina",
+    "demonym": "Philippine",
     "languages": [
       "English",
       "Filipino",
@@ -18700,15 +20272,24 @@
       ".ph"
     ],
     "borders": [
+      "JP",
       "CN",
       "ID",
       "PW",
       "MY",
-      "TW",
-      "JP"
+      "TW"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الفلبين",
+      "zh": "菲律賓",
+      "fr": "Philippines",
+      "ru": "Филиппины",
+      "es": "Filipinas",
+      "pt": "Filipinas",
+      "de": "Philippinen"
+    }
   },
   {
     "countryName": "Pitcairn",
@@ -18746,7 +20327,16 @@
       ".pn"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر بيتكيرن",
+      "zh": "皮特凯恩群岛",
+      "fr": "îles Pitcairn",
+      "ru": "Острова Питкэрн",
+      "es": "Islas Pitcairn",
+      "pt": "Ilhas Pitcairn",
+      "de": "Pitcairninseln"
+    }
   },
   {
     "countryName": "Poland",
@@ -18852,7 +20442,16 @@
       "SK"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "بولندا",
+      "zh": "波蘭",
+      "fr": "Pologne",
+      "ru": "Польша",
+      "es": "Polonia",
+      "pt": "Polónia",
+      "de": "Polen"
+    }
   },
   {
     "countryName": "Portugal",
@@ -18982,7 +20581,16 @@
       "ES"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "البرتغال",
+      "zh": "葡萄牙",
+      "fr": "Portugal",
+      "ru": "Португалия",
+      "es": "Portugal",
+      "pt": "Portugal",
+      "de": "Portugal"
+    }
   },
   {
     "countryName": "Puerto Rico",
@@ -19236,7 +20844,16 @@
       ".pr"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "بورتوريكو",
+      "zh": "波多黎各",
+      "fr": "Porto Rico",
+      "ru": "Пуэрто-Рико",
+      "es": "Puerto Rico",
+      "pt": "Porto Rico",
+      "de": "Puerto Rico"
+    }
   },
   {
     "countryName": "Qatar",
@@ -19300,7 +20917,16 @@
       "SA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "قطر",
+      "zh": "卡塔尔",
+      "fr": "Qatar",
+      "ru": "Катар",
+      "es": "Catar",
+      "pt": "Catar",
+      "de": "Katar"
+    }
   },
   {
     "countryName": "Réunion",
@@ -19335,7 +20961,16 @@
       ".re"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "ريونيون",
+      "zh": "留尼汪",
+      "fr": "La Réunion",
+      "ru": "Реюньон",
+      "es": "Reunión",
+      "pt": "Reunião",
+      "de": "Réunion"
+    }
   },
   {
     "countryName": "Romania",
@@ -19539,7 +21174,16 @@
       "RS"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "رومانيا",
+      "zh": "羅馬尼亞",
+      "fr": "Roumanie",
+      "ru": "Румыния",
+      "es": "Rumania",
+      "pt": "Roménia",
+      "de": "Rumänien"
+    }
   },
   {
     "countryName": "Russian Federation",
@@ -20069,7 +21713,7 @@
     "capital": "Moscow",
     "population": 146119928,
     "area": 17075400,
-    "continent": "Asia",
+    "continent": "Europe",
     "nativeName": "Россия",
     "demonym": "Russian",
     "languages": [
@@ -20082,12 +21726,6 @@
       ".ru"
     ],
     "borders": [
-      "UA",
-      "AZ",
-      "GE",
-      "KZ",
-      "KP",
-      "MN",
       "JP",
       "NO",
       "US",
@@ -20098,10 +21736,25 @@
       "CN",
       "BY",
       "EE",
-      "LV"
+      "LV",
+      "UA",
+      "AZ",
+      "GE",
+      "KZ",
+      "KP",
+      "MN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "روسيا",
+      "zh": "俄罗斯",
+      "fr": "Russie",
+      "ru": "Россия",
+      "es": "Rusia",
+      "pt": "Rússia",
+      "de": "Russland"
+    }
   },
   {
     "countryName": "Rwanda",
@@ -20146,25 +21799,34 @@
     "area": 26338,
     "continent": "Africa",
     "officialName": "Republic of Rwanda",
-    "nativeName": "Rwanda",
+    "nativeName": "Republic of Rwanda",
     "demonym": "Rwandese",
     "languages": [
-      "Swahili",
-      "Kinyarwanda",
       "French",
-      "English"
+      "English",
+      "Swahili",
+      "Kinyarwanda"
     ],
     "tld": [
       ".rw"
     ],
     "borders": [
-      "UG",
       "TZ",
       "BI",
-      "CD"
+      "CD",
+      "UG"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "رواندا",
+      "zh": "卢旺达",
+      "fr": "Rwanda",
+      "ru": "Руанда",
+      "es": "Ruanda",
+      "pt": "Ruanda",
+      "de": "Ruanda"
+    }
   },
   {
     "countryName": "Saint Barthélemy",
@@ -20203,7 +21865,16 @@
       ".bl"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "سان بارتيلمي",
+      "zh": "聖巴泰勒米",
+      "fr": "Saint-Barthélemy",
+      "ru": "Сен-Бартелеми",
+      "es": "San Bartolomé",
+      "pt": "São Bartolomeu",
+      "de": "Saint-Barthélemy"
+    }
   },
   {
     "countryName": "Saint Helena, Ascension and Tristan da Cunha",
@@ -20245,7 +21916,16 @@
       "English"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "سانت هيلانة وأسينشين وتريستان دا كونا",
+      "zh": "圣赫勒拿、阿森松和特里斯坦-达库尼亚",
+      "fr": "Sainte-Hélène, Ascension et Tristan da Cunha",
+      "ru": "Острова Святой Елены, Вознесения и Тристан-да-Кунья",
+      "es": "Santa Elena, Ascensión y Tristán de Acuña",
+      "pt": "Santa Helena, Ascensão e Tristão da Cunha",
+      "de": "St. Helena, Ascension und Tristan da Cunha"
+    }
   },
   {
     "countryName": "Saint Kitts and Nevis",
@@ -20291,7 +21971,16 @@
       "VE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سانت كيتس ونيفيس",
+      "zh": "聖克里斯多福及尼維斯",
+      "fr": "Saint-Christophe-et-Niévès",
+      "ru": "Сент-Китс и Невис",
+      "es": "San Cristóbal y Nieves",
+      "pt": "São Cristóvão e Neves",
+      "de": "St. Kitts und Nevis"
+    }
   },
   {
     "countryName": "Saint Lucia",
@@ -20368,7 +22057,16 @@
       "VE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سانت لوسيا",
+      "zh": "圣卢西亚",
+      "fr": "Sainte-Lucie",
+      "ru": "Сент-Люсия",
+      "es": "Santa Lucía",
+      "pt": "Santa Lúcia",
+      "de": "St. Lucia"
+    }
   },
   {
     "countryName": "Saint Martin",
@@ -20407,7 +22105,16 @@
       "SX"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "تجمع سان مارتين",
+      "zh": "法屬聖馬丁",
+      "fr": "Saint-Martin",
+      "ru": "Сен-Мартен",
+      "es": "San Martín",
+      "pt": "São Martinho",
+      "de": "Saint-Martin"
+    }
   },
   {
     "countryName": "Saint Pierre and Miquelon",
@@ -20449,7 +22156,16 @@
       "CA"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "سان بيير وميكلون",
+      "zh": "圣皮埃尔和密克隆",
+      "fr": "Saint-Pierre-et-Miquelon",
+      "ru": "Сен-Пьер и Микелон",
+      "es": "San Pedro y Miquelón",
+      "pt": "Saint-Pierre e Miquelon",
+      "de": "Saint-Pierre und Miquelon"
+    }
   },
   {
     "countryName": "Saint Vincent and the Grenadines",
@@ -20510,7 +22226,16 @@
       "VE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سانت فينسنت والغرينادين",
+      "zh": "圣文森特和格林纳丁斯",
+      "fr": "Saint-Vincent-et-les-Grenadines",
+      "ru": "Сент-Винсент и Гренадины",
+      "es": "San Vicente y las Granadinas",
+      "pt": "São Vicente e Granadinas",
+      "de": "St. Vincent und die Grenadinen"
+    }
   },
   {
     "countryName": "Samoa",
@@ -20592,7 +22317,16 @@
       "US"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ساموا",
+      "zh": "萨摩亚",
+      "fr": "Samoa",
+      "ru": "Самоа",
+      "es": "Samoa",
+      "pt": "Samoa",
+      "de": "Samoa"
+    }
   },
   {
     "countryName": "San Marino",
@@ -20664,7 +22398,16 @@
       "IT"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سان مارينو",
+      "zh": "圣马力诺",
+      "fr": "Saint-Marin",
+      "ru": "Сан-Марино",
+      "es": "San Marino",
+      "pt": "San Marino",
+      "de": "San Marino"
+    }
   },
   {
     "countryName": "Sao Tome and Principe",
@@ -20710,7 +22453,16 @@
       "NG"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ساو تومي وبرينسيب",
+      "zh": "圣多美和普林西比",
+      "fr": "Sao Tomé-et-Principe",
+      "ru": "Сан-Томе и Принсипи",
+      "es": "Santo Tomé y Príncipe",
+      "pt": "São Tomé e Príncipe",
+      "de": "São Tomé und Príncipe"
+    }
   },
   {
     "countryName": "Saudi Arabia",
@@ -20807,7 +22559,16 @@
       "AE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "السعودية",
+      "zh": "沙特阿拉伯",
+      "fr": "Arabie saoudite",
+      "ru": "Саудовская Аравия",
+      "es": "Arabia Saudí",
+      "pt": "Arábia Saudita",
+      "de": "Saudi-Arabien"
+    }
   },
   {
     "countryName": "Senegal",
@@ -20890,23 +22651,32 @@
     "nativeName": "Senegaal",
     "demonym": "Senegalese",
     "languages": [
-      "French",
+      "Wolof",
       "Balanta",
       "Badyara",
-      "Wolof"
+      "French"
     ],
     "tld": [
       ".sn"
     ],
     "borders": [
+      "MR",
       "ML",
       "GM",
       "GN",
-      "GW",
-      "MR"
+      "GW"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "السنغال",
+      "zh": "塞内加尔",
+      "fr": "Sénégal",
+      "ru": "Сенегал",
+      "es": "Senegal",
+      "pt": "Senegal",
+      "de": "Senegal"
+    }
   },
   {
     "countryName": "Serbia",
@@ -21071,7 +22841,16 @@
       "XK"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "صربيا",
+      "zh": "塞爾維亞",
+      "fr": "Serbie",
+      "ru": "Сербия",
+      "es": "Serbia",
+      "pt": "Sérvia",
+      "de": "Serbien"
+    }
   },
   {
     "countryName": "Seychelles",
@@ -21214,7 +22993,16 @@
       "MU"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سيشل",
+      "zh": "塞舌尔",
+      "fr": "Seychelles",
+      "ru": "Сейшельские Острова",
+      "es": "Seychelles",
+      "pt": "Seychelles",
+      "de": "Seychellen"
+    }
   },
   {
     "countryName": "Sierra Leone",
@@ -21269,7 +23057,16 @@
       "LR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سيراليون",
+      "zh": "塞拉利昂",
+      "fr": "Sierra Leone",
+      "ru": "Сьерра-Леоне",
+      "es": "Sierra Leona",
+      "pt": "Serra Leoa",
+      "de": "Sierra Leone"
+    }
   },
   {
     "countryName": "Singapore",
@@ -21330,7 +23127,16 @@
       "MY"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سنغافورة",
+      "zh": "新加坡",
+      "fr": "Singapour",
+      "ru": "Сингапур",
+      "es": "Singapur",
+      "pt": "Singapura",
+      "de": "Singapur"
+    }
   },
   {
     "countryName": "Sint Maarten (Dutch part)",
@@ -21372,7 +23178,16 @@
       "MF"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "سينت مارتن",
+      "zh": "荷屬聖馬丁",
+      "fr": "Saint-Martin",
+      "ru": "Синт-Мартен",
+      "es": "San Martín",
+      "pt": "São Martinho",
+      "de": "Sint Maarten"
+    }
   },
   {
     "countryName": "Slovakia",
@@ -21444,7 +23259,16 @@
       "CZ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سلوفاكيا",
+      "zh": "斯洛伐克",
+      "fr": "Slovaquie",
+      "ru": "Словакия",
+      "es": "Eslovaquia",
+      "pt": "Eslováquia",
+      "de": "Slowakei"
+    }
   },
   {
     "countryName": "Slovenia",
@@ -22307,7 +24131,16 @@
       "HR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سلوفينيا",
+      "zh": "斯洛文尼亞",
+      "fr": "Slovénie",
+      "ru": "Словения",
+      "es": "Eslovenia",
+      "pt": "Eslovénia",
+      "de": "Slowenien"
+    }
   },
   {
     "countryName": "Solomon Islands",
@@ -22370,7 +24203,7 @@
     "capital": "Honiara",
     "population": 611343,
     "area": 28400,
-    "continent": "Oceania",
+    "continent": "Insular Oceania",
     "officialName": "Solomon Islands",
     "nativeName": "Solomon Islands",
     "demonym": "Solomon Islander",
@@ -22388,7 +24221,16 @@
       "FJ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جزر سليمان",
+      "zh": "所罗门群岛",
+      "fr": "Îles Salomon",
+      "ru": "Соломоновы Острова",
+      "es": "Islas Salomón",
+      "pt": "Ilhas Salomão",
+      "de": "Salomonen"
+    }
   },
   {
     "countryName": "Somalia",
@@ -22488,8 +24330,8 @@
     "nativeName": "جمهورية الصومال الفدرالية",
     "demonym": "Somalian",
     "languages": [
-      "Arabic",
-      "Somali"
+      "Somali",
+      "Arabic"
     ],
     "tld": [
       ".so"
@@ -22500,7 +24342,16 @@
       "DJ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الصومال",
+      "zh": "索馬里",
+      "fr": "Somalie",
+      "ru": "Сомали",
+      "es": "Somalia",
+      "pt": "Somália",
+      "de": "Somalia"
+    }
   },
   {
     "countryName": "South Africa",
@@ -22556,7 +24407,7 @@
         "shortCode": "WC"
       }
     ],
-    "capital": "Cape Town",
+    "capital": "Pretoria",
     "population": 62027503,
     "area": 1221037,
     "continent": "Africa",
@@ -22565,17 +24416,17 @@
     "demonym": "South African",
     "languages": [
       "English",
-      "Zulu",
       "Xhosa",
+      "Zulu",
       "Afrikaans",
       "Swazi",
       "Northern Sotho",
       "Venda",
-      "Tswana",
-      "Southern Ndebele",
       "Tsonga",
+      "Tswana",
       "Sesotho",
-      "South African Sign Language"
+      "South African Sign Language",
+      "Southern Ndebele"
     ],
     "tld": [
       ".za"
@@ -22589,7 +24440,16 @@
       "SZ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جنوب إفريقيا",
+      "zh": "南非",
+      "fr": "Afrique du Sud",
+      "ru": "ЮАР",
+      "es": "Sudáfrica",
+      "pt": "África do Sul",
+      "de": "Südafrika"
+    }
   },
   {
     "countryName": "South Georgia and South Sandwich Islands",
@@ -22647,7 +24507,16 @@
       ".gs"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جورجيا الجنوبية وجزر ساندويتش الجنوبية",
+      "zh": "南乔治亚和南桑威奇群岛",
+      "fr": "Géorgie du Sud-et-les Îles Sandwich du Sud",
+      "ru": "Южная Георгия и Южные Сандвичевы острова",
+      "es": "Islas Georgias del Sur y Sandwich del Sur",
+      "pt": "Ilhas Geórgia do Sul e Sandwich do Sul",
+      "de": "Südgeorgien und die Südlichen Sandwichinseln"
+    }
   },
   {
     "countryName": "South Sudan",
@@ -22729,7 +24598,16 @@
       "SD"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "جنوب السودان",
+      "zh": "南蘇丹",
+      "fr": "Soudan du Sud",
+      "ru": "Южный Судан",
+      "es": "Sudán del Sur",
+      "pt": "Sudão do Sul",
+      "de": "Südsudan"
+    }
   },
   {
     "countryName": "Spain",
@@ -22976,7 +24854,7 @@
     "area": 505990,
     "continent": "Europe",
     "nativeName": "Reino de España",
-    "demonym": "Spaniard",
+    "demonym": "Spanish",
     "languages": [
       "Spanish"
     ],
@@ -22984,14 +24862,23 @@
       ".es"
     ],
     "borders": [
-      "PT",
       "FR",
       "AD",
       "MA",
-      "GI"
+      "GI",
+      "PT"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "إسبانيا",
+      "zh": "西班牙",
+      "fr": "Espagne",
+      "ru": "Испания",
+      "es": "España",
+      "pt": "Espanha",
+      "de": "Spanien"
+    }
   },
   {
     "countryName": "Sri Lanka",
@@ -23065,7 +24952,16 @@
       "IN"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سريلانكا",
+      "zh": "斯里蘭卡",
+      "fr": "Sri Lanka",
+      "ru": "Шри-Ланка",
+      "es": "Sri Lanka",
+      "pt": "Sri Lanka",
+      "de": "Sri Lanka"
+    }
   },
   {
     "countryName": "Sudan",
@@ -23184,7 +25080,16 @@
       "UG"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "السودان",
+      "zh": "苏丹",
+      "fr": "Soudan",
+      "ru": "Судан",
+      "es": "Sudán",
+      "pt": "Sudão",
+      "de": "Sudan"
+    }
   },
   {
     "countryName": "Suriname",
@@ -23262,7 +25167,16 @@
       "GY"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سورينام",
+      "zh": "蘇利南",
+      "fr": "Suriname",
+      "ru": "Суринам",
+      "es": "Surinam",
+      "pt": "Suriname",
+      "de": "Suriname"
+    }
   },
   {
     "countryName": "Svalbard And Jan Mayen Islands",
@@ -23291,7 +25205,16 @@
       ".sj"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "سفالبارد ويان ماين",
+      "zh": "斯瓦巴和扬马延",
+      "fr": "Svalbard et Jan Mayen",
+      "ru": "Шпицберген и Ян-Майен",
+      "es": "Svalbard y Jan Mayen",
+      "pt": "Svalbard e Jan Mayen",
+      "de": "Svalbard und Jan Mayen"
+    }
   },
   {
     "countryName": "Swaziland",
@@ -23327,7 +25250,7 @@
         "shortCode": "SH"
       }
     ],
-    "capital": "Lobamba",
+    "capital": "Mbabane",
     "population": 1230506,
     "area": 17364,
     "continent": "Africa",
@@ -23346,7 +25269,16 @@
       "MZ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "إسواتيني",
+      "zh": "斯威士兰",
+      "fr": "Eswatini",
+      "ru": "Эсватини",
+      "es": "Suazilandia",
+      "pt": "Essuatíni",
+      "de": "Eswatini"
+    }
   },
   {
     "countryName": "Sweden",
@@ -23468,7 +25400,16 @@
       "DK"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "السويد",
+      "zh": "瑞典",
+      "fr": "Suède",
+      "ru": "Швеция",
+      "es": "Suecia",
+      "pt": "Suécia",
+      "de": "Schweden"
+    }
   },
   {
     "countryName": "Switzerland",
@@ -23617,7 +25558,16 @@
       "LI"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سويسرا",
+      "zh": "瑞士",
+      "fr": "Suisse",
+      "ru": "Швейцария",
+      "es": "Suiza",
+      "pt": "Suíça",
+      "de": "Schweiz"
+    }
   },
   {
     "countryName": "Syrian Arab Republic",
@@ -23698,7 +25648,7 @@
     "area": 185180,
     "continent": "Asia",
     "officialName": "Syrian Arab Republic",
-    "nativeName": "الجمهورية العربية السورية",
+    "nativeName": "سوريا",
     "demonym": "Syrian",
     "languages": [
       "Arabic"
@@ -23707,14 +25657,23 @@
       ".sy"
     ],
     "borders": [
-      "TR",
-      "IQ",
       "IL",
       "JO",
-      "LB"
+      "LB",
+      "TR",
+      "IQ"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "سوريا",
+      "zh": "敘利亞",
+      "fr": "Syrie",
+      "ru": "Сирия",
+      "es": "Siria",
+      "pt": "Síria",
+      "de": "Syrien"
+    }
   },
   {
     "countryName": "Taiwan",
@@ -23818,31 +25777,31 @@
     "population": 23262544,
     "area": 36193,
     "continent": "Asia",
-    "nativeName": "Tâi-oân",
-    "demonym": "taiwanese",
+    "nativeName": "Tiong-hoâ Bîn-kok",
+    "demonym": "Taiwan",
     "languages": [
       "Taiwanese Sign Language",
-      "Amis",
-      "Taiwanese Hokkien",
-      "Kanakanavu",
-      "Rukai",
-      "Bunun",
-      "Tsou",
-      "Seediq",
-      "Puyuma",
-      "Taiwanese Hakka",
-      "Truku",
       "Matsu dialect",
       "Kinmen dialect",
       "Wuqiu dialect",
+      "Amis",
+      "Taiwanese Hokkien",
       "Standard Taiwanese Mandarin",
       "Paiwan",
+      "Taiwanese Hakka",
+      "Truku",
       "Yami",
       "Atayal",
-      "Saisiyat",
-      "Sakizaya",
+      "Rukai",
+      "Bunun",
+      "Kanakanavu",
       "Saaroa",
-      "Kavalan"
+      "Kavalan",
+      "Tsou",
+      "Seediq",
+      "Puyuma",
+      "Saisiyat",
+      "Sakizaya"
     ],
     "tld": [
       ".tw"
@@ -23853,7 +25812,16 @@
       "PH"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تايوان",
+      "zh": "中華民國",
+      "fr": "Taïwan",
+      "ru": "Китайская Республика (Тайвань)",
+      "es": "República de China",
+      "pt": "Taiwan",
+      "de": "Republik China"
+    }
   },
   {
     "countryName": "Tajikistan",
@@ -23908,7 +25876,16 @@
       "AF"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "طاجيكستان",
+      "zh": "塔吉克斯坦",
+      "fr": "Tadjikistan",
+      "ru": "Таджикистан",
+      "es": "Tayikistán",
+      "pt": "Tajiquistão",
+      "de": "Tadschikistan"
+    }
   },
   {
     "countryName": "Tanzania, United Republic of",
@@ -24046,18 +26023,27 @@
       ".tz"
     ],
     "borders": [
+      "MZ",
+      "UG",
+      "RW",
+      "SC",
       "KE",
       "ZM",
       "BI",
       "CD",
-      "MW",
-      "MZ",
-      "UG",
-      "RW",
-      "SC"
+      "MW"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تنزانيا",
+      "zh": "坦桑尼亞",
+      "fr": "Tanzanie",
+      "ru": "Танзания",
+      "es": "Tanzania",
+      "pt": "Tanzânia",
+      "de": "Tansania"
+    }
   },
   {
     "countryName": "Thailand",
@@ -24405,7 +26391,16 @@
       "MM"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تايلاند",
+      "zh": "泰國",
+      "fr": "Thaïlande",
+      "ru": "Таиланд",
+      "es": "Tailandia",
+      "pt": "Tailândia",
+      "de": "Thailand"
+    }
   },
   {
     "countryName": "Timor-Leste",
@@ -24495,7 +26490,16 @@
       "AU"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تيمور الشرقية",
+      "zh": "東帝汶",
+      "fr": "Timor oriental",
+      "ru": "Восточный Тимор",
+      "es": "Timor Oriental",
+      "pt": "Timor-Leste",
+      "de": "Osttimor"
+    }
   },
   {
     "countryName": "Togo",
@@ -24553,7 +26557,16 @@
       "BF"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "توغو",
+      "zh": "多哥",
+      "fr": "Togo",
+      "ru": "Того",
+      "es": "Togo",
+      "pt": "Togo",
+      "de": "Togo"
+    }
   },
   {
     "countryName": "Tokelau",
@@ -24596,7 +26609,16 @@
       ".tk"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "توكيلاو",
+      "zh": "托克劳",
+      "fr": "Tokelau",
+      "ru": "Токелау",
+      "es": "Tokelau",
+      "pt": "Tokelau",
+      "de": "Tokelau"
+    }
   },
   {
     "countryName": "Tonga",
@@ -24654,7 +26676,16 @@
       "US"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تونغا",
+      "zh": "東加",
+      "fr": "Tonga",
+      "ru": "Тонга",
+      "es": "Tonga",
+      "pt": "Tonga",
+      "de": "Tonga"
+    }
   },
   {
     "countryName": "Trinidad and Tobago",
@@ -24751,7 +26782,16 @@
       "VE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "ترينيداد وتوباغو",
+      "zh": "千里達及托巴哥",
+      "fr": "Trinité-et-Tobago",
+      "ru": "Тринидад и Тобаго",
+      "es": "Trinidad y Tobago",
+      "pt": "Trindade e Tobago",
+      "de": "Trinidad und Tobago"
+    }
   },
   {
     "countryName": "Tunisia",
@@ -24881,7 +26921,16 @@
       "LY"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تونس",
+      "zh": "突尼西亞",
+      "fr": "Tunisie",
+      "ru": "Тунис",
+      "es": "Túnez",
+      "pt": "Tunísia",
+      "de": "Tunesien"
+    }
   },
   {
     "countryName": "Turkey",
@@ -25248,7 +27297,16 @@
       "SY"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تركيا",
+      "zh": "土耳其",
+      "fr": "Turquie",
+      "ru": "Турция",
+      "es": "Turquía",
+      "pt": "Turquia",
+      "de": "Türkei"
+    }
   },
   {
     "countryName": "Turkmenistan",
@@ -25310,7 +27368,16 @@
       "AF"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "تركمانستان",
+      "zh": "土庫曼",
+      "fr": "Turkménistan",
+      "ru": "Туркменистан",
+      "es": "Turkmenistán",
+      "pt": "Turquemenistão",
+      "de": "Turkmenistan"
+    }
   },
   {
     "countryName": "Turks and Caicos Islands",
@@ -25352,7 +27419,16 @@
       "HT"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر توركس وكيكوس",
+      "zh": "特克斯和凯科斯群岛",
+      "fr": "Îles Turques et Caïques",
+      "ru": "Тёркс и Кайкос",
+      "es": "Islas Turcas y Caicos",
+      "pt": "Ilhas Turcas e Caicos",
+      "de": "Turks- und Caicosinseln"
+    }
   },
   {
     "countryName": "Tuvalu",
@@ -25407,7 +27483,7 @@
     "capital": "Funafuti",
     "population": 10643,
     "area": 25.14,
-    "continent": "Oceania",
+    "continent": "Insular Oceania",
     "officialName": "Tuvalu",
     "demonym": "Tuvaluan",
     "languages": [
@@ -25418,7 +27494,16 @@
       ".tv"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "توفالو",
+      "zh": "吐瓦魯",
+      "fr": "Tuvalu",
+      "ru": "Тувалу",
+      "es": "Tuvalu",
+      "pt": "Tuvalu",
+      "de": "Tuvalu"
+    }
   },
   {
     "countryName": "Uganda",
@@ -25781,7 +27866,16 @@
       "SD"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أوغندا",
+      "zh": "烏干達",
+      "fr": "Ouganda",
+      "ru": "Уганда",
+      "es": "Uganda",
+      "pt": "Uganda",
+      "de": "Uganda"
+    }
   },
   {
     "countryName": "Ukraine",
@@ -25951,7 +28045,16 @@
       "RO"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أوكرانيا",
+      "zh": "烏克蘭",
+      "fr": "Ukraine",
+      "ru": "Украина",
+      "es": "Ucrania",
+      "pt": "Ucrânia",
+      "de": "Ukraine"
+    }
   },
   {
     "countryName": "United Arab Emirates",
@@ -26018,7 +28121,16 @@
       "SA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الإمارات العربية المتحدة",
+      "zh": "阿拉伯联合酋长国",
+      "fr": "Émirats arabes unis",
+      "ru": "Объединённые Арабские Эмираты",
+      "es": "Emiratos Árabes Unidos",
+      "pt": "Emirados Árabes Unidos",
+      "de": "Vereinigte Arabische Emirate"
+    }
   },
   {
     "countryName": "United Kingdom",
@@ -26923,7 +29035,16 @@
       "IE"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "المملكة المتحدة",
+      "zh": "英国",
+      "fr": "Royaume-Uni",
+      "ru": "Великобритания",
+      "es": "Reino Unido",
+      "pt": "Reino Unido",
+      "de": "Vereinigtes Königreich"
+    }
   },
   {
     "countryName": "United States",
@@ -27406,7 +29527,16 @@
       "MX"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الولايات المتحدة",
+      "zh": "美國",
+      "fr": "États-Unis",
+      "ru": "США",
+      "es": "Estados Unidos",
+      "pt": "Estados Unidos",
+      "de": "Vereinigte Staaten"
+    }
   },
   {
     "countryName": "United States Minor Outlying Islands",
@@ -27487,7 +29617,16 @@
       ".um"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر الولايات المتحدة الصغيرة النائية",
+      "zh": "美国本土外小岛屿",
+      "fr": "îles mineures éloignées des États-Unis",
+      "ru": "Внешние малые острова США",
+      "es": "Islas ultramarinas de Estados Unidos",
+      "pt": "Ilhas Menores Distantes dos Estados Unidos",
+      "de": "Kleinere Amerikanische Überseeinseln"
+    }
   },
   {
     "countryName": "Uruguay",
@@ -27593,11 +29732,20 @@
       ".uy"
     ],
     "borders": [
-      "BR",
-      "AR"
+      "AR",
+      "BR"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "الأوروغواي",
+      "zh": "烏拉圭",
+      "fr": "Uruguay",
+      "ru": "Уругвай",
+      "es": "Uruguay",
+      "pt": "Uruguai",
+      "de": "Uruguay"
+    }
   },
   {
     "countryName": "Uzbekistan",
@@ -27700,7 +29848,16 @@
       "AF"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "أوزبكستان",
+      "zh": "乌兹别克斯坦",
+      "fr": "Ouzbékistan",
+      "ru": "Узбекистан",
+      "es": "Uzbekistán",
+      "pt": "Usbequistão",
+      "de": "Usbekistan"
+    }
   },
   {
     "countryName": "Vanuatu",
@@ -27764,7 +29921,16 @@
       "SB"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "فانواتو",
+      "zh": "萬那杜",
+      "fr": "Vanuatu",
+      "ru": "Вануату",
+      "es": "Vanuatu",
+      "pt": "Vanuatu",
+      "de": "Vanuatu"
+    }
   },
   {
     "countryName": "Venezuela, Bolivarian Republic of",
@@ -27915,7 +30081,16 @@
       "NL"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "فنزويلا",
+      "zh": "委內瑞拉",
+      "fr": "Venezuela",
+      "ru": "Венесуэла",
+      "es": "Venezuela",
+      "pt": "Venezuela",
+      "de": "Venezuela"
+    }
   },
   {
     "countryName": "Vietnam",
@@ -28146,7 +30321,16 @@
       "LA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "فيتنام",
+      "zh": "越南",
+      "fr": "Vietnam",
+      "ru": "Вьетнам",
+      "es": "Vietnam",
+      "pt": "Vietname",
+      "de": "Vietnam"
+    }
   },
   {
     "countryName": "Virgin Islands, British",
@@ -28198,7 +30382,16 @@
       "VI"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر عذراء بريطانية",
+      "zh": "英屬維爾京群島",
+      "fr": "îles Vierges britanniques",
+      "ru": "Британские Виргинские Острова",
+      "es": "Islas Vírgenes Británicas",
+      "pt": "Ilhas Virgens Britânicas",
+      "de": "Britische Jungferninseln"
+    }
   },
   {
     "countryName": "Virgin Islands, U.S.",
@@ -28247,7 +30440,16 @@
       "VG"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "جزر العذراء الأمريكية",
+      "zh": "美屬維爾京群島",
+      "fr": "îles Vierges des États-Unis",
+      "ru": "Американские Виргинские Острова",
+      "es": "Islas Vírgenes de los Estados Unidos",
+      "pt": "Ilhas Virgens Americanas",
+      "de": "Amerikanische Jungferninseln"
+    }
   },
   {
     "countryName": "Wallis and Futuna",
@@ -28287,14 +30489,23 @@
     "demonym": "Wallisian",
     "languages": [
       "French",
-      "Wallisian",
-      "Futunan"
+      "Futunan",
+      "Wallisian"
     ],
     "tld": [
       ".wf"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "واليس وفوتونا",
+      "zh": "瓦利斯和富圖納",
+      "fr": "Wallis-et-Futuna",
+      "ru": "Уоллис и Футуна",
+      "es": "Wallis y Futuna",
+      "pt": "Wallis e Futuna",
+      "de": "Wallis und Futuna"
+    }
   },
   {
     "countryName": "Western Sahara",
@@ -28348,7 +30559,16 @@
       "MA"
     ],
     "unMember": false,
-    "independent": false
+    "independent": false,
+    "translations": {
+      "ar": "الصحراء الغربية",
+      "zh": "西撒哈拉",
+      "fr": "Sahara occidental",
+      "ru": "Западная Сахара",
+      "es": "Sahara Occidental",
+      "pt": "Sara Ocidental",
+      "de": "Westsahara"
+    }
   },
   {
     "countryName": "Yemen",
@@ -28465,7 +30685,16 @@
       "SA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "اليمن",
+      "zh": "也门",
+      "fr": "Yémen",
+      "ru": "Йемен",
+      "es": "Yemen",
+      "pt": "Iémen",
+      "de": "Jemen"
+    }
   },
   {
     "countryName": "Zambia",
@@ -28545,7 +30774,16 @@
       "NA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "زامبيا",
+      "zh": "贊比亞",
+      "fr": "Zambie",
+      "ru": "Замбия",
+      "es": "Zambia",
+      "pt": "Zâmbia",
+      "de": "Sambia"
+    }
   },
   {
     "countryName": "Zimbabwe",
@@ -28613,22 +30851,22 @@
     "nativeName": "Zimbabwe",
     "demonym": "Zimbabwean",
     "languages": [
-      "Kalanga",
-      "Khoisan",
-      "Shona",
-      "Tonga",
       "Tswana",
-      "Nambya",
-      "Tsonga",
+      "Tonga",
+      "Chewa",
       "Sesotho",
-      "Northern Ndebele",
+      "Khoisan",
+      "Kalanga",
       "Zimbabwe Sign Language",
       "Barwe",
-      "Xhosa",
       "English",
       "Ndau",
+      "Xhosa",
       "Venda",
-      "Chewa"
+      "Tsonga",
+      "Shona",
+      "Northern Ndebele",
+      "Nambya"
     ],
     "tld": [
       ".zw"
@@ -28640,6 +30878,15 @@
       "ZA"
     ],
     "unMember": true,
-    "independent": true
+    "independent": true,
+    "translations": {
+      "ar": "زيمبابوي",
+      "zh": "津巴布韦",
+      "fr": "Zimbabwe",
+      "ru": "Зимбабве",
+      "es": "Zimbabue",
+      "pt": "Zimbábue",
+      "de": "Simbabwe"
+    }
   }
 ]

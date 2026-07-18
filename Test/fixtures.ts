@@ -75,6 +75,7 @@ export const COUNTRY_GHANA = {
   tld: ['.gh'],
   unMember: true,
   independent: true,
+  translations: { fr: 'Ghana', es: 'Ghana', de: 'Ghana', ar: 'غانا' },
 };
 
 export const COUNTRY_GERMANY = {

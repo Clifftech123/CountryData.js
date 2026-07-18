@@ -6,6 +6,8 @@ import type {
   ITimezone,
   ISearchOptions,
   INearestCityOptions,
+  ICityPaginationOptions,
+  IPaginatedCities,
 } from './shared/interface.js';
 import {
   getAllCountries,
@@ -19,6 +21,7 @@ import {
   getCountriesByRegion,
   isValidCountryCode,
   isValidPhoneCode,
+  getCountryName,
 } from './modules/country.js';
 import {
   getAllStates,
@@ -32,6 +35,7 @@ import {
   getCitiesOfCountry,
   getCitiesOfState,
   sortCities,
+  getCitiesPaginated,
 } from './modules/city.js';
 import {
   getRegionsByCountryCode,
@@ -117,6 +121,12 @@ export class CountryHelper {
     return isValidStateCode(stateCode, countryCode);
   }
 
+  // ─── i18n methods ─────────────────────────────────────────────────────────
+
+  public getCountryName(isoCode: string, locale?: string): string | undefined {
+    return getCountryName(isoCode, locale);
+  }
+
   // ─── Region methods ───────────────────────────────────────────────────────
 
   public getRegionsByCountryShortCode(countryShortCode: string): IRegion[] {
@@ -185,6 +195,10 @@ export class CountryHelper {
 
   public sortCities(cities?: ICity[]): ICity[] {
     return sortCities(cities);
+  }
+
+  public getCitiesPaginated(options?: ICityPaginationOptions): IPaginatedCities {
+    return getCitiesPaginated(options);
   }
 
   // ─── Search methods ───────────────────────────────────────────────────────

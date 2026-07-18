@@ -35,6 +35,10 @@ export interface ICountry {
   tld?: string[];
   unMember?: boolean;
   independent?: boolean;
+  /** Translated country names keyed by ISO 639-1 locale (e.g. "fr", "ar"). English is
+   *  covered by countryName, not repeated here. Use Country.getCountryName() for lookups
+   *  with a fallback to countryName when a locale is missing. */
+  translations?: Record<string, string>;
   /** Get all states/provinces for this country */
   getStates?(): IState[];
   /** Get all cities for this country */
@@ -69,4 +73,24 @@ export interface INearestCityOptions {
   countryCode?: string;
   /** Restrict further to one state — requires countryCode to also be set. */
   stateCode?: string;
+}
+
+export interface ICityPaginationOptions {
+  /** Restrict to one country before paginating. */
+  countryCode?: string;
+  /** Restrict further to one state — requires countryCode to also be set. */
+  stateCode?: string;
+  /** 1-indexed page number. Defaults to 1. */
+  page?: number;
+  /** Items per page. Defaults to 50. */
+  pageSize?: number;
+}
+
+export interface IPaginatedCities {
+  items: ICity[];
+  page: number;
+  pageSize: number;
+  /** Total matching cities across all pages (after countryCode/stateCode filtering). */
+  total: number;
+  hasMore: boolean;
 }

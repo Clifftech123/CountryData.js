@@ -15,4 +15,6 @@ export type {
   ITimezone,
   ISearchOptions,
   INearestCityOptions,
+  ICityPaginationOptions,
+  IPaginatedCities,
 } from './shared/interface.js';

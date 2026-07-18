@@ -213,3 +213,14 @@ describe('CountryHelper — search methods', () => {
     expect(helper.searchCities('a', { limit: 1 })).toHaveLength(1);
   });
 });
+
+// ─── Pagination ───────────────────────────────────────────────────────────────
+
+describe('CountryHelper — pagination methods', () => {
+  test('getCitiesPaginated returns a paginated result', () => {
+    const result = helper.getCitiesPaginated({ pageSize: 2 });
+    expect(result.items).toHaveLength(2);
+    expect(result.total).toBe(4);
+    expect(result.hasMore).toBe(true);
+  });
+});

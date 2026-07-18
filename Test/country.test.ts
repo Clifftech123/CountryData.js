@@ -248,6 +248,37 @@ describe('Country.isValidPhoneCode', () => {
   });
 });
 
+// ─── i18n ───────────────────────────────────────────────────────────────────
+
+describe('Country.getCountryName', () => {
+  test('returns the translated name for a known locale', () => {
+    expect(Country.getCountryName('GH', 'fr')).toBe('Ghana');
+    expect(Country.getCountryName('GH', 'ar')).toBe('غانا');
+  });
+
+  test('returns countryName when locale is omitted', () => {
+    expect(Country.getCountryName('GH')).toBe('Ghana');
+  });
+
+  test('returns countryName when locale is "en"', () => {
+    expect(Country.getCountryName('GH', 'en')).toBe('Ghana');
+  });
+
+  test('falls back to countryName when the locale has no translation', () => {
+    // COUNTRY_GHANA fixture has fr/es/de/ar but not, say, "ja"
+    expect(Country.getCountryName('GH', 'ja')).toBe('Ghana');
+  });
+
+  test('falls back to countryName when the country has no translations at all', () => {
+    // COUNTRY_ALAND fixture has no translations field
+    expect(Country.getCountryName('AX', 'fr')).toBe('Åland Islands');
+  });
+
+  test('returns undefined for an unknown country code', () => {
+    expect(Country.getCountryName('XX', 'fr')).toBeUndefined();
+  });
+});
+
 // ─── method chaining ──────────────────────────────────────────────────────────
 
 describe('Country object method chaining', () => {

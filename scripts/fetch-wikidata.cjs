@@ -3,11 +3,12 @@
  *
  * One-time, dev-time data enrichment script — NOT part of the published package and never
  * imported by src/. Pulls capital, population, area, continent, official/native name,
- * demonym, languages, borders, TLDs, and UN-membership/independence flags from Wikidata
- * (query.wikidata.org) — CC0 licensed, free, no API key — and merges them into the existing
- * data/countries.json records in place. currencyName/currencySymbol are NOT stored here —
- * they're computed at load time in src/modules/country.ts from the static ISO 4217 table in
- * src/shared/currencies.ts, keyed off the existing currencyCode field.
+ * demonym, languages, borders, TLDs, UN-membership/independence flags, and translated
+ * country names (LOCALES below) from Wikidata (query.wikidata.org) — CC0 licensed, free, no
+ * API key — and merges them into the existing data/countries.json records in place.
+ * currencyName/currencySymbol are NOT stored here — they're computed at load time in
+ * src/modules/country.ts from the static ISO 4217 table in src/shared/currencies.ts, keyed
+ * off the existing currencyCode field.
  *
  * Run manually when refreshing country data: node scripts/fetch-wikidata.cjs
  */
@@ -23,6 +24,9 @@ const SPARQL_ENDPOINT = 'https://query.wikidata.org/sparql';
 const USER_AGENT = 'CountryDataJS-Build/1.0 (opokuisaiahclifford123@gmail.com)';
 const BATCH_SIZE = 40;
 const DELAY_MS = 1200;
+// ISO 639-1 codes for translated country names (Country.getCountryName(code, locale)).
+// English isn't included — it's already the base countryName field.
+const LOCALES = ['ar', 'zh', 'fr', 'ru', 'es', 'pt', 'de'];
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -96,6 +100,24 @@ GROUP BY ?iso2
 `;
 }
 
+function translationsQuery(codes) {
+  const selectClauses = LOCALES.map((l) => `(SAMPLE(?label_${l}) AS ?${l})`).join('\n       ');
+  const whereClauses = LOCALES
+    .map((l) => `  OPTIONAL { ?country rdfs:label ?label_${l}. FILTER(LANG(?label_${l}) = "${l}") }`)
+    .join('\n');
+
+  return `
+SELECT ?iso2
+       ${selectClauses}
+WHERE {
+  VALUES ?iso2 { ${valuesClause(codes)} }
+  ?country wdt:P297 ?iso2.
+${whereClauses}
+}
+GROUP BY ?iso2
+`;
+}
+
 function populationQuery(codes) {
   return `
 SELECT ?iso2
@@ -134,11 +156,15 @@ function splitList(value) {
 }
 
 async function fetchBatch(codes) {
-  const [mainRows, popRows] = await Promise.all([
+  const [mainRows, popRows, translationRows] = await Promise.all([
     runQuery(mainQuery(codes)),
     (async () => {
       await sleep(DELAY_MS);
       return runQuery(populationQuery(codes));
+    })(),
+    (async () => {
+      await sleep(DELAY_MS * 2);
+      return runQuery(translationsQuery(codes));
     })(),
   ]);
 
@@ -170,6 +196,18 @@ async function fetchBatch(codes) {
     byIso2.set(iso2, entry);
   }
 
+  for (const row of translationRows) {
+    const iso2 = row.iso2.value;
+    const translations = {};
+    for (const locale of LOCALES) {
+      if (row[locale]?.value) translations[locale] = row[locale].value;
+    }
+    if (Object.keys(translations).length === 0) continue;
+    const entry = byIso2.get(iso2) ?? {};
+    entry.translations = translations;
+    byIso2.set(iso2, entry);
+  }
+
   return byIso2;
 }
 
@@ -192,6 +230,7 @@ async function main() {
     borders: 0,
     unMember: 0,
     independent: 0,
+    translations: 0,
   };
 
   for (let i = 0; i < batches.length; i++) {
@@ -216,6 +255,7 @@ async function main() {
       if (data.languages !== undefined) { country.languages = data.languages; coverage.languages++; }
       if (data.tld !== undefined) { country.tld = data.tld; coverage.tld++; }
       if (data.borders !== undefined) { country.borders = data.borders; coverage.borders++; }
+      if (data.translations !== undefined) { country.translations = data.translations; coverage.translations++; }
       country.unMember = data.unMember ?? false;
       country.independent = data.independent ?? false;
       coverage.unMember += country.unMember ? 1 : 0;

@@ -64,19 +64,24 @@ both `dr5hn` and `mledoze` are ODbL (share-alike) and REST Countries dropped its
 
 ## Phase plan
 
-- [ ] **Phase 1** — Capital, population, area, currency name/symbol, native/official name,
+- [x] **Phase 1** — Capital, population, area, currency name/symbol, native/official name,
       demonym, continent, languages, borders, TLD, unMember/independent. New optional
       `ICountry` fields + `scripts/fetch-wikidata.cjs` build-time fetch (SPARQL query against
       `query.wikidata.org`, CC0, no key needed) merged with a hardcoded ISO 4217 currency
-      name/symbol table.
+      name/symbol table (computed at load time, not persisted, to avoid duplicating it across
+      every country record).
 - [x] **Phase 2** — `searchCountries()` / `searchStates()` / `searchCities()` fuzzy search.
 - [x] **Phase 3** — Cross-entity filters: `getCountriesByCurrency`, `getCountriesByRegion`,
       `getCountriesByLanguage`, `getCountriesByContinent`. Depends on Phase 1.
 - [x] **Phase 4** — Validation helpers: `isValidCountryCode`, `isValidPhoneCode`,
       `isValidStateCode`.
 - [x] **Phase 5** — Geo utilities: Haversine distance, `getNearestCountry`, `getNearestCity`.
-- [ ] **Phase 6** — Pagination for the cities dataset (`getCitiesPaginated`).
-- [ ] **Phase 7** (backlog, lower priority) — i18n locale names, slimmer browser/CDN bundle,
-      CLI data export.
+- [x] **Phase 6** — Pagination for the cities dataset (`getCitiesPaginated`).
+- **Phase 7** (backlog, lower priority):
+  - [x] CLI data export — `countrydata-export` (`src/cli.ts` + `src/bin.ts`), dumps
+        countries/states/cities as CSV or SQL via `npx countrydata-export --entity ... --format ...`.
+  - [x] i18n locale names — `Country.getCountryName(code, locale?)`, `ar`/`zh`/`fr`/`ru`/`es`/`pt`/`de`
+        via a new `translations` field on `ICountry`, sourced from Wikidata like Phase 1.
+  - [ ] Slimmer browser/CDN bundle
 
 Phases 2, 4, 5, 6 don't depend on Phase 1 or each other and can ship in any order.

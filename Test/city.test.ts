@@ -104,3 +104,56 @@ describe('City.sortCities', () => {
     expect(cities[0]!.name).toBe('Brändö Village');
   });
 });
+
+// ─── getCitiesPaginated ───────────────────────────────────────────────────────
+
+describe('City.getCitiesPaginated', () => {
+  test('returns all cities on one page when pageSize exceeds total', () => {
+    const result = City.getCitiesPaginated();
+    expect(result.items).toHaveLength(4);
+    expect(result.page).toBe(1);
+    expect(result.pageSize).toBe(50);
+    expect(result.total).toBe(4);
+    expect(result.hasMore).toBe(false);
+  });
+
+  test('paginates with a custom pageSize', () => {
+    const page1 = City.getCitiesPaginated({ pageSize: 2 });
+    expect(page1.items).toHaveLength(2);
+    expect(page1.total).toBe(4);
+    expect(page1.hasMore).toBe(true);
+
+    const page2 = City.getCitiesPaginated({ pageSize: 2, page: 2 });
+    expect(page2.items).toHaveLength(2);
+    expect(page2.hasMore).toBe(false);
+
+    const namesPage1 = page1.items.map((c) => c.name);
+    const namesPage2 = page2.items.map((c) => c.name);
+    expect(namesPage1).not.toEqual(namesPage2);
+  });
+
+  test('scopes to a country before paginating', () => {
+    const result = City.getCitiesPaginated({ countryCode: 'AX', pageSize: 10 });
+    expect(result.items).toHaveLength(2);
+    expect(result.items.every((c) => c.countryCode === 'AX')).toBe(true);
+    expect(result.total).toBe(2);
+  });
+
+  test('scopes to a state within a country', () => {
+    const result = City.getCitiesPaginated({ countryCode: 'AX', stateCode: 'BR', pageSize: 10 });
+    expect(result.items).toHaveLength(1);
+    expect(result.items[0]!.name).toBe('Brändö Village');
+  });
+
+  test('clamps page numbers below 1', () => {
+    expect(City.getCitiesPaginated({ page: 0, pageSize: 2 }).page).toBe(1);
+    expect(City.getCitiesPaginated({ page: -5, pageSize: 2 }).page).toBe(1);
+  });
+
+  test('returns empty items for a page beyond the last', () => {
+    const result = City.getCitiesPaginated({ pageSize: 2, page: 10 });
+    expect(result.items).toHaveLength(0);
+    expect(result.hasMore).toBe(false);
+    expect(result.total).toBe(4);
+  });
+});

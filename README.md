@@ -44,6 +44,7 @@ const englishSpeaking = Country.getCountriesByLanguage('English');
 const owner = Country.getCountriesByRegion('Bavaria'); // → [Germany]
 const validCode = Country.isValidCountryCode('GH'); // true
 const validPhone = Country.isValidPhoneCode('+233'); // true
+const nameInFrench = Country.getCountryName('GH', 'fr'); // 'Ghana'
 
 // States / Provinces
 const states = State.getStatesOfCountry('US');
@@ -54,6 +55,7 @@ const validState = State.isValidStateCode('CA', 'US'); // true
 // Cities (lazily loaded on first call)
 const cities = City.getCitiesOfState('US', 'CA');
 const ghCities = City.getCitiesOfCountry('GH');
+const page = City.getCitiesPaginated({ countryCode: 'US', page: 1, pageSize: 25 });
 
 // Regions
 const regions = Region.getRegionsByCountryCode('US');
@@ -120,6 +122,9 @@ All methods are **synchronous** and return data directly no `await`, no `.then()
 | `getCountriesByRegion(name)`     | `ICountry[]` | Country containing a named admin region (e.g. `"Bavaria"`) |
 | `isValidCountryCode(code)`       | `boolean`    | Whether an ISO code exists in the dataset                |
 | `isValidPhoneCode(code)`         | `boolean`    | Whether a phone code exists in the dataset               |
+| `getCountryName(code, locale?)`  | `string \| undefined` | Translated name; falls back to English if the locale is missing |
+
+Supported `locale` codes: `ar`, `zh`, `fr`, `ru`, `es`, `pt`, `de` (plus `en`/omitted → `countryName`). Coverage is 99–100% across all 250 countries for every locale. Raw translations are also available on `country.translations` (`Record<string, string>`).
 
 ### `State`
 
@@ -141,6 +146,7 @@ All methods are **synchronous** and return data directly no `await`, no `.then()
 | `getCitiesOfCountry(countryCode)`          | `ICity[]` | Cities for one country           |
 | `getCitiesOfState(countryCode, stateCode)` | `ICity[]` | Cities for one state             |
 | `sortCities(cities?)`                      | `ICity[]` | Sorted by country → state → name |
+| `getCitiesPaginated(options?)`             | `{ items, page, pageSize, total, hasMore }` | Paged slice; pass `countryCode`/`stateCode` to scope before paginating |
 
 ### `Region`
 
@@ -227,6 +233,7 @@ interface ICountry {
   tld?: string[];
   unMember?: boolean;
   independent?: boolean;
+  translations?: Record<string, string>;
   getStates?(): IState[];
   getCities?(): ICity[];
 }
@@ -323,6 +330,24 @@ app.listen(3000);
 ```
 
 See the [Sample](https://github.com/Clifftech123/CountryData.js/tree/main/Sample) folder for more complete examples.
+
+## CLI
+
+For non-JS consumers, `countrydata-export` dumps any of the three datasets as CSV or SQL:
+
+```bash
+npx countrydata-export --entity countries --format csv --out countries.csv
+npx countrydata-export --entity cities --format sql > cities.sql
+npx countrydata-export --help
+```
+
+| Flag        | Required | Description                                    |
+| ----------- | -------- | ----------------------------------------------- |
+| `--entity`  | yes      | `countries`, `states`, or `cities`               |
+| `--format`  | no       | `csv` (default) or `sql`                         |
+| `--out`     | no       | Output file path (defaults to stdout)            |
+
+Nested fields (`timezones`, `regions`) are dropped from the export since they don't fit a flat row; array fields (`languages`, `borders`, `tld`) are joined with `|`.
 
 ## Contributing
 
