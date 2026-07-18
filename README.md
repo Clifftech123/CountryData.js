@@ -30,7 +30,7 @@ npm install countrydata.js
 ### Module API (recommended)
 
 ```typescript
-import { Country, State, City, Region, Timezone, Search } from 'countrydata.js';
+import { Country, State, City, Region, Timezone, Search, Geo } from 'countrydata.js';
 
 // Countries
 const all = Country.getAllCountries();
@@ -42,11 +42,14 @@ const eurCountries = Country.getCountriesByCurrency('EUR');
 const african = Country.getCountriesByContinent('Africa');
 const englishSpeaking = Country.getCountriesByLanguage('English');
 const owner = Country.getCountriesByRegion('Bavaria'); // → [Germany]
+const validCode = Country.isValidCountryCode('GH'); // true
+const validPhone = Country.isValidPhoneCode('+233'); // true
 
 // States / Provinces
 const states = State.getStatesOfCountry('US');
 const ca = State.getStateByCodeAndCountry('CA', 'US');
 const sorted = State.sortStates(states);
+const validState = State.isValidStateCode('CA', 'US'); // true
 
 // Cities (lazily loaded on first call)
 const cities = City.getCitiesOfState('US', 'CA');
@@ -65,6 +68,10 @@ const countries = Timezone.getCountriesByTimezone('America/New_York');
 const countryMatches = Search.searchCountries('ghan'); // → [Ghana]
 const stateMatches = Search.searchStates('accra');
 const cityMatches = Search.searchCities('kum');
+
+// Geo (distance in km, nearest lookups)
+const distance = Geo.haversineDistanceKm(40.7128, -74.0060, 51.5074, -0.1278);
+const nearestCity = Geo.getNearestCity(40.7128, -74.0060, { countryCode: 'US' });
 ```
 
 ### Class API
@@ -111,6 +118,8 @@ All methods are **synchronous** and return data directly no `await`, no `.then()
 | `getCountriesByContinent(name)`  | `ICountry[]` | Countries on a continent (e.g. `"Africa"`)               |
 | `getCountriesByLanguage(name)`   | `ICountry[]` | Countries with a given official language                |
 | `getCountriesByRegion(name)`     | `ICountry[]` | Country containing a named admin region (e.g. `"Bavaria"`) |
+| `isValidCountryCode(code)`       | `boolean`    | Whether an ISO code exists in the dataset                |
+| `isValidPhoneCode(code)`         | `boolean`    | Whether a phone code exists in the dataset               |
 
 ### `State`
 
@@ -120,6 +129,7 @@ All methods are **synchronous** and return data directly no `await`, no `.then()
 | `getStatesOfCountry(countryCode)`                  | `IState[]`            | States for one country              |
 | `getStateByCodeAndCountry(stateCode, countryCode)` | `IState \| undefined` | Single state lookup                 |
 | `sortStates(states?)`                              | `IState[]`            | Alphabetical copy (defaults to all) |
+| `isValidStateCode(stateCode, countryCode)`         | `boolean`              | Whether that state exists for that country |
 
 ### `City`
 
@@ -161,6 +171,21 @@ Case-insensitive, diacritic-insensitive substring matching (`"sao paulo"` matche
 ```typescript
 Search.searchCities('sao paulo');            // finds "São Paulo" despite no accents in the query
 Search.searchCountries('a', { limit: 10 });   // top 10 matches only
+```
+
+### `Geo`
+
+Country/state/city coordinates are single points (typically a geographic centroid), not borders — so "nearest country" means nearest *centroid*, which can be counterintuitive for large countries (e.g. a point in New York City is nearer Bermuda's centroid than the continental US's). `getNearestCity()` scans the whole ~148k-city dataset if no `countryCode`/`stateCode` is given (~100ms); pass one to scope the search to an already-indexed subset (~3ms).
+
+| Method                                          | Returns              | Description                                  |
+| ------------------------------------------------ | --------------------- | --------------------------------------------- |
+| `haversineDistanceKm(lat1, lon1, lat2, lon2)`     | `number`              | Great-circle distance between two coordinates |
+| `getNearestCountry(lat, lon)`                     | `ICountry \| undefined` | Nearest country by centroid distance         |
+| `getNearestCity(lat, lon, options?)`              | `ICity \| undefined`  | Nearest city; `options.countryCode`/`stateCode` narrow the search |
+
+```typescript
+Geo.haversineDistanceKm(40.7128, -74.0060, 51.5074, -0.1278); // NYC → London, ≈5570 km
+Geo.getNearestCity(40.7128, -74.0060, { countryCode: 'US' }); // scoped — fast
 ```
 
 ### `CountryHelper` class

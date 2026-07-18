@@ -72,9 +72,9 @@ both `dr5hn` and `mledoze` are ODbL (share-alike) and REST Countries dropped its
 - [x] **Phase 2** — `searchCountries()` / `searchStates()` / `searchCities()` fuzzy search.
 - [x] **Phase 3** — Cross-entity filters: `getCountriesByCurrency`, `getCountriesByRegion`,
       `getCountriesByLanguage`, `getCountriesByContinent`. Depends on Phase 1.
-- [ ] **Phase 4** — Validation helpers: `isValidCountryCode`, `isValidPhoneCode`,
+- [x] **Phase 4** — Validation helpers: `isValidCountryCode`, `isValidPhoneCode`,
       `isValidStateCode`.
-- [ ] **Phase 5** — Geo utilities: Haversine distance, `getNearestCountry`, `getNearestCity`.
+- [x] **Phase 5** — Geo utilities: Haversine distance, `getNearestCountry`, `getNearestCity`.
 - [ ] **Phase 6** — Pagination for the cities dataset (`getCitiesPaginated`).
 - [ ] **Phase 7** (backlog, lower priority) — i18n locale names, slimmer browser/CDN bundle,
       CLI data export.

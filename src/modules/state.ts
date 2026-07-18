@@ -58,6 +58,12 @@ export function sortStates(states: IState[] = getAllStates()): IState[] {
   return [...states].sort(compareByName);
 }
 
+// ─── validation ──────────────────────────────────────────────────────────────
+
+export function isValidStateCode(stateCode: string, countryCode: string): boolean {
+  return getStateByCodeAndCountry(stateCode, countryCode) !== undefined;
+}
+
 // ─── module export (State.getStatesOfCountry() style) ────────────────────────
 
 export default {
@@ -65,4 +71,5 @@ export default {
   getStatesOfCountry,
   getStateByCodeAndCountry,
   sortStates,
+  isValidStateCode,
 };

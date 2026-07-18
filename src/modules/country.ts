@@ -126,6 +126,16 @@ export function getCountriesByRegion(regionName: string): ICountry[] {
   return byRegionName!.get(regionName.toLowerCase()) ?? [];
 }
 
+// ─── validation ──────────────────────────────────────────────────────────────
+
+export function isValidCountryCode(isoCode: string): boolean {
+  return getCountryByCode(isoCode) !== undefined;
+}
+
+export function isValidPhoneCode(phoneCode: string): boolean {
+  return getCountryByPhoneCode(phoneCode) !== undefined;
+}
+
 // ─── module export (Country.getAllCountries() style) ──────────────────────────
 
 export default {
@@ -138,4 +148,6 @@ export default {
   getCountriesByContinent,
   getCountriesByLanguage,
   getCountriesByRegion,
+  isValidCountryCode,
+  isValidPhoneCode,
 };

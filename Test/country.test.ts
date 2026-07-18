@@ -218,6 +218,36 @@ describe('Country.getCountriesByRegion', () => {
   });
 });
 
+// ─── validation ─────────────────────────────────────────────────────────────
+
+describe('Country.isValidCountryCode', () => {
+  test('returns true for a known code', () => {
+    expect(Country.isValidCountryCode('GH')).toBe(true);
+  });
+
+  test('returns false for an unknown code', () => {
+    expect(Country.isValidCountryCode('XX')).toBe(false);
+  });
+
+  test('returns false for an empty string', () => {
+    expect(Country.isValidCountryCode('')).toBe(false);
+  });
+});
+
+describe('Country.isValidPhoneCode', () => {
+  test('returns true for a known phone code', () => {
+    expect(Country.isValidPhoneCode('+233')).toBe(true);
+  });
+
+  test('returns false for an unknown phone code', () => {
+    expect(Country.isValidPhoneCode('+000')).toBe(false);
+  });
+
+  test('returns false for an empty string', () => {
+    expect(Country.isValidPhoneCode('')).toBe(false);
+  });
+});
+
 // ─── method chaining ──────────────────────────────────────────────────────────
 
 describe('Country object method chaining', () => {

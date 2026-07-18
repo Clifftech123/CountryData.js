@@ -57,6 +57,25 @@ describe('CountryHelper — country methods', () => {
   });
 });
 
+// ─── Validation ───────────────────────────────────────────────────────────────
+
+describe('CountryHelper — validation methods', () => {
+  test('isValidCountryCode', () => {
+    expect(helper.isValidCountryCode('GH')).toBe(true);
+    expect(helper.isValidCountryCode('XX')).toBe(false);
+  });
+
+  test('isValidPhoneCode', () => {
+    expect(helper.isValidPhoneCode('+233')).toBe(true);
+    expect(helper.isValidPhoneCode('+000')).toBe(false);
+  });
+
+  test('isValidStateCode', () => {
+    expect(helper.isValidStateCode('BR', 'AX')).toBe(true);
+    expect(helper.isValidStateCode('ZZ', 'AX')).toBe(false);
+  });
+});
+
 // ─── Region ───────────────────────────────────────────────────────────────────
 
 describe('CountryHelper — region methods', () => {

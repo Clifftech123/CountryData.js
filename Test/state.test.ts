@@ -84,6 +84,26 @@ describe('State.getStateByCodeAndCountry', () => {
   });
 });
 
+// ─── isValidStateCode ─────────────────────────────────────────────────────────
+
+describe('State.isValidStateCode', () => {
+  test('returns true for a known state/country pair', () => {
+    expect(State.isValidStateCode('BR', 'AX')).toBe(true);
+  });
+
+  test('returns false for an unknown state code', () => {
+    expect(State.isValidStateCode('ZZ', 'AX')).toBe(false);
+  });
+
+  test('returns false when the state belongs to a different country', () => {
+    expect(State.isValidStateCode('BR', 'GH')).toBe(false);
+  });
+
+  test('returns false for empty input', () => {
+    expect(State.isValidStateCode('', 'AX')).toBe(false);
+  });
+});
+
 // ─── sortStates ───────────────────────────────────────────────────────────────
 
 describe('State.sortStates', () => {

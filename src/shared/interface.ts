@@ -63,3 +63,10 @@ export interface ISearchOptions {
   /** Cap the number of results returned (after ranking). Unlimited if omitted. */
   limit?: number;
 }
+
+export interface INearestCityOptions {
+  /** Restrict the search to one country instead of scanning all ~148k cities. */
+  countryCode?: string;
+  /** Restrict further to one state — requires countryCode to also be set. */
+  stateCode?: string;
+}
