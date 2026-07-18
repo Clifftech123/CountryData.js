@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import type { ICountry } from '../shared/interface.js';
 import { resolveDataPath } from '../shared/helpers.js';
+import { CURRENCIES } from '../shared/currencies.js';
 import { getStatesOfCountry } from './state.js';
 import { getCitiesOfCountry } from './city.js';
 
@@ -20,6 +21,8 @@ function ensureLoaded(): void {
   countryCache = raw.map((c) => ({
     ...c,
     countryFlag: getCountryFlag(c.countryShortCode),
+    currencyName: c.currencyCode ? CURRENCIES[c.currencyCode]?.name : undefined,
+    currencySymbol: c.currencyCode ? CURRENCIES[c.currencyCode]?.symbol : undefined,
     getStates: () => getStatesOfCountry(c.countryShortCode),
     getCities: () => getCitiesOfCountry(c.countryShortCode),
   }));

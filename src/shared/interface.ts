@@ -17,10 +17,24 @@ export interface ICountry {
   phoneCode: string;
   countryFlag: string;
   currencyCode?: string;
+  currencyName?: string;
+  currencySymbol?: string;
   latitude?: string;
   longitude?: string;
   timezones?: ITimezone[];
   regions: IRegion[];
+  capital?: string;
+  population?: number;
+  area?: number;
+  continent?: string;
+  officialName?: string;
+  nativeName?: string;
+  demonym?: string;
+  languages?: string[];
+  borders?: string[];
+  tld?: string[];
+  unMember?: boolean;
+  independent?: boolean;
   /** Get all states/provinces for this country */
   getStates?(): IState[];
   /** Get all cities for this country */

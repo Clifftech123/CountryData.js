@@ -45,6 +45,7 @@
   "scripts": {
     "build": "tsup",
     "build:data": "node scripts/build-data.cjs",
+    "build:data:fetch": "node scripts/fetch-wikidata.cjs",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "release": "npm run build:data && npm run build && changeset publish --access public",

@@ -16,6 +16,14 @@ const MOCK_COUNTRIES = [
       { name: 'Brändö', shortCode: 'BR' },
       { name: 'Eckerö', shortCode: 'EC' },
     ],
+    capital: 'Mariehamn',
+    population: 30836,
+    area: 1582.93,
+    nativeName: 'Åland',
+    languages: ['Swedish'],
+    tld: ['.ax'],
+    unMember: false,
+    independent: false,
   },
   {
     countryName: 'Ghana',
@@ -28,6 +36,16 @@ const MOCK_COUNTRIES = [
       { zoneName: 'Africa/Accra', gmtOffset: 0, gmtOffsetName: 'UTC+00:00', abbreviation: 'GMT', tzName: 'Greenwich Mean Time' },
     ],
     regions: [{ name: 'Ashanti', shortCode: 'AH' }],
+    capital: 'Accra',
+    population: 32833031,
+    area: 238535,
+    continent: 'Africa',
+    demonym: 'Ghanaian',
+    languages: ['English'],
+    borders: ['TG', 'BF', 'CI'],
+    tld: ['.gh'],
+    unMember: true,
+    independent: true,
   },
 ];
 
@@ -95,6 +113,49 @@ describe('Country.getCountryByCode', () => {
 
   test('returns undefined for empty string', () => {
     expect(Country.getCountryByCode('')).toBeUndefined();
+  });
+});
+
+// ─── enriched country fields ──────────────────────────────────────────────────
+
+describe('Country.getCountryByCode enriched fields', () => {
+  test('exposes currency name/symbol', () => {
+    const gh = Country.getCountryByCode('GH')!;
+    expect(gh.currencyName).toBe('Ghanaian Cedi');
+    expect(gh.currencySymbol).toBe('₵');
+  });
+
+  test('exposes capital, population, area, continent', () => {
+    const gh = Country.getCountryByCode('GH')!;
+    expect(gh.capital).toBe('Accra');
+    expect(gh.population).toBe(32833031);
+    expect(gh.area).toBe(238535);
+    expect(gh.continent).toBe('Africa');
+  });
+
+  test('exposes demonym, languages, borders, tld', () => {
+    const gh = Country.getCountryByCode('GH')!;
+    expect(gh.demonym).toBe('Ghanaian');
+    expect(gh.languages).toEqual(['English']);
+    expect(gh.borders).toEqual(['TG', 'BF', 'CI']);
+    expect(gh.tld).toEqual(['.gh']);
+  });
+
+  test('exposes unMember and independent flags', () => {
+    const gh = Country.getCountryByCode('GH')!;
+    expect(gh.unMember).toBe(true);
+    expect(gh.independent).toBe(true);
+
+    const ax = Country.getCountryByCode('AX')!;
+    expect(ax.unMember).toBe(false);
+    expect(ax.independent).toBe(false);
+  });
+
+  test('leaves sparse fields undefined rather than null/empty', () => {
+    const ax = Country.getCountryByCode('AX')!;
+    expect(ax.continent).toBeUndefined();
+    expect(ax.demonym).toBeUndefined();
+    expect(ax.borders).toBeUndefined();
   });
 });
 

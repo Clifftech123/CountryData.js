@@ -156,10 +156,24 @@ interface ICountry {
   phoneCode: string;
   countryFlag: string;
   currencyCode?: string;
+  currencyName?: string;
+  currencySymbol?: string;
   latitude?: string;
   longitude?: string;
   timezones?: ITimezone[];
   regions: IRegion[];
+  capital?: string;
+  population?: number;
+  area?: number;
+  continent?: string;
+  officialName?: string;
+  nativeName?: string;
+  demonym?: string;
+  languages?: string[];
+  borders?: string[];
+  tld?: string[];
+  unMember?: boolean;
+  independent?: boolean;
   getStates?(): IState[];
   getCities?(): ICity[];
 }
@@ -207,10 +221,22 @@ const gh = Country.getCountryByCode('GH');
 //   phoneCode: '+233',
 //   countryFlag: '🇬🇭',
 //   currencyCode: 'GHS',
+//   currencyName: 'Ghanaian Cedi',
+//   currencySymbol: '₵',
 //   latitude: '8.00000000',
 //   longitude: '-2.00000000',
 //   timezones: [{ zoneName: 'Africa/Accra', gmtOffset: 0, ... }],
-//   regions: [...]
+//   regions: [...],
+//   capital: 'Accra',
+//   population: 32833031,
+//   area: 238535,
+//   continent: 'Africa',
+//   demonym: 'Ghanaian',
+//   languages: ['English'],
+//   borders: ['TG', 'BF', 'CI'],
+//   tld: ['.gh'],
+//   unMember: true,
+//   independent: true
 // }
 ```
 

@@ -1,4 +1,10 @@
-import type { ICountry, IState, ICity, IRegion, ITimezone } from './shared/interface.js';
+import type {
+  ICountry,
+  IState,
+  ICity,
+  IRegion,
+  ITimezone,
+} from './shared/interface.js';
 import {
   getAllCountries,
   getCountryByCode,
