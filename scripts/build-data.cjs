@@ -4,9 +4,11 @@
  * Pre-sorts and minifies the data JSON files for distribution.
  * Run before publishing: node scripts/build-data.cjs
  *
- *   1. Pre-sorts all data so runtime queries are faster
- *   2. Minifies JSON (removes whitespace) — cuts total size by ~44%
- *   3. Optionally writes .gz compressed versions (set env GZ=true)
+ *   1. Strips fields that are computed at load time (src/modules/country.ts) rather than
+ *      stored, so they never end up duplicated across every record in the shipped file
+ *   2. Pre-sorts all data so runtime queries are faster
+ *   3. Minifies JSON (removes whitespace) — cuts total size by ~44%
+ *   4. Optionally writes .gz compressed versions (set env GZ=true)
  */
 
 'use strict';
@@ -31,9 +33,26 @@ function sizeKB(bytes) {
   return (bytes / 1024).toFixed(1) + ' KB';
 }
 
+// Derived at load time from currencyCode/countryShortCode (see country.ts ensureLoaded()) —
+// never persist these, or they'd be duplicated across every record that shares a currency.
+const COMPUTED_COUNTRY_FIELDS = ['currencyName', 'currencySymbol', 'countryFlag'];
+
 // ─── countries ───────────────────────────────────────────────────────────────
 
 const countries = read('countries.json');
+
+let stripped = 0;
+for (const c of countries) {
+  for (const field of COMPUTED_COUNTRY_FIELDS) {
+    if (field in c) {
+      delete c[field];
+      stripped++;
+    }
+  }
+}
+if (stripped > 0) {
+  console.log(`Stripped ${stripped} computed field(s) that shouldn't be persisted.`);
+}
 
 // Sort alphabetically by countryName
 countries.sort((a, b) => a.countryName.localeCompare(b.countryName));

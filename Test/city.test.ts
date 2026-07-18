@@ -1,34 +1,15 @@
 import { describe, test, expect, vi } from 'vitest';
 import { City } from '../src/index.js';
 
-const MOCK_COUNTRIES = [
-  { countryName: 'Åland Islands', countryShortCode: 'AX', phoneCode: '+358', timezones: [], regions: [] },
-  { countryName: 'Ghana',         countryShortCode: 'GH', phoneCode: '+233', timezones: [], regions: [] },
-];
-
-const MOCK_STATES = [
-  { name: 'Brändö',        isoCode: 'BR', countryCode: 'AX' },
-  { name: 'Eckerö',        isoCode: 'EC', countryCode: 'AX' },
-  { name: 'Ashanti Region',isoCode: 'AH', countryCode: 'GH' },
-  { name: 'Greater Accra', isoCode: 'AA', countryCode: 'GH' },
-];
-
-const MOCK_CITIES: string[][] = [
-  ['Brändö Village', 'AX', 'BR', '60.41667',  '21.05000'],
-  ['Eckerö Village', 'AX', 'EC', '60.22500',  '19.55000'],
-  ['Kumasi',         'GH', 'AH', '6.68848',   '-1.62443'],
-  ['Accra',          'GH', 'AA', '5.55602',   '-0.19690'],
-];
-
-vi.mock('fs', () => ({
-  readFileSync: (filePath: string) => {
-    const p = String(filePath);
-    if (p.includes('states.json'))    return JSON.stringify(MOCK_STATES);
-    if (p.includes('cities.json'))    return JSON.stringify(MOCK_CITIES);
-    if (p.includes('countries.json')) return JSON.stringify(MOCK_COUNTRIES);
-    return '[]';
-  },
-}));
+// vi.mock() is hoisted above imports, so fixture data must be pulled in via a
+// dynamic import inside the factory rather than referenced from a top-level import.
+vi.mock('fs', async () => {
+  const f = await import('./fixtures.js');
+  const countries = [f.COUNTRY_ALAND, f.COUNTRY_GHANA];
+  const states = [f.STATE_BRANDO, f.STATE_ECKERO, f.STATE_ASHANTI_REGION, f.STATE_GREATER_ACCRA];
+  const cities = [f.CITY_BRANDO_VILLAGE, f.CITY_ECKERO_VILLAGE, f.CITY_KUMASI, f.CITY_ACCRA];
+  return { readFileSync: f.mockFsReader(countries, states, cities) };
+});
 
 // ─── getAllCities ─────────────────────────────────────────────────────────────
 
@@ -117,10 +98,62 @@ describe('City.sortCities', () => {
   });
 
   test('sorts a provided array without mutating the original', () => {
-    const input = [MOCK_CITIES[3], MOCK_CITIES[0]] as string[][];
     const cities = City.getCitiesOfCountry('AX');
     const sorted = City.sortCities([...cities].reverse());
     expect(sorted[0]!.name).toBe('Brändö Village');
     expect(cities[0]!.name).toBe('Brändö Village');
+  });
+});
+
+// ─── getCitiesPaginated ───────────────────────────────────────────────────────
+
+describe('City.getCitiesPaginated', () => {
+  test('returns all cities on one page when pageSize exceeds total', () => {
+    const result = City.getCitiesPaginated();
+    expect(result.items).toHaveLength(4);
+    expect(result.page).toBe(1);
+    expect(result.pageSize).toBe(50);
+    expect(result.total).toBe(4);
+    expect(result.hasMore).toBe(false);
+  });
+
+  test('paginates with a custom pageSize', () => {
+    const page1 = City.getCitiesPaginated({ pageSize: 2 });
+    expect(page1.items).toHaveLength(2);
+    expect(page1.total).toBe(4);
+    expect(page1.hasMore).toBe(true);
+
+    const page2 = City.getCitiesPaginated({ pageSize: 2, page: 2 });
+    expect(page2.items).toHaveLength(2);
+    expect(page2.hasMore).toBe(false);
+
+    const namesPage1 = page1.items.map((c) => c.name);
+    const namesPage2 = page2.items.map((c) => c.name);
+    expect(namesPage1).not.toEqual(namesPage2);
+  });
+
+  test('scopes to a country before paginating', () => {
+    const result = City.getCitiesPaginated({ countryCode: 'AX', pageSize: 10 });
+    expect(result.items).toHaveLength(2);
+    expect(result.items.every((c) => c.countryCode === 'AX')).toBe(true);
+    expect(result.total).toBe(2);
+  });
+
+  test('scopes to a state within a country', () => {
+    const result = City.getCitiesPaginated({ countryCode: 'AX', stateCode: 'BR', pageSize: 10 });
+    expect(result.items).toHaveLength(1);
+    expect(result.items[0]!.name).toBe('Brändö Village');
+  });
+
+  test('clamps page numbers below 1', () => {
+    expect(City.getCitiesPaginated({ page: 0, pageSize: 2 }).page).toBe(1);
+    expect(City.getCitiesPaginated({ page: -5, pageSize: 2 }).page).toBe(1);
+  });
+
+  test('returns empty items for a page beyond the last', () => {
+    const result = City.getCitiesPaginated({ pageSize: 2, page: 10 });
+    expect(result.items).toHaveLength(0);
+    expect(result.hasMore).toBe(false);
+    expect(result.total).toBe(4);
   });
 });

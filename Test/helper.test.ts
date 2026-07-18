@@ -1,62 +1,15 @@
 import { describe, test, expect, vi, beforeAll } from 'vitest';
 import { CountryHelper } from '../src/index.js';
 
-const MOCK_COUNTRIES = [
-  {
-    countryName: 'Åland Islands',
-    countryShortCode: 'AX',
-    phoneCode: '+358',
-    currencyCode: 'EUR',
-    latitude: '60.11666700',
-    longitude: '19.90000000',
-    timezones: [
-      { zoneName: 'Europe/Mariehamn', gmtOffset: 7200, gmtOffsetName: 'UTC+02:00', abbreviation: 'EEST', tzName: 'Eastern European Summer Time' },
-    ],
-    regions: [
-      { name: 'Brändö',   shortCode: 'BR' },
-      { name: 'Eckerö',   shortCode: 'EC' },
-      { name: 'Finström', shortCode: 'FN' },
-    ],
-  },
-  {
-    countryName: 'Ghana',
-    countryShortCode: 'GH',
-    phoneCode: '+233',
-    currencyCode: 'GHS',
-    latitude: '8.00000000',
-    longitude: '-2.00000000',
-    timezones: [
-      { zoneName: 'Africa/Accra', gmtOffset: 0, gmtOffsetName: 'UTC+00:00', abbreviation: 'GMT', tzName: 'Greenwich Mean Time' },
-    ],
-    regions: [
-      { name: 'Ashanti',      shortCode: 'AH' },
-      { name: 'Greater Accra',shortCode: 'AA' },
-    ],
-  },
-];
-
-const MOCK_STATES = [
-  { name: 'Brändö',        isoCode: 'BR', countryCode: 'AX', latitude: '60.41667', longitude: '21.05000' },
-  { name: 'Eckerö',        isoCode: 'EC', countryCode: 'AX', latitude: '60.22500', longitude: '19.55000' },
-  { name: 'Ashanti Region',isoCode: 'AH', countryCode: 'GH', latitude: '6.74700',  longitude: '-1.52000' },
-];
-
-const MOCK_CITIES: string[][] = [
-  ['Brändö Village', 'AX', 'BR', '60.41667', '21.05000'],
-  ['Eckerö Village', 'AX', 'EC', '60.22500', '19.55000'],
-  ['Kumasi',         'GH', 'AH', '6.68848',  '-1.62443'],
-  ['Accra',          'GH', 'AA', '5.55602',  '-0.19690'],
-];
-
-vi.mock('fs', () => ({
-  readFileSync: (filePath: string) => {
-    const p = String(filePath);
-    if (p.includes('states.json'))    return JSON.stringify(MOCK_STATES);
-    if (p.includes('cities.json'))    return JSON.stringify(MOCK_CITIES);
-    if (p.includes('countries.json')) return JSON.stringify(MOCK_COUNTRIES);
-    return '[]';
-  },
-}));
+// vi.mock() is hoisted above imports, so fixture data must be pulled in via a
+// dynamic import inside the factory rather than referenced from a top-level import.
+vi.mock('fs', async () => {
+  const f = await import('./fixtures.js');
+  const countries = [f.COUNTRY_ALAND, f.COUNTRY_GHANA];
+  const states = [f.STATE_BRANDO, f.STATE_ECKERO, f.STATE_ASHANTI_REGION];
+  const cities = [f.CITY_BRANDO_VILLAGE, f.CITY_ECKERO_VILLAGE, f.CITY_KUMASI, f.CITY_ACCRA];
+  return { readFileSync: f.mockFsReader(countries, states, cities) };
+});
 
 let helper: CountryHelper;
 beforeAll(() => { helper = new CountryHelper(); });
@@ -101,6 +54,25 @@ describe('CountryHelper — country methods', () => {
     const sorted = helper.sortCountries();
     expect(sorted[0]!.countryName).toBe('Ghana');
     expect(sorted[1]!.countryName).toBe('Åland Islands');
+  });
+});
+
+// ─── Validation ───────────────────────────────────────────────────────────────
+
+describe('CountryHelper — validation methods', () => {
+  test('isValidCountryCode', () => {
+    expect(helper.isValidCountryCode('GH')).toBe(true);
+    expect(helper.isValidCountryCode('XX')).toBe(false);
+  });
+
+  test('isValidPhoneCode', () => {
+    expect(helper.isValidPhoneCode('+233')).toBe(true);
+    expect(helper.isValidPhoneCode('+000')).toBe(false);
+  });
+
+  test('isValidStateCode', () => {
+    expect(helper.isValidStateCode('BR', 'AX')).toBe(true);
+    expect(helper.isValidStateCode('ZZ', 'AX')).toBe(false);
   });
 });
 
@@ -219,5 +191,36 @@ describe('CountryHelper — city methods', () => {
     expect(sorted[0]!.name).toBe('Brändö Village');  // AX-BR
     expect(sorted[2]!.name).toBe('Accra');            // GH-AA
     expect(sorted[3]!.name).toBe('Kumasi');           // GH-AH
+  });
+});
+
+// ─── Search ───────────────────────────────────────────────────────────────────
+
+describe('CountryHelper — search methods', () => {
+  test('searchCountries finds by partial name', () => {
+    expect(helper.searchCountries('ghan')).toHaveLength(1);
+  });
+
+  test('searchStates finds by partial name', () => {
+    expect(helper.searchStates('ashanti')).toHaveLength(1);
+  });
+
+  test('searchCities finds by partial name', () => {
+    expect(helper.searchCities('kum')).toHaveLength(1);
+  });
+
+  test('search methods accept a limit option', () => {
+    expect(helper.searchCities('a', { limit: 1 })).toHaveLength(1);
+  });
+});
+
+// ─── Pagination ───────────────────────────────────────────────────────────────
+
+describe('CountryHelper — pagination methods', () => {
+  test('getCitiesPaginated returns a paginated result', () => {
+    const result = helper.getCitiesPaginated({ pageSize: 2 });
+    expect(result.items).toHaveLength(2);
+    expect(result.total).toBe(4);
+    expect(result.hasMore).toBe(true);
   });
 });
