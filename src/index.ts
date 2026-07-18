@@ -4,6 +4,7 @@ export { default as State } from './modules/state.js';
 export { default as City } from './modules/city.js';
 export { default as Region } from './modules/regions.js';
 export { default as Timezone } from './modules/timezone.js';
+export { default as Search } from './modules/search.js';
 
 export type {
   ICountry,
@@ -11,4 +12,5 @@ export type {
   ICity,
   IRegion,
   ITimezone,
+  ISearchOptions,
 } from './shared/interface.js';

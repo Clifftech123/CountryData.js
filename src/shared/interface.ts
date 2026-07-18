@@ -58,3 +58,8 @@ export interface ICity {
   latitude?: string | null;
   longitude?: string | null;
 }
+
+export interface ISearchOptions {
+  /** Cap the number of results returned (after ranking). Unlimited if omitted. */
+  limit?: number;
+}

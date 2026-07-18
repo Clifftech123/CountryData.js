@@ -69,7 +69,7 @@ both `dr5hn` and `mledoze` are ODbL (share-alike) and REST Countries dropped its
       `ICountry` fields + `scripts/fetch-wikidata.cjs` build-time fetch (SPARQL query against
       `query.wikidata.org`, CC0, no key needed) merged with a hardcoded ISO 4217 currency
       name/symbol table.
-- [ ] **Phase 2** — `searchCountries()` / `searchStates()` / `searchCities()` fuzzy search.
+- [x] **Phase 2** — `searchCountries()` / `searchStates()` / `searchCities()` fuzzy search.
 - [ ] **Phase 3** — Cross-entity filters: `getCountriesByCurrency`, `getCountriesByRegion`,
       `getCountriesByLanguage`, `getCountriesByContinent`. Depends on Phase 1.
 - [ ] **Phase 4** — Validation helpers: `isValidCountryCode`, `isValidPhoneCode`,

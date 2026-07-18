@@ -4,6 +4,7 @@ import type {
   ICity,
   IRegion,
   ITimezone,
+  ISearchOptions,
 } from './shared/interface.js';
 import {
   getAllCountries,
@@ -34,6 +35,11 @@ import {
   getCountriesByTimezone,
   getAllTimezones,
 } from './modules/timezone.js';
+import {
+  searchCountries,
+  searchStates,
+  searchCities,
+} from './modules/search.js';
 
 export class CountryHelper {
   // ─── Country flag ─────────────────────────────────────────────────────────
@@ -134,6 +140,20 @@ export class CountryHelper {
 
   public sortCities(cities?: ICity[]): ICity[] {
     return sortCities(cities);
+  }
+
+  // ─── Search methods ───────────────────────────────────────────────────────
+
+  public searchCountries(query: string, options?: ISearchOptions): ICountry[] {
+    return searchCountries(query, options);
+  }
+
+  public searchStates(query: string, options?: ISearchOptions): IState[] {
+    return searchStates(query, options);
+  }
+
+  public searchCities(query: string, options?: ISearchOptions): ICity[] {
+    return searchCities(query, options);
   }
 }
 

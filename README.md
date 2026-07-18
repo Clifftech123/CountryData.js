@@ -30,7 +30,7 @@ npm install countrydata.js
 ### Module API (recommended)
 
 ```typescript
-import { Country, State, City, Region, Timezone } from 'countrydata.js';
+import { Country, State, City, Region, Timezone, Search } from 'countrydata.js';
 
 // Countries
 const all = Country.getAllCountries();
@@ -56,6 +56,11 @@ const region = Region.getRegionByShortCode('US', 'CA');
 const tzList = Timezone.getTimezonesByCountryCode('US');
 const allTz = Timezone.getAllTimezones();
 const countries = Timezone.getCountriesByTimezone('America/New_York');
+
+// Search (case-insensitive, prefix matches ranked first)
+const countryMatches = Search.searchCountries('ghan'); // → [Ghana]
+const stateMatches = Search.searchStates('accra');
+const cityMatches = Search.searchCities('kum');
 ```
 
 ### Class API
@@ -134,6 +139,21 @@ All methods are **synchronous** and return data directly no `await`, no `.then()
 | `getAllTimezones()`                      | `ITimezone[]` | Every unique timezone in the dataset    |
 | `getTimezonesByCountryCode(countryCode)` | `ITimezone[]` | Timezones for one country               |
 | `getCountriesByTimezone(zoneName)`       | `ICountry[]`  | Countries that observe a given timezone |
+
+### `Search`
+
+Case-insensitive, diacritic-insensitive substring matching (`"sao paulo"` matches `"São Paulo"`), with exact matches ranked first, then prefix matches, then other substring matches. No fuzzy-matching dependency. Pass `{ limit }` to cap the number of results — useful for city search, which can otherwise return thousands of matches.
+
+| Method                            | Returns      | Description                            |
+| ---------------------------------- | ------------ | --------------------------------------- |
+| `searchCountries(query, options?)` | `ICountry[]` | Countries whose `countryName` matches   |
+| `searchStates(query, options?)`    | `IState[]`   | States whose `name` matches             |
+| `searchCities(query, options?)`    | `ICity[]`    | Cities whose `name` matches             |
+
+```typescript
+Search.searchCities('sao paulo');            // finds "São Paulo" despite no accents in the query
+Search.searchCountries('a', { limit: 10 });   // top 10 matches only
+```
 
 ### `CountryHelper` class
 
