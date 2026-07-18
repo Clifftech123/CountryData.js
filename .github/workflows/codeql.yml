@@ -36,9 +36,14 @@ jobs:
         with:
           languages: javascript-typescript
           queries: security-extended
+          config-file: ./.github/codeql/codeql-config.yml
 
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v4
+      # Autobuild's heuristic crawl picks up Sample/TypeScript's own tsconfig.json and tries
+      # to `tsc` it, which fails because that sample imports from ../../dist/index.js and this
+      # job never builds the root package. Build explicitly instead — see
+      # https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/customizing-your-advanced-setup-for-code-scanning#specifying-build-commands-for-compiled-languages-in-a-github-actions-workflow
+      - name: Build
+        run: npm run build
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4

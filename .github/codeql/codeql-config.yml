@@ -1,0 +1,8 @@
+name: "CodeQL config"
+
+# Sample/ holds standalone demo apps (their own package.json/tsconfig, not part of the
+# published package) — no need to security-scan throwaway example code.
+paths-ignore:
+  - Sample/**
+  - coverage/**
+  - dist/**
