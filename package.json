@@ -66,7 +66,7 @@
     "build:data:fetch": "node scripts/fetch-wikidata.cjs",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
-    "release": "npm run build:data && npm run build && changeset publish --access public",
+    "release": "npm run build:data && npm run build && changeset publish",
     "check-exports": "attw --pack .",
     "lint": "tsc",
     "test": "vitest run"
