@@ -51,7 +51,7 @@ const sorted = Country.sortCountries();
 const eurCountries = Country.getCountriesByCurrency('EUR');
 const african = Country.getCountriesByContinent('Africa');
 const englishSpeaking = Country.getCountriesByLanguage('English');
-const owner = Country.getCountriesByRegion('Bavaria'); // → [Germany]
+const owner = Country.getCountriesByRegion('California'); // → [United States]
 const validCode = Country.isValidCountryCode('GH'); // true
 const validPhone = Country.isValidPhoneCode('+233'); // true
 const nameInFrench = Country.getCountryName('GH', 'fr'); // 'Ghana'
@@ -129,7 +129,7 @@ All methods are **synchronous** and return data directly no `await`, no `.then()
 | `getCountriesByCurrency(code)`   | `ICountry[]` | Countries sharing a currency code (e.g. `"EUR"`)         |
 | `getCountriesByContinent(name)`  | `ICountry[]` | Countries on a continent (e.g. `"Africa"`)               |
 | `getCountriesByLanguage(name)`   | `ICountry[]` | Countries with a given official language                |
-| `getCountriesByRegion(name)`     | `ICountry[]` | Country containing a named admin region (e.g. `"Bavaria"`) |
+| `getCountriesByRegion(name)`     | `ICountry[]` | Country containing a named admin region (e.g. `"California"`) |
 | `isValidCountryCode(code)`       | `boolean`    | Whether an ISO code exists in the dataset                |
 | `isValidPhoneCode(code)`         | `boolean`    | Whether a phone code exists in the dataset               |
 | `getCountryName(code, locale?)`  | `string \| undefined` | Translated name; falls back to English if the locale is missing |
