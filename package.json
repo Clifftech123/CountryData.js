@@ -79,7 +79,7 @@
     "@arethetypeswrong/cli": "^0.18.2",
     "@jest/globals": "^30.3.0",
     "@types/jest": "^30.0.0",
-    "@types/node": "^25.5.0",
+    "@types/node": "^26.1.1",
     "@vitest/coverage-v8": "^4.1.0",
     "jest": "^30.3.0",
     "jest-junit": "^17.0.0",
@@ -88,7 +88,7 @@
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
+    "typescript": "^7.0.2",
     "vitest": "^4.1.0"
   },
   "dependencies": {
